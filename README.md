@@ -591,6 +591,186 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 Never ask me for raw API keys or secrets in chat.
 ```
 
+### Mercury 🧪 Draft
+
+View Mercury bank accounts and transactions. Read-only by design.
+- Auth: Mercury API token (per-user, app.mercury.com → Settings → API Tokens; a Read-Only token suffices) · Allowed hosts: `api.mercury.com`
+- Maturity: 🧪 Draft — written from Mercury's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mercury/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/mercury/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Wise 🧪 Draft
+
+View Wise profiles and multi-currency balances. Read-only by design.
+- Auth: Wise personal API token (per-user, wise.com → Settings → API tokens) · Allowed hosts: `api.wise.com`
+- Maturity: 🧪 Draft — written from Wise's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/wise/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/wise/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Shopify 🧪 Draft
+
+View open orders, products, and customers in your Shopify store. Read-only by design.
+- Auth: Shopify Admin API access token (per-user, Shopify admin → Apps → Develop apps → custom app; scopes read_orders/read_products/read_customers) · Allowed hosts: `<your-shop>.myshopify.com` (your store's domain)
+- Maturity: 🧪 Draft — written from Shopify's Admin API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/shopify/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/shopify/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Gumroad 🧪 Draft
+
+View your Gumroad products and sales. Read-only by design.
+- Auth: Gumroad access token (per-user, app.gumroad.com → Settings → Advanced) · Allowed hosts: `api.gumroad.com`
+- Maturity: 🧪 Draft — written from Gumroad's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/gumroad/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/gumroad/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Paddle 🧪 Draft
+
+View Paddle transactions and customers. Read-only by design.
+- Auth: Paddle API key (per-user, Paddle Dashboard → Developer Tools → Authentication) · Allowed hosts: `api.paddle.com`
+- Maturity: 🧪 Draft — written from Paddle's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/paddle/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/paddle/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Exa 🧪 Draft
+
+Neural web search with page text: one call returns ranked sources with snippets. Read-only.
+- Auth: Exa API key (per-user, dashboard.exa.ai/api-keys) · Allowed hosts: `api.exa.ai`
+- Maturity: 🧪 Draft — written from Exa's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/exa/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/exa/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Brave Search 🧪 Draft
+
+Independent web search from Brave's own index. Read-only.
+- Auth: Brave Search API key (per-user, brave.com/search/api; free tier 2,000 queries/month) · Allowed hosts: `api.search.brave.com`
+- Maturity: 🧪 Draft — written from Brave Search's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/brave-search/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/brave-search/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### OpenWeatherMap 🧪 Draft
+
+Current weather and 5-day forecast for any city. Read-only.
+- Auth: OpenWeatherMap API key (per-user, openweathermap.org → API keys; free tier fine) · Allowed hosts: `api.openweathermap.org`
+- Maturity: 🧪 Draft — written from OpenWeatherMap's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/openweathermap/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/openweathermap/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Alpha Vantage 🧪 Draft
+
+Stock quotes and daily price history. Read-only.
+- Auth: Alpha Vantage API key (per-user, alphavantage.co/support/#api-key; free tier 25 calls/day) · Allowed hosts: `www.alphavantage.co`
+- Maturity: 🧪 Draft — written from Alpha Vantage's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/alphavantage/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/alphavantage/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### NewsAPI 🧪 Draft
+
+Top headlines and full-text news search. Read-only.
+- Auth: NewsAPI key (per-user, newsapi.org/register; free tier 100 requests/day) · Allowed hosts: `newsapi.org`
+- Maturity: 🧪 Draft — written from NewsAPI's public docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/newsapi/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/newsapi/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
 *To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*
 
 ## Maturity badges
