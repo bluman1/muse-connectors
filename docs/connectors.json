@@ -243,8 +243,8 @@
   {
     "id": "coinbase",
     "name": "Coinbase",
-    "tagline": "Read-only Coinbase Exchange account balances and history. No orders, transfers, or converts.",
-    "auth": "Coinbase Exchange API key (per-user; create with View/read-only permissions; collected as api_key/passphrase/signing_key via the secure credential flow)",
+    "tagline": "Coinbase Exchange balances and history, plus confirm-gated order placement and cancels (all trades need --confirm).",
+    "auth": "Coinbase Exchange API key (per-user; View permission for reads, Trade permission for orders; collected as api_key/passphrase/signing_key via the secure credential flow)",
     "hosts": [
       "api.exchange.coinbase.com"
     ],
@@ -922,7 +922,7 @@
   {
     "id": "paypal",
     "name": "PayPal",
-    "tagline": "Check PayPal balances and search transactions read-only. No payments, payouts, or transfers.",
+    "tagline": "PayPal balances and transaction search, plus confirm-gated payouts, subscription cancels, and refunds (all writes need --confirm).",
     "auth": "PayPal REST app (per-user; OAuth2 client credentials via developer.paypal.com dashboard)",
     "hosts": [
       "api-m.paypal.com",
@@ -973,7 +973,7 @@
   {
     "id": "plaid",
     "name": "Plaid",
-    "tagline": "Sync bank transactions and check account balances through Plaid.",
+    "tagline": "Sync bank transactions and balances through Plaid, plus confirm-gated bank transfers (all writes need --confirm).",
     "auth": "Plaid client_id + secret (per-user; dashboard.plaid.com; Sandbox instant, Production needs Plaid approval) plus the user's own Plaid Link access_token per call",
     "hosts": [
       "sandbox.plaid.com",

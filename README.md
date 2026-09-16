@@ -52,7 +52,7 @@ All 156 connectors, searchable with one-click install prompts, at **https://muse
 | [Cloudflare](https://museconnectors.link/#cloudflare) | List your Cloudflare zones and read DNS records. Read-only. |
 | [Cloudinary](https://museconnectors.link/#cloudinary) | Manage media on Cloudinary through the Upload and Admin APIs: upload images and videos, list and inspect assets, update metadata and tags, delete assets, and check plan usage (credits, storage, bandwidth, transformations). |
 | [Coda](https://museconnectors.link/#coda) | List docs, read tables and rows, add rows. Your docs as a database. |
-| [Coinbase](https://museconnectors.link/#coinbase) | Read-only Coinbase Exchange account balances and history. No orders, transfers, or converts. |
+| [Coinbase](https://museconnectors.link/#coinbase) | Coinbase Exchange balances and history, plus confirm-gated order placement and cancels (all trades need --confirm). |
 | [Deepgram](https://museconnectors.link/#deepgram) | Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text. |
 | [DeepL](https://museconnectors.link/#deepl) | Translate text between 30+ languages, check usage. |
 | [DeepSeek](https://museconnectors.link/#deepseek) | Chat with DeepSeek's models and check account balance: OpenAI-compatible chat completions with thinking mode, model listing, and balance lookup via the official API. |
@@ -119,12 +119,12 @@ All 156 connectors, searchable with one-click install prompts, at **https://muse
 | [Oura](https://museconnectors.link/#oura) | Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2. |
 | [Paddle](https://museconnectors.link/#paddle) | View Paddle transactions and customers. Read-only by design. |
 | [Patreon](https://museconnectors.link/#patreon) | Read Patreon campaigns, members, tiers, and identity (read-only). |
-| [PayPal](https://museconnectors.link/#paypal) | Check PayPal balances and search transactions read-only. No payments, payouts, or transfers. |
+| [PayPal](https://museconnectors.link/#paypal) | PayPal balances and transaction search, plus confirm-gated payouts, subscription cancels, and refunds (all writes need --confirm). |
 | [Perplexity](https://museconnectors.link/#perplexity) | Ask questions with citations, search the web. |
 | [Pexels](https://museconnectors.link/#pexels) | Search Pexels' royalty-free stock library: find photos and videos by keyword, browse curated/trending photos and popular videos, look up a single photo or video, and read collection contents. The Pexels API is read-only, so this connector cannot change anything. |
 | [Philips Hue](https://museconnectors.link/#philips-hue) | Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors. |
 | [Pipedrive](https://museconnectors.link/#pipedrive) | List deals and contacts, create deals. CRM for your pipeline. |
-| [Plaid](https://museconnectors.link/#plaid) | Sync bank transactions and check account balances through Plaid. |
+| [Plaid](https://museconnectors.link/#plaid) | Sync bank transactions and balances through Plaid, plus confirm-gated bank transfers (all writes need --confirm). |
 | [Plain](https://museconnectors.link/#plain) | Find customers, manage support threads. |
 | [PlayHT](https://museconnectors.link/#playht) | Generate spoken audio from text with PlayHT voices, browse stock and cloned voices, and create instant voice clones. Reach for this when the user wants narration or voiceovers, a voice library lookup, or a voice cloned from a sample. |
 | [Podbean](https://museconnectors.link/#podbean) | Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector. |
