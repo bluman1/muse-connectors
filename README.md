@@ -21,7 +21,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ### Slack 🧪 Draft
 
-Read channels, post messages, search history, list users. The most-requested workplace connector.
+Read channels, post messages, list users. The most-requested workplace connector.
 
 - Auth: Slack OAuth (per-user) · Allowed hosts: `slack.com`
 - Maturity: 🧪 Draft — written from Slack's public Web API docs, not yet live-tested end-to-end.

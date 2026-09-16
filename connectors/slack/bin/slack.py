@@ -103,17 +103,6 @@ def cmd_users(args):
     print(json.dumps(users, indent=2))
 
 
-def cmd_search(args):
-    result = call("search.messages", params={"query": args.query, "count": args.count})
-    matches = (result.get("messages") or {}).get("matches", [])
-    out = [
-        {"channel": (m.get("channel") or {}).get("name"), "user": m.get("user"),
-         "text": m.get("text"), "permalink": m.get("permalink")}
-        for m in matches
-    ]
-    print(json.dumps(out, indent=2))
-
-
 def main():
     parser = argparse.ArgumentParser(description="Slack Web API CLI (muse-connectors)")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -138,11 +127,6 @@ def main():
     p = sub.add_parser("users", help="list workspace users")
     p.add_argument("--limit", type=int, default=200)
     p.set_defaults(func=cmd_users)
-
-    p = sub.add_parser("search", help="search messages")
-    p.add_argument("--query", required=True)
-    p.add_argument("--count", type=int, default=20)
-    p.set_defaults(func=cmd_search)
 
     args = parser.parse_args()
     args.func(args)
