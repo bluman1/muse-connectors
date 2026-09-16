@@ -5,6 +5,12 @@ Auth: loads the per-user `custom.notion` credential as a surrogate via the
 bundled dynamic_credentials helper. The real token never touches this script:
 the runtime swaps the surrogate on approved egress, only to api.notion.com.
 Every request also carries the required Notion-Version header.
+
+Reads (search, page, query-db) need no confirmation. Writes
+(page-create, block-append, page-update) require an exact --confirm string
+echoed by the CLI, on every call.
+HONESTY NOTE: the write endpoint paths and bodies below are taken from
+Notion's public API docs and have not yet been verified in a live flow.
 """
 from __future__ import annotations
 
@@ -18,6 +24,12 @@ CREDENTIAL_NAME = "custom.notion"
 ALLOWED_HOSTS = ("api.notion.com",)
 API = "https://api.notion.com"
 NOTION_VERSION = "2022-06-28"
+CONNECT_GUIDANCE = (
+    "not connected: approve Notion access via the secure credential flow "
+    "(credentials.request_api_access) as `custom.notion` (create an internal "
+    "integration at notion.so/my-integrations and share the needed "
+    "pages/databases with it inside Notion), then retry."
+)
 
 try:
     sys.path.insert(0, HELPER_PATH)
@@ -44,6 +56,8 @@ def call(method: str, path: str, payload: dict | None = None) -> dict:
     try:
         add_surrogate_to_request(req, CREDENTIAL_NAME, allowed_hosts=ALLOWED_HOSTS)
     except DynamicCredentialError as exc:
+        if "missing" in str(exc) or "surrogate" in str(exc):
+            sys.exit(CONNECT_GUIDANCE)
         sys.exit(f"error: credential problem: {exc}")
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -132,6 +146,72 @@ def cmd_query_db(args):
     print(json.dumps(rows, indent=2))
 
 
+def need_confirm(args, expected: str, effect: str) -> None:
+    """Refuse unless --confirm matches the exact effect string."""
+    if args.confirm == expected:
+        return
+    sys.exit(
+        f"refusing: {effect}\n"
+        f"Re-run with the exact confirmation string:\n"
+        f'  --confirm "{expected}"'
+    )
+
+
+def _json_obj(raw: str, flag: str) -> dict:
+    try:
+        obj = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        sys.exit(f"error: {flag} is not valid JSON: {exc}")
+    if not isinstance(obj, dict):
+        sys.exit(f"error: {flag} must be a JSON object")
+    return obj
+
+
+def cmd_page_create(args):
+    props = _json_obj(args.properties, "--properties")
+    if args.parent_type == "database":
+        parent = {"database_id": args.parent_id}
+    else:
+        parent = {"page_id": args.parent_id}
+    expected = f"create notion page under {args.parent_type} {args.parent_id}"
+    need_confirm(
+        args, expected,
+        f"creating a new Notion page under {args.parent_type} {args.parent_id}.")
+    result = call("POST", "/v1/pages",
+                  {"parent": parent, "properties": props})
+    print(json.dumps({"ok": True, "page_id": result.get("id"),
+                      "url": result.get("url")}, indent=2))
+
+
+def cmd_block_append(args):
+    try:
+        blocks = json.loads(args.blocks)
+    except json.JSONDecodeError as exc:
+        sys.exit(f"error: --blocks is not valid JSON: {exc}")
+    if not isinstance(blocks, list) or not blocks:
+        sys.exit("error: --blocks must be a non-empty JSON array of block objects")
+    expected = f"append {len(blocks)} block(s) to {args.block_id}"
+    need_confirm(
+        args, expected,
+        f"appending {len(blocks)} block(s) to Notion block/page {args.block_id}.")
+    result = call("PATCH", f"/v1/blocks/{args.block_id}/children",
+                  {"children": blocks})
+    appended = result.get("results", [])
+    print(json.dumps({"ok": True, "appended": len(appended),
+                      "block_ids": [b.get("id") for b in appended]},
+                     indent=2))
+
+
+def cmd_page_update(args):
+    props = _json_obj(args.properties, "--properties")
+    expected = f"update notion page {args.id} properties"
+    need_confirm(
+        args, expected,
+        f"updating properties on Notion page {args.id}.")
+    result = call("PATCH", f"/v1/pages/{args.id}", {"properties": props})
+    print(json.dumps({"ok": True, "page_id": result.get("id")}, indent=2))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Notion API CLI (muse-connectors)")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -150,6 +230,35 @@ def main():
     p = sub.add_parser("query-db", help="query a database (first 20 rows)")
     p.add_argument("--id", required=True, help="database ID")
     p.set_defaults(func=cmd_query_db)
+
+    p = sub.add_parser("page-create",
+                       help="create a page (needs --confirm)")
+    p.add_argument("--parent-id", required=True,
+                   help="parent page or database ID")
+    p.add_argument("--parent-type", default="page",
+                   choices=("page", "database"),
+                   help="whether --parent-id is a page or a database")
+    p.add_argument("--properties", required=True,
+                   help='JSON object of Notion API properties, e.g. \'{"title": {"title": [{"text": {"content": "Note"}}]}}\'')
+    p.add_argument("--confirm", default=None)
+    p.set_defaults(func=cmd_page_create)
+
+    p = sub.add_parser("block-append",
+                       help="append blocks to a page/block (needs --confirm)")
+    p.add_argument("--block-id", required=True,
+                   help="page or block ID to append under")
+    p.add_argument("--blocks", required=True,
+                   help="JSON array of Notion block objects")
+    p.add_argument("--confirm", default=None)
+    p.set_defaults(func=cmd_block_append)
+
+    p = sub.add_parser("page-update",
+                       help="update a page's properties (needs --confirm)")
+    p.add_argument("--id", required=True, help="page ID")
+    p.add_argument("--properties", required=True,
+                   help="JSON object of Notion API properties to set")
+    p.add_argument("--confirm", default=None)
+    p.set_defaults(func=cmd_page_update)
 
     args = parser.parse_args()
     args.func(args)
