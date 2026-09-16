@@ -241,6 +241,16 @@
     "category": "Notes & docs"
   },
   {
+    "id": "coinbase",
+    "name": "Coinbase",
+    "tagline": "Read-only Coinbase Exchange account balances and history. No orders, transfers, or converts.",
+    "auth": "Coinbase Exchange API key (per-user; create with View/read-only permissions; collected as api_key/passphrase/signing_key via the secure credential flow)",
+    "hosts": [
+      "api.exchange.coinbase.com"
+    ],
+    "category": "Other"
+  },
+  {
     "id": "deepgram",
     "name": "Deepgram",
     "tagline": "Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text.",
@@ -331,6 +341,16 @@
       "api.dub.co"
     ],
     "category": "Marketing"
+  },
+  {
+    "id": "ecobee",
+    "name": "ecobee",
+    "tagline": "Thermostat runtime history and energy reports, plus temperature holds with confirmation.",
+    "auth": "ecobee OAuth 2.0 (per-user PIN flow; self-serve developer app in ecobee portal; smartRead for reads, smartWrite for holds)",
+    "hosts": [
+      "api.ecobee.com"
+    ],
+    "category": "Other"
   },
   {
     "id": "ecovacs",
@@ -486,6 +506,16 @@
       "gitlab.com"
     ],
     "category": "Developer & Infra"
+  },
+  {
+    "id": "google-analytics",
+    "name": "Google Analytics",
+    "tagline": "Query GA4 property reports: dimensions, metrics, realtime activity.",
+    "auth": "Google OAuth 2.0 (per-user) or service account; Analytics Data API enabled in Google Cloud Console",
+    "hosts": [
+      "analyticsdata.googleapis.com"
+    ],
+    "category": "Other"
   },
   {
     "id": "google-nest",
@@ -880,6 +910,17 @@
     "category": "Creator"
   },
   {
+    "id": "paypal",
+    "name": "PayPal",
+    "tagline": "Check PayPal balances and search transactions read-only. No payments, payouts, or transfers.",
+    "auth": "PayPal REST app (per-user; OAuth2 client credentials via developer.paypal.com dashboard)",
+    "hosts": [
+      "api-m.paypal.com",
+      "api-m.sandbox.paypal.com"
+    ],
+    "category": "Other"
+  },
+  {
     "id": "perplexity",
     "name": "Perplexity",
     "tagline": "Ask questions with citations, search the web.",
@@ -918,6 +959,17 @@
       "{company}.pipedrive.com"
     ],
     "category": "Sales & CRM"
+  },
+  {
+    "id": "plaid",
+    "name": "Plaid",
+    "tagline": "Sync bank transactions and check account balances through Plaid.",
+    "auth": "Plaid client_id + secret (per-user; dashboard.plaid.com; Sandbox instant, Production needs Plaid approval) plus the user's own Plaid Link access_token per call",
+    "hosts": [
+      "sandbox.plaid.com",
+      "production.plaid.com"
+    ],
+    "category": "Other"
   },
   {
     "id": "plain",

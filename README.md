@@ -1,7 +1,7 @@
 # Muse Connectors
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Connectors](https://img.shields.io/badge/connectors-150-blue)](https://museconnectors.link/)
+[![Connectors](https://img.shields.io/badge/connectors-155-blue)](https://museconnectors.link/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![GitHub stars](https://img.shields.io/github/stars/bluman1/muse-connectors?style=social)](https://github.com/bluman1/muse-connectors/stargazers)
 
@@ -24,7 +24,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ## Catalog
 
-All 150 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
+All 155 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
 
 | Connector | What it does |
 |---|---|
@@ -52,6 +52,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Cloudflare](https://museconnectors.link/#cloudflare) | List your Cloudflare zones and read DNS records. Read-only. |
 | [Cloudinary](https://museconnectors.link/#cloudinary) | Manage media on Cloudinary through the Upload and Admin APIs: upload images and videos, list and inspect assets, update metadata and tags, delete assets, and check plan usage (credits, storage, bandwidth, transformations). |
 | [Coda](https://museconnectors.link/#coda) | List docs, read tables and rows, add rows. Your docs as a database. |
+| [Coinbase](https://museconnectors.link/#coinbase) | Read-only Coinbase Exchange account balances and history. No orders, transfers, or converts. |
 | [Deepgram](https://museconnectors.link/#deepgram) | Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text. |
 | [DeepL](https://museconnectors.link/#deepl) | Translate text between 30+ languages, check usage. |
 | [DeepSeek](https://museconnectors.link/#deepseek) | Chat with DeepSeek's models and check account balance: OpenAI-compatible chat completions with thinking mode, model listing, and balance lookup via the official API. |
@@ -61,6 +62,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Discord](https://museconnectors.link/#discord) | Read servers and channels, send messages and DMs. |
 | [DocuSign](https://museconnectors.link/#docusign) | Draft and send signature envelopes (demo environment by default), check envelope status, and download signed documents. |
 | [Dub](https://museconnectors.link/#dub) | Create short links, read analytics, track conversions. |
+| [ecobee](https://museconnectors.link/#ecobee) | Thermostat runtime history and energy reports, plus temperature holds with confirmation. |
 | [Ecovacs](https://museconnectors.link/#ecovacs) | Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum. |
 | [Elai](https://museconnectors.link/#elai) | Build AI avatar presenter videos with Elai: list available avatars, inspect videos and their render status, submit renders, and poll until a render finishes. Reach for this when the user wants a talking-head video generated from a script or slide deck. |
 | [ElevenLabs](https://museconnectors.link/#elevenlabs) | Check ElevenLabs subscription usage, list voices, and generate text-to-speech audio (TTS needs --confirm, spends characters). |
@@ -76,6 +78,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Gemini (media generation)](https://museconnectors.link/#gemini) | Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing. |
 | [GitHub](https://museconnectors.link/#github) | View your profile, list repos, list open issues, and create issues. |
 | [GitLab](https://museconnectors.link/#gitlab) | Your GitLab user, projects, open merge requests, and issue creation. |
+| [Google Analytics](https://museconnectors.link/#google-analytics) | Query GA4 property reports: dimensions, metrics, realtime activity. |
 | [Google Nest](https://museconnectors.link/#google-nest) | Read traits and execute commands on Google Nest devices through the Smart Device Management (SDM) API: thermostats (mode, setpoints, ambient readings), cameras and doorbells (events, live-stream generation). Use it when the user asks about their Nest thermostat, wants to change heating/cooling, or wants camera/doorbell state. Thermostat commands start or stop real HVAC, so they are confirmation-gated (see Operating Rules). |
 | [Gumroad](https://museconnectors.link/#gumroad) | View your Gumroad products and sales. Read-only by design. |
 | [HeyGen](https://museconnectors.link/#heygen) | HeyGen avatar and talking-head video: prompt-to-video agent, multi-scene avatar video, status polling, avatar and voice lists. |
@@ -115,10 +118,12 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Oura](https://museconnectors.link/#oura) | Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2. |
 | [Paddle](https://museconnectors.link/#paddle) | View Paddle transactions and customers. Read-only by design. |
 | [Patreon](https://museconnectors.link/#patreon) | Read Patreon campaigns, members, tiers, and identity (read-only). |
+| [PayPal](https://museconnectors.link/#paypal) | Check PayPal balances and search transactions read-only. No payments, payouts, or transfers. |
 | [Perplexity](https://museconnectors.link/#perplexity) | Ask questions with citations, search the web. |
 | [Pexels](https://museconnectors.link/#pexels) | Search Pexels' royalty-free stock library: find photos and videos by keyword, browse curated/trending photos and popular videos, look up a single photo or video, and read collection contents. The Pexels API is read-only, so this connector cannot change anything. |
 | [Philips Hue](https://museconnectors.link/#philips-hue) | Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors. |
 | [Pipedrive](https://museconnectors.link/#pipedrive) | List deals and contacts, create deals. CRM for your pipeline. |
+| [Plaid](https://museconnectors.link/#plaid) | Sync bank transactions and check account balances through Plaid. |
 | [Plain](https://museconnectors.link/#plain) | Find customers, manage support threads. |
 | [PlayHT](https://museconnectors.link/#playht) | Generate spoken audio from text with PlayHT voices, browse stock and cloned voices, and create instant voice clones. Reach for this when the user wants narration or voiceovers, a voice library lookup, or a voice cloned from a sample. |
 | [Podbean](https://museconnectors.link/#podbean) | Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector. |

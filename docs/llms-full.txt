@@ -1,6 +1,6 @@
 # Muse Connectors
 
-150 open-source, auditable connector skills for Muse (Meta's personal AI agent).
+155 open-source, auditable connector skills for Muse (Meta's personal AI agent).
 Each connector installs with one pasted prompt. Every file it installs is public and auditable.
 
 ## How an agent installs a connector
@@ -168,6 +168,12 @@ Auth: personal API token (per-user)
 Allowed hosts: coda.io
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/coda/SKILL.md
 
+# Coinbase (coinbase)
+Read-only Coinbase Exchange account balances and history. No orders, transfers, or converts.
+Auth: Coinbase Exchange API key (per-user; create with View/read-only permissions; collected as api_key/passphrase/signing_key via the secure credential flow)
+Allowed hosts: api.exchange.coinbase.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/coinbase/SKILL.md
+
 # Deepgram (deepgram)
 Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text.
 Auth: API key via the secure credential flow
@@ -221,6 +227,12 @@ Create short links, read analytics, track conversions.
 Auth: API key (per-workspace)
 Allowed hosts: api.dub.co
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/dub/SKILL.md
+
+# ecobee (ecobee)
+Thermostat runtime history and energy reports, plus temperature holds with confirmation.
+Auth: ecobee OAuth 2.0 (per-user PIN flow; self-serve developer app in ecobee portal; smartRead for reads, smartWrite for holds)
+Allowed hosts: api.ecobee.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ecobee/SKILL.md
 
 # Ecovacs (ecovacs)
 Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum.
@@ -311,6 +323,12 @@ Your GitLab user, projects, open merge requests, and issue creation.
 Auth: personal access token (per-user, gitlab.com → Preferences → Access Tokens; `read_api` for reads, `api` to create issues)
 Allowed hosts: gitlab.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/gitlab/SKILL.md
+
+# Google Analytics (google-analytics)
+Query GA4 property reports: dimensions, metrics, realtime activity.
+Auth: Google OAuth 2.0 (per-user) or service account; Analytics Data API enabled in Google Cloud Console
+Allowed hosts: analyticsdata.googleapis.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/google-analytics/SKILL.md
 
 # Google Nest (google-nest)
 Read traits and execute commands on Google Nest devices through the Smart Device Management (SDM) API: thermostats (mode, setpoints, ambient readings), cameras and doorbells (events, live-stream generation). Use it when the user asks about their Nest thermostat, wants to change heating/cooling, or wants camera/doorbell state. Thermostat commands start or stop real HVAC, so they are confirmation-gated (see Operating Rules).
@@ -546,6 +564,12 @@ Auth: Creator's Access Token via the secure credential flow
 Allowed hosts: www.patreon.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/patreon/SKILL.md
 
+# PayPal (paypal)
+Check PayPal balances and search transactions read-only. No payments, payouts, or transfers.
+Auth: PayPal REST app (per-user; OAuth2 client credentials via developer.paypal.com dashboard)
+Allowed hosts: api-m.paypal.com, api-m.sandbox.paypal.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/paypal/SKILL.md
+
 # Perplexity (perplexity)
 Ask questions with citations, search the web.
 Auth: API key (per-user)
@@ -569,6 +593,12 @@ List deals and contacts, create deals. CRM for your pipeline.
 Auth: personal API token (per-user) + company subdomain
 Allowed hosts: {company}.pipedrive.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/pipedrive/SKILL.md
+
+# Plaid (plaid)
+Sync bank transactions and check account balances through Plaid.
+Auth: Plaid client_id + secret (per-user; dashboard.plaid.com; Sandbox instant, Production needs Plaid approval) plus the user's own Plaid Link access_token per call
+Allowed hosts: sandbox.plaid.com, production.plaid.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/plaid/SKILL.md
 
 # Plain (plain)
 Find customers, manage support threads.
