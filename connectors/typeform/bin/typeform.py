@@ -8,11 +8,13 @@ token via the bundled dynamic_credentials helper. The real token never
 touches this script: the runtime swaps the surrogate on approved egress,
 only to api.typeform.com.
 
-Webhook writes (webhook-create, webhook-delete) require an exact
+Writes (form-create, webhook-create, webhook-delete) require an exact
 --confirm string echoed by the CLI, on every call.
 HONESTY NOTE: endpoint paths are taken from Typeform's public developer
 docs and have not been verified in a live flow. In particular the webhook
-create path (PUT /forms/{form_id}/webhooks/{tag}) is provisional.
+create path (PUT /forms/{form_id}/webhooks/{tag}) and the create-form
+body shape ({"type", "title", "fields"}) are provisional; if form-create
+rejects the body, check Typeform's current docs for the required shape.
 """
 from __future__ import annotations
 
@@ -148,6 +150,35 @@ def cmd_webhooks_list(args):
                       for w in result], indent=2))
 
 
+def cmd_form_create(args):
+    try:
+        fields = json.loads(args.fields_json)
+    except json.JSONDecodeError as exc:
+        sys.exit(f"error: --fields-json is not valid JSON: {exc}")
+    if not isinstance(fields, list) or not fields:
+        sys.exit("error: --fields-json must be a non-empty JSON array of "
+                 "field objects")
+    for f in fields:
+        if not isinstance(f, dict) or "title" not in f or "type" not in f:
+            sys.exit("error: every field needs at least a title and a type, "
+                     f"got: {f!r}")
+    expected = f'create form "{args.title}" with {len(fields)} field(s)'
+    need_confirm(
+        args, expected,
+        f"creating a new Typeform titled {args.title!r} with "
+        f"{len(fields)} field(s).")
+    # The "type" key ("form" or "quiz") is what public docs/examples show
+    # on create-form bodies; kept as a flag because it is not certain the
+    # API requires it or which values are accepted.
+    result = call("POST", "/forms",
+                  {"type": args.type, "title": args.title,
+                   "fields": fields})
+    print(json.dumps({"ok": True, "form_id": result.get("id"),
+                      "title": result.get("title"),
+                      "url": (result.get("_links") or {}).get("display")},
+                     indent=2))
+
+
 def cmd_webhook_create(args):
     expected = (f"create webhook {args.tag} on form {args.form_id} "
                 f"for {args.url}")
@@ -196,6 +227,23 @@ def main():
     p.add_argument("--since", default=None,
                    help="only responses after this ISO timestamp")
     p.set_defaults(func=cmd_responses)
+
+    p = sub.add_parser("form-create",
+                       help="create a new form (needs --confirm)")
+    p.add_argument("--title", required=True)
+    p.add_argument("--fields-json", required=True,
+                   help='JSON array of field objects, e.g. '
+                        '\'[{"title": "Your name", "type": "short_text", '
+                        '"validations": {"required": true}}, '
+                        '{"title": "Rate us", "type": "rating", '
+                        '"properties": {"steps": 5}}]\' '
+                        '(field types: short_text, long_text, multiple_choice, '
+                        'dropdown, email, number, yes_no, opinion_scale, '
+                        'rating, statement, contact_info, ...)')
+    p.add_argument("--type", default="form", choices=("form", "quiz"),
+                   help="form type (default: form)")
+    p.add_argument("--confirm", default=None)
+    p.set_defaults(func=cmd_form_create)
 
     p = sub.add_parser("webhooks-list", help="list a form's webhooks")
     p.add_argument("--form-id", required=True)
