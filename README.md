@@ -29,7 +29,7 @@ Read channels, post messages, search history, list users. The most-requested wor
 Copy, paste to your Muse:
 
 ```
-Install this connector: https://raw.githubusercontent.com/USERNAME/muse-connectors/main/connectors/slack/SKILL.md
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/slack/SKILL.md
 You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
 2. Save them under ~/workspace/skills/slack/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
