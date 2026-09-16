@@ -2,9 +2,7 @@ name: audit
 on:
   push:
     branches: [main]
-    paths: ['connectors/**', 'tools/audit.sh']
   pull_request:
-    paths: ['connectors/**', 'tools/audit.sh']
 permissions:
   contents: read
 jobs:
