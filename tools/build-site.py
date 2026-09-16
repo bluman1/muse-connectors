@@ -673,6 +673,41 @@ def build_og_image(count):
         return
     import math
 
+    FONTS_DIR = ROOT / "tools" / "fonts"
+    OPTIMISTIC = {
+        "display_bd": "Optimistic_Display_W_Bd",
+        "display_md": "Optimistic_Display_W_Md",
+        "text_rg": "Optimistic_Text_W_Rg",
+        "text_bd": "Optimistic_Text_W_Bd",
+    }
+    OPT_URL = ("https://about.fb.com/wp-content/themes/fbcorp/"
+               "fonts/optimistic/")
+
+    def ensure_optimistic():
+        """Fetch Meta's Optimistic webfonts (the typeface of the Muse
+        announcement page) and convert to TTF for PIL. Cached under
+        tools/fonts/, which is gitignored so the proprietary binaries
+        never land in the public repo."""
+        try:
+            FONTS_DIR.mkdir(exist_ok=True)
+            paths = {}
+            for key, name in OPTIMISTIC.items():
+                ttf = FONTS_DIR / f"{name}.ttf"
+                if not ttf.exists():
+                    import urllib.request
+                    woff2 = FONTS_DIR / f"{name}.woff2"
+                    urllib.request.urlretrieve(OPT_URL + name + ".woff2",
+                                               woff2)
+                    from fontTools.ttLib import TTFont
+                    f = TTFont(str(woff2))
+                    f.flavor = None
+                    f.save(str(ttf))
+                paths[key] = str(ttf)
+            return paths
+        except Exception as e:
+            print(f"warning: could not fetch Optimistic fonts ({e})")
+            return None
+
     def find_font(bold):
         candidates = [
             "/usr/share/fonts/truetype/dejavu/"
@@ -685,10 +720,19 @@ def build_og_image(count):
                 return c
         return None
 
-    fb_path, fr_path = find_font(True), find_font(False)
-    if not fb_path or not fr_path:
-        print("warning: no suitable fonts found, skipping og-image.png")
-        return
+    opt = ensure_optimistic()
+    if opt:
+        f_display_bd = opt["display_bd"]
+        f_display_md = opt["display_md"]
+        f_text_rg = opt["text_rg"]
+        f_text_bd = opt["text_bd"]
+    else:
+        fb, fr = find_font(True), find_font(False)
+        if not fb or not fr:
+            print("warning: no suitable fonts found, skipping og-image.png")
+            return
+        f_display_bd = f_display_md = f_text_bd = fb
+        f_text_rg = fr
     avatar_src = ROOT / "docs" / "avatar" / "hatch.jpg"
     if not avatar_src.exists():
         print("warning: docs/avatar/hatch.jpg missing, skipping og-image.png")
@@ -735,32 +779,35 @@ def build_og_image(count):
     right = 1140
     wordmark = "Muse Connectors"
     draw_at(x, 108, wordmark,
-            ImageFont.truetype(fb_path, size_for(wordmark, right - x, fb_path)),
+            ImageFont.truetype(f_display_bd,
+                               size_for(wordmark, right - x, f_display_bd)),
             TITLE_C)
 
     # hero number with stacked label
     num = str(count)
-    num_font = ImageFont.truetype(fb_path, 168)
+    num_font = ImageFont.truetype(f_display_bd, 168)
     num_w = d.textlength(num, font=num_font)
     draw_at(x, 196, num, num_font, BLUE)
     lx = x + num_w + 28
-    lab_font = ImageFont.truetype(fr_path,
-                                  size_for("open-source", right - lx, fr_path))
+    lab_font = ImageFont.truetype(f_display_md,
+                                  size_for("open-source", right - lx,
+                                           f_display_md))
     draw_at(lx, 218, "open-source", lab_font, BODY_C)
     draw_at(lx, 278, "connectors", lab_font, BODY_C)
 
     tag1 = "Auditable connector skills for Muse."
     draw_at(x, 408, tag1,
-            ImageFont.truetype(fr_path, size_for(tag1, right - x, fr_path)),
+            ImageFont.truetype(f_text_rg, size_for(tag1, right - x, f_text_rg)),
             BODY_C)
     tag2 = "One pasted prompt installs each in your Muse."
     draw_at(x, 456, tag2,
-            ImageFont.truetype(fr_path, size_for(tag2, right - x, fr_path)),
+            ImageFont.truetype(f_text_rg, size_for(tag2, right - x, f_text_rg)),
             BODY_C)
     d.rectangle((x, 516, x + 150, 522), fill=BLUE)
     url = "museconnectors.link"
     draw_at(x, 534, url,
-            ImageFont.truetype(fb_path, size_for(url, right - x, fb_path)),
+            ImageFont.truetype(f_display_md,
+                               size_for(url, right - x, f_display_md)),
             BLUE)
 
     out = ROOT / "docs" / "og-image.png"
