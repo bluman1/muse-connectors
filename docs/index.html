@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>muse-connectors: auditable connector skills for Muse</title>
 <meta name="description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="avatar/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="muse-connectors">
 <meta property="og:title" content="muse-connectors: auditable connector skills for Muse">
@@ -37,7 +37,22 @@
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
   .brandrow { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-  .brandrow svg { flex-shrink: 0; }
+  .avatar-orbit { position: relative; width: 64px; height: 64px; flex-shrink: 0; }
+  .avatar-orbit video {
+    width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--accent); display: block; background: #fff;
+  }
+  .avatar-orbit .ring { position: absolute; inset: -8px; animation: spin 14s linear infinite; }
+  .avatar-orbit .ring i {
+    position: absolute; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--accent);
+  }
+  .avatar-orbit .ring i:nth-child(1) { top: 0; left: 50%; margin-left: -4px; }
+  .avatar-orbit .ring i:nth-child(2) { top: 50%; right: 0; margin-top: -4px; }
+  .avatar-orbit .ring i:nth-child(3) { bottom: 0; left: 50%; margin-left: -4px; }
+  .avatar-orbit .ring i:nth-child(4) { top: 50%; left: 0; margin-top: -4px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .avatar-orbit .ring { animation: none; } }
   header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
   header h1 .muse { color: var(--accent); }
   header h1 .dim { color: var(--muted); font-weight: 400; }
@@ -127,18 +142,10 @@
 <div class="wrap">
   <header>
     <div class="brandrow">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="mark" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#58a6ff"/>
-            <stop offset="1" stop-color="#1f6feb"/>
-          </linearGradient>
-        </defs>
-        <rect width="48" height="48" rx="12" fill="url(#mark)"/>
-        <circle cx="15" cy="24" r="4.5" fill="#fff"/>
-        <circle cx="33" cy="24" r="4.5" fill="#fff"/>
-        <path d="M19.5 24h9" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-      </svg>
+      <div class="avatar-orbit" aria-hidden="true">
+        <video src="avatar/hatch.mp4" autoplay loop muted playsinline></video>
+        <span class="ring"><i></i><i></i><i></i><i></i></span>
+      </div>
       <h1><span class="muse">muse</span>-connectors <span class="dim">/ catalog</span></h1>
     </div>
     <p>Open-source, auditable connector skills for Muse. Pick one, copy its install prompt, paste it to your Muse: it downloads the skill, verifies it, and walks you through connecting your own account. Every file is public in <a href="https://github.com/bluman1/muse-connectors">the repo</a>, and no skill ever sees your credentials.</p>
