@@ -478,6 +478,7 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
       <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">One-paste install</a>
       <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">Add a connector</a>
       <a class="flink" href="https://github.com/bluman1/muse-connectors/issues/new">Report an issue</a>
+      <a class="flink" href="/llms.txt">llms.txt</a>
     </div>
   </footer>
 </div>
@@ -821,6 +822,49 @@ def build_og_image(count):
     print(f"wrote {out} ({count} connectors)")
 
 
+def build_llms_txt(connectors):
+    short = [
+        "# Muse Connectors",
+        "",
+        f"{len(connectors)} open-source, auditable connector skills for Muse (Meta's personal AI agent).",
+        "Each connector installs with one pasted prompt. Every file it installs is public and auditable.",
+        "",
+        "## How an agent installs a connector",
+        "",
+        "1. Fetch the connector's SKILL.md from its raw GitHub URL:",
+        "   https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/<slug>/SKILL.md",
+        "2. Read its `## Files` manifest and download every listed file from the same directory,",
+        "   preserving paths. Compile any bin/*.py with python3 -m py_compile.",
+        "3. Follow the skill's `## Auth` section using your own secure credential flow.",
+        "   Never paste raw API keys or secrets into chat.",
+        "4. Run the skill's status check and report what the connector can now do.",
+        "",
+        "## Full catalog",
+        "",
+        "See llms-full.txt for the complete list with per-connector install URLs,",
+        "or browse https://museconnectors.link/",
+        "",
+        "## Contributing",
+        "",
+        "https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md",
+        "",
+    ]
+    full = short + ["## Connectors", ""]
+    for c in connectors:
+        full += [
+            f"# {c['name']} ({c['id']})",
+            c["tagline"],
+            f"Auth: {c['auth']}",
+            f"Allowed hosts: {', '.join(c['hosts'])}",
+            f"Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/{c['id']}/SKILL.md",
+            "",
+        ]
+    docs = ROOT / "docs"
+    (docs / "llms.txt").write_text("\n".join(short))
+    (docs / "llms-full.txt").write_text("\n".join(full))
+    print(f"wrote llms.txt + llms-full.txt ({len(connectors)} connectors)")
+
+
 def main():
     readme = (ROOT / "README.md").read_text()
     connectors = []
@@ -849,6 +893,15 @@ def main():
     print(f"wrote {out} ({len(connectors)} connectors)")
     print(f"wrote {docs / 'index.html'}")
     build_og_image(len(connectors))
+    build_llms_txt(connectors)
+    # keep the connectors-count badge in README in sync
+    rp = ROOT / "README.md"
+    badge_txt = rp.read_text()
+    badge_new = re.sub(r"badge/connectors-\d+-blue",
+                       f"badge/connectors-{len(connectors)}-blue", badge_txt)
+    if badge_new != badge_txt:
+        rp.write_text(badge_new)
+        print("updated connectors badge in README.md")
 
 
 if __name__ == "__main__":

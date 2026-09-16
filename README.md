@@ -1,5 +1,10 @@
 # muse-connectors
 
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Connectors](https://img.shields.io/badge/connectors-150-blue)](https://museconnectors.link/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/bluman1/muse-connectors?style=social)](https://github.com/bluman1/muse-connectors/stargazers)
+
 Open-source, auditable connector skills for Muse. Each connector is a skill any Muse can install with **one pasted prompt**: and every file it installs is right here for anyone to audit.
 
 ## Install any connector in one paste

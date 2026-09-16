@@ -1,0 +1,23 @@
+# Muse Connectors
+
+150 open-source, auditable connector skills for Muse (Meta's personal AI agent).
+Each connector installs with one pasted prompt. Every file it installs is public and auditable.
+
+## How an agent installs a connector
+
+1. Fetch the connector's SKILL.md from its raw GitHub URL:
+   https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/<slug>/SKILL.md
+2. Read its `## Files` manifest and download every listed file from the same directory,
+   preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section using your own secure credential flow.
+   Never paste raw API keys or secrets into chat.
+4. Run the skill's status check and report what the connector can now do.
+
+## Full catalog
+
+See llms-full.txt for the complete list with per-connector install URLs,
+or browse https://museconnectors.link/
+
+## Contributing
+
+https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md
