@@ -35,4 +35,4 @@ bin/digitalocean.py domains    # domains (name)
 - bin/digitalocean.py
 
 ## Maturity
-🧪 Draft — written from DigitalOcean's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from DigitalOcean's public API docs; not yet live-tested end-to-end.

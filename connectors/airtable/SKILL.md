@@ -23,7 +23,7 @@ Use `bases` first to resolve a base name to its id (`app...`). The table name is
 
 ## Auth
 - Provider id: `airtable` (credential is collected as `custom.airtable`)
-- Collection: personal access token via the secure credential flow (`credentials.request_api_access`) — create one at airtable.com/create/tokens with scopes `data.records:read`, `data.records:write`, and `schema.bases:read`, and grant it access to the bases you want to use
+- Collection: personal access token via the secure credential flow (`credentials.request_api_access`): create one at airtable.com/create/tokens with scopes `data.records:read`, `data.records:write`, and `schema.bases:read`, and grant it access to the bases you want to use
 - Connect placement: `bearer_header`
 - Allowed hosts: `api.airtable.com`
 - Status check: `bin/airtable.py bases` (a successful list proves the token works)
@@ -38,4 +38,4 @@ Use `bases` first to resolve a base name to its id (`app...`). The table name is
 - bin/airtable.py
 
 ## Maturity
-🧪 Draft — written from Airtable's public Web API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Airtable's public Web API docs; not yet live-tested end-to-end.

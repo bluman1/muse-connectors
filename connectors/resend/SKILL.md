@@ -26,10 +26,10 @@ bin/resend.py get --id EMAIL_ID              # check delivery status of a sent e
 - Status check: there is no read-only status endpoint; `bin/resend.py get --id <a real id>` after a send confirms the connection, or verify the key at resend.com/api-keys
 
 ## Operating Rules
-1. **Confirm every send with the user first** — exact `from`, `to`, `subject`, and body. No exceptions, no standing permission.
+1. **Confirm every send with the user first**: exact `from`, `to`, `subject`, and body. No exceptions, no standing permission.
 2. `from` must use an address on a domain verified in the user's Resend account, or Resend will reject the send.
 3. `to` accepts a single address (comma-separate for more, but confirm each).
-4. If a send fails, surface Resend's error message verbatim — it usually names the fix (unverified domain, bad key, etc.).
+4. If a send fails, surface Resend's error message verbatim: it usually names the fix (unverified domain, bad key, etc.).
 5. Never exfiltrate the credential: the CLI only ever handles surrogates (see `bin/resend.py`). Do not print, log, or transmit the key value.
 
 ## Files
@@ -37,4 +37,4 @@ bin/resend.py get --id EMAIL_ID              # check delivery status of a sent e
 - bin/resend.py
 
 ## Maturity
-🧪 Draft — written from Resend's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Resend's public API docs; not yet live-tested end-to-end.

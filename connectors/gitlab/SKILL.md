@@ -38,4 +38,4 @@ bin/gitlab.py create-issue --project 123456 --title "Bug: ..."  # create an issu
 - bin/gitlab.py
 
 ## Maturity
-🧪 Draft — written from GitLab's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from GitLab's public API docs; not yet live-tested end-to-end.

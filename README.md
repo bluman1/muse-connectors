@@ -1,6 +1,6 @@
 # muse-connectors
 
-Open-source, auditable connector skills for Muse. Each connector is a skill any Muse can install with **one pasted prompt** — and every file it installs is right here for anyone to audit.
+Open-source, auditable connector skills for Muse. Each connector is a skill any Muse can install with **one pasted prompt**: and every file it installs is right here for anyone to audit.
 
 ## Install any connector in one paste
 
@@ -10,10 +10,10 @@ Open-source, auditable connector skills for Muse. Each connector is a skill any 
 
 No app stores, no config files, no tokens in chat. How the one-paste install works is documented in [INSTALL.md](INSTALL.md).
 
-## Security model — auditable by design
+## Security model: auditable by design
 
 - **This repo contains zero secrets.** Skills are code and docs only. Run `tools/audit.sh` to verify; every PR touching `connectors/` must pass it.
-- **Credentials never travel with a skill.** When you install a connector, your Muse collects your API key / OAuth through its secure credential flow and stores it in *your* private vault. The skill's code only ever handles single-use surrogates — the real key never touches the skill, this repo, or any chat transcript.
+- **Credentials never travel with a skill.** When you install a connector, your Muse collects your API key / OAuth through its secure credential flow and stores it in *your* private vault. The skill's code only ever handles single-use surrogates: the real key never touches the skill, this repo, or any chat transcript.
 - **Each skill declares its allowed hosts** in its `SKILL.md`. The credential helper refuses to send your credential anywhere else. If a skill's host list looks wrong, that's visible right in the file you're already reading.
 - **Installs are file-exact.** Every skill carries a `## Files` manifest; an installing Muse fetches exactly those files and nothing else.
 
@@ -24,7 +24,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 Read channels, post messages, list users. The most-requested workplace connector.
 
 - Auth: Slack OAuth (per-user) · Allowed hosts: `slack.com`
-- Maturity: 🧪 Draft — written from Slack's public Web API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Slack's public Web API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -43,7 +43,7 @@ Never ask me for raw API keys or secrets in chat.
 View your profile, list repos, list open issues, and create issues.
 
 - Auth: personal access token (classic, scopes `repo` + `read:user`, per-user) · Allowed hosts: `api.github.com`
-- Maturity: 🧪 Draft — written from GitHub's public REST API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from GitHub's public REST API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -62,7 +62,7 @@ Never ask me for raw API keys or secrets in chat.
 Search pages and databases, read page properties, query databases (read-only).
 
 - Auth: Notion internal integration token (per-user, created at notion.so/my-integrations) · Allowed hosts: `api.notion.com`
-- Maturity: 🧪 Draft — written from Notion's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Notion's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -81,7 +81,7 @@ Never ask me for raw API keys or secrets in chat.
 View your assigned issues and create issues, over Linear's GraphQL API.
 
 - Auth: Linear personal API key (per-user, linear.app/settings/api) · Allowed hosts: `api.linear.app`
-- Maturity: 🧪 Draft — written from Linear's public GraphQL API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Linear's public GraphQL API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -100,7 +100,7 @@ Never ask me for raw API keys or secrets in chat.
 Send email through Resend and check delivery status. Every send is confirmed with you first.
 
 - Auth: Resend API key (per-user, resend.com/api-keys) · Allowed hosts: `api.resend.com`
-- Maturity: 🧪 Draft — written from Resend's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Resend's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -119,7 +119,7 @@ Never ask me for raw API keys or secrets in chat.
 Send messages and read updates through your own Telegram bot. Bots can't message users who haven't started them first.
 
 - Auth: Telegram bot token from @BotFather (per-user, single token) · Allowed hosts: `api.telegram.org`
-- Maturity: 🧪 Draft — written from Telegram's public Bot API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Telegram's public Bot API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -138,7 +138,7 @@ Never ask me for raw API keys or secrets in chat.
 List and search contacts, create contacts, and list deals in your HubSpot CRM.
 
 - Auth: HubSpot private app token (per-user, HubSpot Settings → Integrations → Private Apps) · Allowed hosts: `api.hubapi.com`
-- Maturity: 🧪 Draft — written from HubSpot's public CRM API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from HubSpot's public CRM API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -157,7 +157,7 @@ Never ask me for raw API keys or secrets in chat.
 View your assigned Asana tasks and create new ones.
 
 - Auth: Asana personal access token (per-user, My Settings → Apps → Manage Developer Apps) · Allowed hosts: `app.asana.com`
-- Maturity: 🧪 Draft — written from Asana's public REST API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Asana's public REST API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -176,7 +176,7 @@ Never ask me for raw API keys or secrets in chat.
 Fast, clean web research: one call returns an AI answer plus ranked sources with snippets. Read-only.
 
 - Auth: Tavily API key (per-user, tavily.com) · Allowed hosts: `api.tavily.com`
-- Maturity: 🧪 Draft — written from Tavily's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Tavily's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -192,10 +192,10 @@ Never ask me for raw API keys or secrets in chat.
 
 ### Stripe 🧪 Draft
 
-Read-only Stripe visibility: balance, recent charges, customers. No write commands ship — expanding to writes is a deliberate v2.
+Read-only Stripe visibility: balance, recent charges, customers. No write commands ship: expanding to writes is a deliberate v2.
 
 - Auth: Stripe restricted API key (per-user, Dashboard → Developers → API keys; read-only permissions suffice) · Allowed hosts: `api.stripe.com`
-- Maturity: 🧪 Draft — written from Stripe's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Stripe's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -216,7 +216,7 @@ Never ask me for raw API keys or secrets in chat.
 Check your OpenAI API access and list the models your key can use. Read-only.
 
 - Auth: OpenAI API key (per-user, platform.openai.com/api-keys) · Allowed hosts: `api.openai.com`
-- Maturity: 🧪 Draft — written from OpenAI's public API reference, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from OpenAI's public API reference, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -235,7 +235,7 @@ Never ask me for raw API keys or secrets in chat.
 Check your Anthropic API access and list available Claude models. Read-only.
 
 - Auth: Anthropic API key (per-user, console.anthropic.com) · Allowed hosts: `api.anthropic.com`
-- Maturity: 🧪 Draft — written from Anthropic's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Anthropic's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -254,7 +254,7 @@ Never ask me for raw API keys or secrets in chat.
 Verify your Hugging Face account and search the model hub. Read-only.
 
 - Auth: Hugging Face user access token (per-user, huggingface.co/settings/tokens) · Allowed hosts: `huggingface.co`
-- Maturity: 🧪 Draft — written from Hugging Face's public Hub API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Hugging Face's public Hub API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -273,7 +273,7 @@ Never ask me for raw API keys or secrets in chat.
 Check your ElevenLabs subscription usage and list available voices. Read-only.
 
 - Auth: ElevenLabs API key (per-user, elevenlabs.io/app/settings/api-keys) · Allowed hosts: `api.elevenlabs.io`
-- Maturity: 🧪 Draft — written from ElevenLabs' public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from ElevenLabs' public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -292,7 +292,7 @@ Never ask me for raw API keys or secrets in chat.
 Look up your Figma user and read file metadata. Read-only.
 
 - Auth: Figma personal access token (per-user, Figma Settings → Personal access tokens) · Allowed hosts: `api.figma.com`
-- Maturity: 🧪 Draft — written from Figma's public REST API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Figma's public REST API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -311,7 +311,7 @@ Never ask me for raw API keys or secrets in chat.
 Read entity states and call services on your Home Assistant instance. Service calls are confirmed first.
 
 - Auth: Home Assistant long-lived access token (per-user, Profile → Security → Long-Lived Access Tokens) · Allowed hosts: your instance host (declared at connect time)
-- Maturity: 🧪 Draft — written from Home Assistant's public REST API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Home Assistant's public REST API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -330,7 +330,7 @@ Never ask me for raw API keys or secrets in chat.
 List Front inboxes and read conversations in your shared inbox. Read-only.
 
 - Auth: Front API token (per-user, Front Settings → API) · Allowed hosts: `api2.frontapp.com`
-- Maturity: 🧪 Draft — written from Front's public Core API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Front's public Core API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -349,7 +349,7 @@ Never ask me for raw API keys or secrets in chat.
 List tasks, create tasks, and mark them done in Todoist.
 
 - Auth: Todoist API token (per-user, Settings → Integrations → Developer) · Allowed hosts: `api.todoist.com`
-- Maturity: 🧪 Draft — written from Todoist's public REST API v1 docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Todoist's public REST API v1 docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -368,7 +368,7 @@ Never ask me for raw API keys or secrets in chat.
 List ClickUp workspaces and tasks, and create tasks.
 
 - Auth: ClickUp personal API token (per-user, Settings → Apps → API Token) · Allowed hosts: `api.clickup.com`
-- Maturity: 🧪 Draft — written from ClickUp's public API v2 docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from ClickUp's public API v2 docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -387,7 +387,7 @@ Never ask me for raw API keys or secrets in chat.
 List Airtable bases, read table records, and add records.
 
 - Auth: Airtable personal access token (per-user, airtable.com/create/tokens) · Allowed hosts: `api.airtable.com`
-- Maturity: 🧪 Draft — written from Airtable's public Web API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Airtable's public Web API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -406,7 +406,7 @@ Never ask me for raw API keys or secrets in chat.
 See your Vercel account, projects, and recent deployments.
 
 - Auth: personal token (per-user, vercel.com/account/tokens) · Allowed hosts: `api.vercel.com`
-- Maturity: 🧪 Draft — written from Vercel's public REST API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Vercel's public REST API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -425,7 +425,7 @@ Never ask me for raw API keys or secrets in chat.
 List your Cloudflare zones and read DNS records. Read-only.
 
 - Auth: API token (per-user, dash.cloudflare.com → My Profile → API Tokens; needs Zone:Read + DNS:Read) · Allowed hosts: `api.cloudflare.com`
-- Maturity: 🧪 Draft — written from Cloudflare's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Cloudflare's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -444,7 +444,7 @@ Never ask me for raw API keys or secrets in chat.
 List tables and query rows in your Supabase Postgres database. Read-only.
 
 - Auth: service_role key (per-user, project Settings → API) · Allowed hosts: `<ref>.supabase.co`
-- Maturity: 🧪 Draft — written from Supabase's public PostgREST docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Supabase's public PostgREST docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -463,7 +463,7 @@ Never ask me for raw API keys or secrets in chat.
 List your Render services and recent deploys. Read-only.
 
 - Auth: API key (per-user, dashboard.render.com → Account Settings → API Keys) · Allowed hosts: `api.render.com`
-- Maturity: 🧪 Draft — written from Render's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Render's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -482,7 +482,7 @@ Never ask me for raw API keys or secrets in chat.
 List your DigitalOcean droplets and domains. Read-only.
 
 - Auth: personal access token (per-user, cloud.digitalocean.com → API) · Allowed hosts: `api.digitalocean.com`
-- Maturity: 🧪 Draft — written from DigitalOcean's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from DigitalOcean's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -501,7 +501,7 @@ Never ask me for raw API keys or secrets in chat.
 List your Netlify sites and recent deploys. Read-only.
 
 - Auth: personal access token (per-user, app.netlify.com → User settings → Applications) · Allowed hosts: `api.netlify.com`
-- Maturity: 🧪 Draft — written from Netlify's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Netlify's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -520,7 +520,7 @@ Never ask me for raw API keys or secrets in chat.
 Your GitLab user, projects, open merge requests, and issue creation.
 
 - Auth: personal access token (per-user, gitlab.com → Preferences → Access Tokens; `read_api` for reads, `api` to create issues) · Allowed hosts: `gitlab.com`
-- Maturity: 🧪 Draft — written from GitLab's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from GitLab's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -539,7 +539,7 @@ Never ask me for raw API keys or secrets in chat.
 List organizations and projects, triage unresolved issues from the last 24h. Read-only.
 
 - Auth: auth token (per-user, sentry.io → Settings → Auth Tokens) · Allowed hosts: `sentry.io`
-- Maturity: 🧪 Draft — written from Sentry's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Sentry's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -558,7 +558,7 @@ Never ask me for raw API keys or secrets in chat.
 Your PostHog user, projects, and saved insights. Read-only.
 
 - Auth: personal API key (per-user, PostHog Settings → Personal API keys; starts `phx_`) · Allowed hosts: configurable, default `app.posthog.com`
-- Maturity: 🧪 Draft — written from PostHog's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from PostHog's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -577,7 +577,7 @@ Never ask me for raw API keys or secrets in chat.
 Browse the model catalog with per-token pricing; check your key usage. Read-only.
 
 - Auth: API key (per-user, openrouter.ai/keys) · Allowed hosts: `openrouter.ai`
-- Maturity: 🧪 Draft — written from OpenRouter's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from OpenRouter's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -595,7 +595,7 @@ Never ask me for raw API keys or secrets in chat.
 
 View Mercury bank accounts and transactions. Read-only by design.
 - Auth: Mercury API token (per-user, app.mercury.com → Settings → API Tokens; a Read-Only token suffices) · Allowed hosts: `api.mercury.com`
-- Maturity: 🧪 Draft — written from Mercury's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Mercury's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -613,7 +613,7 @@ Never ask me for raw API keys or secrets in chat.
 
 View Wise profiles and multi-currency balances. Read-only by design.
 - Auth: Wise personal API token (per-user, wise.com → Settings → API tokens) · Allowed hosts: `api.wise.com`
-- Maturity: 🧪 Draft — written from Wise's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Wise's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -631,7 +631,7 @@ Never ask me for raw API keys or secrets in chat.
 
 View open orders, products, and customers in your Shopify store. Read-only by design.
 - Auth: Shopify Admin API access token (per-user, Shopify admin → Apps → Develop apps → custom app; scopes read_orders/read_products/read_customers) · Allowed hosts: `<your-shop>.myshopify.com` (your store's domain)
-- Maturity: 🧪 Draft — written from Shopify's Admin API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Shopify's Admin API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -649,7 +649,7 @@ Never ask me for raw API keys or secrets in chat.
 
 View your Gumroad products and sales. Read-only by design.
 - Auth: Gumroad access token (per-user, app.gumroad.com → Settings → Advanced) · Allowed hosts: `api.gumroad.com`
-- Maturity: 🧪 Draft — written from Gumroad's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Gumroad's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -667,7 +667,7 @@ Never ask me for raw API keys or secrets in chat.
 
 View Paddle transactions and customers. Read-only by design.
 - Auth: Paddle API key (per-user, Paddle Dashboard → Developer Tools → Authentication) · Allowed hosts: `api.paddle.com`
-- Maturity: 🧪 Draft — written from Paddle's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Paddle's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -685,7 +685,7 @@ Never ask me for raw API keys or secrets in chat.
 
 Neural web search with page text: one call returns ranked sources with snippets. Read-only.
 - Auth: Exa API key (per-user, dashboard.exa.ai/api-keys) · Allowed hosts: `api.exa.ai`
-- Maturity: 🧪 Draft — written from Exa's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Exa's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -703,7 +703,7 @@ Never ask me for raw API keys or secrets in chat.
 
 Independent web search from Brave's own index. Read-only.
 - Auth: Brave Search API key (per-user, brave.com/search/api; free tier 2,000 queries/month) · Allowed hosts: `api.search.brave.com`
-- Maturity: 🧪 Draft — written from Brave Search's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Brave Search's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -721,7 +721,7 @@ Never ask me for raw API keys or secrets in chat.
 
 Current weather and 5-day forecast for any city. Read-only.
 - Auth: OpenWeatherMap API key (per-user, openweathermap.org → API keys; free tier fine) · Allowed hosts: `api.openweathermap.org`
-- Maturity: 🧪 Draft — written from OpenWeatherMap's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from OpenWeatherMap's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -739,7 +739,7 @@ Never ask me for raw API keys or secrets in chat.
 
 Stock quotes and daily price history. Read-only.
 - Auth: Alpha Vantage API key (per-user, alphavantage.co/support/#api-key; free tier 25 calls/day) · Allowed hosts: `www.alphavantage.co`
-- Maturity: 🧪 Draft — written from Alpha Vantage's public API docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from Alpha Vantage's public API docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -757,7 +757,7 @@ Never ask me for raw API keys or secrets in chat.
 
 Top headlines and full-text news search. Read-only.
 - Auth: NewsAPI key (per-user, newsapi.org/register; free tier 100 requests/day) · Allowed hosts: `newsapi.org`
-- Maturity: 🧪 Draft — written from NewsAPI's public docs, not yet live-tested end-to-end.
+- Maturity: 🧪 Draft: written from NewsAPI's public docs, not yet live-tested end-to-end.
 
 Copy, paste to your Muse:
 
@@ -771,14 +771,204 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 Never ask me for raw API keys or secrets in chat.
 ```
 
+### Coda 🧪 Draft
+
+List docs, read tables and rows, add rows. Your docs as a database.
+
+- Auth: personal API token (per-user) · Allowed hosts: `coda.io`
+- Maturity: 🧪 Draft: written from Coda's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/coda/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/coda/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Readwise 🧪 Draft
+
+Search your highlights and books, save new highlights.
+
+- Auth: access token (per-user, from readwise.io/access_token) · Allowed hosts: `readwise.io`
+- Maturity: 🧪 Draft: written from Readwise's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/readwise/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/readwise/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Monday 🧪 Draft
+
+List boards, read items, create items. Project management over GraphQL.
+
+- Auth: personal API token (per-user) · Allowed hosts: `api.monday.com`
+- Maturity: 🧪 Draft: written from monday.com's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/monday/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/monday/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Cal.com 🧪 Draft
+
+List bookings and event types, create bookings.
+
+- Auth: personal API key (per-user, keys start `cal_` / `cal_live_`) · Allowed hosts: `api.cal.com`
+- Maturity: 🧪 Draft: written from Cal.com's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/calcom/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/calcom/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### DeepL 🧪 Draft
+
+Translate text between 30+ languages, check usage.
+
+- Auth: API key (per-user; free keys use api-free.deepl.com, paid keys use api.deepl.com) · Allowed hosts: `api-free.deepl.com`, `api.deepl.com`
+- Maturity: 🧪 Draft: written from DeepL's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/deepl/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/deepl/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### SendGrid 🧪 Draft
+
+Send email, check stats and profile.
+
+- Auth: API key (per-user) · Allowed hosts: `api.sendgrid.com`
+- Maturity: 🧪 Draft: written from SendGrid's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/sendgrid/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/sendgrid/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Postmark 🧪 Draft
+
+Send transactional email, check delivery and bounces.
+
+- Auth: server API token (per-user) · Allowed hosts: `api.postmarkapp.com`
+- Maturity: 🧪 Draft: written from Postmark's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/postmark/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/postmark/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Beehiiv 🧪 Draft
+
+List publications, subscribers, and posts; add subscribers.
+
+- Auth: API key (per-user; Scale plan or higher) · Allowed hosts: `api.beehiiv.com`
+- Maturity: 🧪 Draft: written from beehiiv's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/beehiiv/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/beehiiv/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Pipedrive 🧪 Draft
+
+List deals and contacts, create deals. CRM for your pipeline.
+
+- Auth: personal API token (per-user) + company subdomain · Allowed hosts: `{company}.pipedrive.com`
+- Maturity: 🧪 Draft: written from Pipedrive's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/pipedrive/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/pipedrive/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Apollo 🧪 Draft
+
+Search B2B contacts and enrich people and companies.
+
+- Auth: API key (per-user; Professional plan or higher) · Allowed hosts: `api.apollo.io`
+- Maturity: 🧪 Draft: written from Apollo's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/apollo/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/apollo/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
 *To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*
 
 ## Maturity badges
 
-- ✅ **Live-tested** — installed from a raw URL on a fresh Muse and exercised against the real API.
-- 🧪 **Draft** — written from the provider's public docs, awaiting a live test.
-- 👥 **Community** — contributed by the community; review the code before connecting.
+- ✅ **Live-tested**: installed from a raw URL on a fresh Muse and exercised against the real API.
+- 🧪 **Draft**: written from the provider's public docs, awaiting a live test.
+- 👥 **Community**: contributed by the community; review the code before connecting.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT: see [LICENSE](LICENSE).

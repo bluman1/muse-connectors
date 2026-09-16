@@ -33,6 +33,17 @@
     "category": "AI"
   },
   {
+    "id": "apollo",
+    "name": "Apollo",
+    "tagline": "Search B2B contacts and enrich people and companies.",
+    "auth": "API key (per-user; Professional plan or higher)",
+    "hosts": [
+      "api.apollo.io"
+    ],
+    "maturity": "draft",
+    "category": "Sales"
+  },
+  {
     "id": "asana",
     "name": "Asana",
     "tagline": "View your assigned Asana tasks and create new ones.",
@@ -44,6 +55,17 @@
     "category": "Project management"
   },
   {
+    "id": "beehiiv",
+    "name": "Beehiiv",
+    "tagline": "List publications, subscribers, and posts; add subscribers.",
+    "auth": "API key (per-user; Scale plan or higher)",
+    "hosts": [
+      "api.beehiiv.com"
+    ],
+    "maturity": "draft",
+    "category": "Newsletters"
+  },
+  {
     "id": "brave-search",
     "name": "Brave Search",
     "tagline": "Independent web search from Brave's own index. Read-only.",
@@ -53,6 +75,17 @@
     ],
     "maturity": "draft",
     "category": "Research"
+  },
+  {
+    "id": "calcom",
+    "name": "Cal.com",
+    "tagline": "List bookings and event types, create bookings.",
+    "auth": "personal API key (per-user, keys start `cal_` / `cal_live_`)",
+    "hosts": [
+      "api.cal.com"
+    ],
+    "maturity": "draft",
+    "category": "Scheduling"
   },
   {
     "id": "clickup",
@@ -75,6 +108,29 @@
     ],
     "maturity": "draft",
     "category": "Cloud & hosting"
+  },
+  {
+    "id": "coda",
+    "name": "Coda",
+    "tagline": "List docs, read tables and rows, add rows. Your docs as a database.",
+    "auth": "personal API token (per-user)",
+    "hosts": [
+      "coda.io"
+    ],
+    "maturity": "draft",
+    "category": "Notes & docs"
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "tagline": "Translate text between 30+ languages, check usage.",
+    "auth": "API key (per-user; free keys use api-free.deepl.com, paid keys use api.deepl.com)",
+    "hosts": [
+      "api-free.deepl.com",
+      "api.deepl.com"
+    ],
+    "maturity": "draft",
+    "category": "Translation"
   },
   {
     "id": "digitalocean",
@@ -220,6 +276,17 @@
     "category": "Finance"
   },
   {
+    "id": "monday",
+    "name": "Monday",
+    "tagline": "List boards, read items, create items. Project management over GraphQL.",
+    "auth": "personal API token (per-user)",
+    "hosts": [
+      "api.monday.com"
+    ],
+    "maturity": "draft",
+    "category": "Project management"
+  },
+  {
     "id": "netlify",
     "name": "Netlify",
     "tagline": "List your Netlify sites and recent deploys. Read-only.",
@@ -297,6 +364,17 @@
     "category": "E-commerce"
   },
   {
+    "id": "pipedrive",
+    "name": "Pipedrive",
+    "tagline": "List deals and contacts, create deals. CRM for your pipeline.",
+    "auth": "personal API token (per-user) + company subdomain",
+    "hosts": [
+      "{company}.pipedrive.com"
+    ],
+    "maturity": "draft",
+    "category": "CRM"
+  },
+  {
     "id": "posthog",
     "name": "PostHog",
     "tagline": "Your PostHog user, projects, and saved insights. Read-only.",
@@ -307,6 +385,28 @@
     ],
     "maturity": "draft",
     "category": "Monitoring"
+  },
+  {
+    "id": "postmark",
+    "name": "Postmark",
+    "tagline": "Send transactional email, check delivery and bounces.",
+    "auth": "server API token (per-user)",
+    "hosts": [
+      "api.postmarkapp.com"
+    ],
+    "maturity": "draft",
+    "category": "Email"
+  },
+  {
+    "id": "readwise",
+    "name": "Readwise",
+    "tagline": "Search your highlights and books, save new highlights.",
+    "auth": "access token (per-user, from readwise.io/access_token)",
+    "hosts": [
+      "readwise.io"
+    ],
+    "maturity": "draft",
+    "category": "Reading"
   },
   {
     "id": "render",
@@ -326,6 +426,17 @@
     "auth": "Resend API key (per-user, resend.com/api-keys)",
     "hosts": [
       "api.resend.com"
+    ],
+    "maturity": "draft",
+    "category": "Email"
+  },
+  {
+    "id": "sendgrid",
+    "name": "SendGrid",
+    "tagline": "Send email, check stats and profile.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.sendgrid.com"
     ],
     "maturity": "draft",
     "category": "Email"
@@ -355,7 +466,7 @@
   {
     "id": "slack",
     "name": "Slack",
-    "tagline": "Read channels, post messages, search history, list users. The most-requested workplace connector.",
+    "tagline": "Read channels, post messages, list users. The most-requested workplace connector.",
     "auth": "Slack OAuth (per-user)",
     "hosts": [
       "slack.com"
@@ -366,7 +477,7 @@
   {
     "id": "stripe",
     "name": "Stripe",
-    "tagline": "Read-only Stripe visibility: balance, recent charges, customers. No write commands ship \u2014 expanding to writes is a deliberate v2.",
+    "tagline": "Read-only Stripe visibility: balance, recent charges, customers. No write commands ship: expanding to writes is a deliberate v2.",
     "auth": "Stripe restricted API key (per-user, Dashboard \u2192 Developers \u2192 API keys; read-only permissions suffice)",
     "hosts": [
       "api.stripe.com"

@@ -21,7 +21,7 @@ bin/hubspot.py deals --limit 20                                     # list deals
 
 ## Auth
 - Provider id: `hubspot` (credential is collected as `custom.hubspot`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — a HubSpot private app token (HubSpot Settings → Integrations → Private Apps), pasted once into the hosted form
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): a HubSpot private app token (HubSpot Settings → Integrations → Private Apps), pasted once into the hosted form
 - Enable these scopes on the private app: `crm.objects.contacts.read`, `crm.objects.contacts.write`, `crm.objects.companies.read`, `crm.objects.deals.read`, `crm.objects.deals.write`
 - Allowed hosts: `api.hubapi.com`
 - Status check: `bin/hubspot.py contacts --limit 1` (must return a contacts list)
@@ -37,4 +37,4 @@ bin/hubspot.py deals --limit 20                                     # list deals
 - bin/hubspot.py
 
 ## Maturity
-🧪 Draft — written from HubSpot's public CRM API docs; not yet live-tested end-to-end.
+🧪 Draft: written from HubSpot's public CRM API docs; not yet live-tested end-to-end.

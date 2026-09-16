@@ -38,4 +38,4 @@ Use `accounts` first to resolve an account ID for `transactions`.
 - bin/mercury.py
 
 ## Maturity
-🧪 Draft — written from Mercury's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Mercury's public API docs; not yet live-tested end-to-end.

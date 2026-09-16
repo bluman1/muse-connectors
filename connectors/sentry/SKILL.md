@@ -36,4 +36,4 @@ bin/sentry.py issues --org myorg     # unresolved issues, last 24h, by frequency
 - bin/sentry.py
 
 ## Maturity
-🧪 Draft — written from Sentry's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Sentry's public API docs; not yet live-tested end-to-end.

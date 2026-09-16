@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # OpenAI
 
 ## Purpose
-Check that the user's OpenAI API key works and list the models available to it (id and owner). Read-only by design: this skill never spends credits — it ships no completion, image, or other billable calls.
+Check that the user's OpenAI API key works and list the models available to it (id and owner). Read-only by design: this skill never spends credits; it ships no completion, image, or other billable calls.
 
 ## Tooling
 All commands go through `bin/openai.py`:
@@ -18,7 +18,7 @@ bin/openai.py models    # list models available to this key (id, owned_by), trun
 
 ## Auth
 - Provider id: `openai` (credential is collected as `custom.openai`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — create one at platform.openai.com/api-keys
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): create one at platform.openai.com/api-keys
 - Connect placement: `bearer_header`
 - Allowed hosts: `api.openai.com`
 - Status check: `bin/openai.py models` (a successful list proves the key works)
@@ -32,4 +32,4 @@ bin/openai.py models    # list models available to this key (id, owned_by), trun
 - bin/openai.py
 
 ## Maturity
-🧪 Draft — written from OpenAI's public API reference; not yet live-tested end-to-end.
+🧪 Draft: written from OpenAI's public API reference; not yet live-tested end-to-end.

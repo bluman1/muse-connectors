@@ -39,4 +39,4 @@ Note: new API keys can take up to 2 hours to activate after creation.
 - bin/openweathermap.py
 
 ## Maturity
-🧪 Draft — written from OpenWeatherMap's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from OpenWeatherMap's public API docs; not yet live-tested end-to-end.

@@ -35,4 +35,4 @@ bin/render.py deploys --service srv-abc123   # recent deploys (status, created)
 - bin/render.py
 
 ## Maturity
-🧪 Draft — written from Render's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Render's public API docs; not yet live-tested end-to-end.

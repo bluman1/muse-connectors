@@ -36,4 +36,4 @@ bin/exa.py search --query "Moltbook API" --limit 5   # search with page text
 - bin/exa.py
 
 ## Maturity
-🧪 Draft — written from Exa's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Exa's public API docs; not yet live-tested end-to-end.

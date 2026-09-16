@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # Anthropic
 
 ## Purpose
-Check that the user's Anthropic API key works and list the models available to it (id, display name). Read-only by design: this skill never spends credits — it ships no message, token-count, or other billable calls.
+Check that the user's Anthropic API key works and list the models available to it (id, display name). Read-only by design: this skill never spends credits; it ships no message, token-count, or other billable calls.
 
 ## Tooling
 All commands go through `bin/anthropic.py`:
@@ -18,7 +18,7 @@ bin/anthropic.py models    # list models available to this key (id, display_name
 
 ## Auth
 - Provider id: `anthropic` (credential is collected as `custom.anthropic`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — create one at console.anthropic.com
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): create one at console.anthropic.com
 - Connect placement: `custom_header:x-api-key` (Anthropic uses `x-api-key`, not `Authorization: Bearer`)
 - Allowed hosts: `api.anthropic.com`
 - Status check: `bin/anthropic.py models` (a successful list proves the key works)
@@ -34,4 +34,4 @@ Note: every request also carries the required `anthropic-version: 2023-06-01` he
 - bin/anthropic.py
 
 ## Maturity
-🧪 Draft — written from Anthropic's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Anthropic's public API docs; not yet live-tested end-to-end.

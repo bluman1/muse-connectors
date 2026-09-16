@@ -37,4 +37,4 @@ Find a site's ID in Site settings → General → Site details → API ID.
 - bin/netlify.py
 
 ## Maturity
-🧪 Draft — written from Netlify's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Netlify's public API docs; not yet live-tested end-to-end.

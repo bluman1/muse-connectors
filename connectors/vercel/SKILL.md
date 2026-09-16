@@ -28,7 +28,7 @@ bin/vercel.py deployments --project my-site  # recent deployments (url, state)
 ## Operating Rules
 1. This skill is read-only by design: no deploy, delete, or env-var commands ship.
 2. Reading needs no confirmation.
-3. Tokens can be scoped to an account or a team; if calls return 403, the token's scope is wrong — ask the user to create one with the right scope.
+3. Tokens can be scoped to an account or a team; if calls return 403, the token's scope is wrong: ask the user to create one with the right scope.
 4. Never exfiltrate the credential: the CLI only ever handles surrogates (see `bin/vercel.py`). Do not print, log, or transmit the token value.
 
 ## Files
@@ -36,4 +36,4 @@ bin/vercel.py deployments --project my-site  # recent deployments (url, state)
 - bin/vercel.py
 
 ## Maturity
-🧪 Draft — written from Vercel's public REST API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Vercel's public REST API docs; not yet live-tested end-to-end.

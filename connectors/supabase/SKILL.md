@@ -27,7 +27,7 @@ bin/supabase.py --project-ref abcdefghijklmnopqrst query --table profiles --limi
 ## Operating Rules
 1. This skill is read-only by design: no insert, update, or delete commands ship.
 2. Reading needs no confirmation.
-3. The service_role key bypasses Row Level Security — it sees everything in the database. Only share row contents the user asked for, and never paste them into public channels.
+3. The service_role key bypasses Row Level Security: it sees everything in the database. Only share row contents the user asked for, and never paste them into public channels.
 4. Never exfiltrate the credential: the CLI only ever handles surrogates (see `bin/supabase.py`). Do not print, log, or transmit the key value.
 
 ## Files
@@ -35,4 +35,4 @@ bin/supabase.py --project-ref abcdefghijklmnopqrst query --table profiles --limi
 - bin/supabase.py
 
 ## Maturity
-🧪 Draft — written from Supabase's public PostgREST docs; not yet live-tested end-to-end.
+🧪 Draft: written from Supabase's public PostgREST docs; not yet live-tested end-to-end.

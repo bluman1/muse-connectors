@@ -36,4 +36,4 @@ bin/paddle.py customers --limit 10    # customers
 - bin/paddle.py
 
 ## Maturity
-🧪 Draft — written from Paddle's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Paddle's public API docs; not yet live-tested end-to-end.

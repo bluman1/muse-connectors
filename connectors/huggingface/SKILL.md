@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # Hugging Face
 
 ## Purpose
-Verify the user's Hugging Face account and search the public model hub: whoami (name, email), and model search by keyword with likes/downloads. Read-only — no repo writes ship in this skill.
+Verify the user's Hugging Face account and search the public model hub: whoami (name, email), and model search by keyword with likes/downloads. Read-only: no repo writes ship in this skill.
 
 ## Tooling
 All commands go through `bin/huggingface.py`:
@@ -19,7 +19,7 @@ bin/huggingface.py models --query llama      # search the model hub (id, likes, 
 
 ## Auth
 - Provider id: `huggingface` (credential is collected as `custom.huggingface`)
-- Collection: user access token via the secure credential flow (`credentials.request_api_access`) — create one at huggingface.co/settings/tokens (a fine-grained read token is enough)
+- Collection: user access token via the secure credential flow (`credentials.request_api_access`): create one at huggingface.co/settings/tokens (a fine-grained read token is enough)
 - Connect placement: `bearer_header`
 - Allowed hosts: `huggingface.co`
 - Status check: `bin/huggingface.py me` (a successful whoami proves the token works)
@@ -33,4 +33,4 @@ bin/huggingface.py models --query llama      # search the model hub (id, likes, 
 - bin/huggingface.py
 
 ## Maturity
-🧪 Draft — written from Hugging Face's public Hub API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Hugging Face's public Hub API docs; not yet live-tested end-to-end.

@@ -35,4 +35,4 @@ bin/brave-search.py search --query "AI agent frameworks" --count 10   # web sear
 - bin/brave-search.py
 
 ## Maturity
-🧪 Draft — written from Brave Search's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Brave Search's public API docs; not yet live-tested end-to-end.

@@ -37,4 +37,4 @@ Use `profiles` first to resolve a profile ID for `balances`.
 - bin/wise.py
 
 ## Maturity
-🧪 Draft — written from Wise's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Wise's public API docs; not yet live-tested end-to-end.

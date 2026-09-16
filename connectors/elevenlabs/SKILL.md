@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # ElevenLabs
 
 ## Purpose
-Check the user's ElevenLabs account: subscription tier and character usage (`me`), and the voices available on the account (`voices`). Read-only — no text-to-speech or other quota-consuming calls ship in this skill.
+Check the user's ElevenLabs account: subscription tier and character usage (`me`), and the voices available on the account (`voices`). Read-only: no text-to-speech or other quota-consuming calls ship in this skill.
 
 ## Tooling
 All commands go through `bin/elevenlabs.py`:
@@ -19,7 +19,7 @@ bin/elevenlabs.py voices    # available voices (name, category)
 
 ## Auth
 - Provider id: `elevenlabs` (credential is collected as `custom.elevenlabs`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — create one at elevenlabs.io/app/settings/api-keys
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): create one at elevenlabs.io/app/settings/api-keys
 - Connect placement: `custom_header:xi-api-key` (ElevenLabs uses `xi-api-key`, not `Authorization: Bearer`)
 - Allowed hosts: `api.elevenlabs.io`
 - Status check: `bin/elevenlabs.py me` (a successful response proves the key works)
@@ -33,4 +33,4 @@ bin/elevenlabs.py voices    # available voices (name, category)
 - bin/elevenlabs.py
 
 ## Maturity
-🧪 Draft — written from ElevenLabs' public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from ElevenLabs' public API docs; not yet live-tested end-to-end.

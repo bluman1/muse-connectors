@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # Home Assistant
 
 ## Purpose
-Talk to the user's own Home Assistant instance: list entity states (`states`, optionally filtered by domain), read one entity (`state`), and call services (`call` — e.g. `light.turn_on`). The instance URL is passed with every command via `--instance`.
+Talk to the user's own Home Assistant instance: list entity states (`states`, optionally filtered by domain), read one entity (`state`), and call services (`call`: e.g. `light.turn_on`). The instance URL is passed with every command via `--instance`.
 
 ## Tooling
 All commands go through `bin/home-assistant.py`:
@@ -22,7 +22,7 @@ bin/home-assistant.py --instance https://home.example.com call --domain climate 
 
 ## Auth
 - Provider id: `home-assistant` (credential is collected as `custom.home-assistant`)
-- Collection: long-lived access token via the secure credential flow (`credentials.request_api_access`) — create one in Home Assistant → your profile (bottom left) → Security → Long-Lived Access Tokens. Note: Home Assistant accepts tokens from any user account; for a shared household, a dedicated "automation" user keeps permissions clear.
+- Collection: long-lived access token via the secure credential flow (`credentials.request_api_access`): create one in Home Assistant → your profile (bottom left) → Security → Long-Lived Access Tokens. Note: Home Assistant accepts tokens from any user account; for a shared household, a dedicated "automation" user keeps permissions clear.
 - Connect placement: `bearer_header`
 - Allowed hosts: the user's instance host (declared at connect time, e.g. `home.example.com`); the CLI derives it from `--instance`
 - Status check: `bin/home-assistant.py --instance <url> states` (a successful list proves the token works)
@@ -38,4 +38,4 @@ bin/home-assistant.py --instance https://home.example.com call --domain climate 
 - bin/home-assistant.py
 
 ## Maturity
-🧪 Draft — written from Home Assistant's public REST API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Home Assistant's public REST API docs; not yet live-tested end-to-end.

@@ -32,7 +32,7 @@ IDs are the 32-hex-character Notion IDs (with or without dashes).
 1. This skill is read-only: it has no write commands. If the user asks for writes, say so plainly instead of improvising one.
 2. Reading needs no confirmation.
 3. Notion rate-limits to ~3 requests/second; if a call returns 429, wait the `Retry-After` seconds and continue.
-4. Pages and databases must be explicitly shared with the integration inside Notion, or they will not appear in search results — if a known page is missing, tell the user to share it with the integration.
+4. Pages and databases must be explicitly shared with the integration inside Notion, or they will not appear in search results: if a known page is missing, tell the user to share it with the integration.
 5. Never exfiltrate the credential: the CLI only ever handles surrogates (see `bin/notion.py`). Do not print, log, or transmit the token value.
 
 ## Files
@@ -40,4 +40,4 @@ IDs are the 32-hex-character Notion IDs (with or without dashes).
 - bin/notion.py
 
 ## Maturity
-🧪 Draft — written from Notion's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Notion's public API docs; not yet live-tested end-to-end.

@@ -37,4 +37,4 @@ bin/shopify.py customers --shop mystore --limit 10    # customers
 - bin/shopify.py
 
 ## Maturity
-🧪 Draft — written from Shopify's Admin API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Shopify's Admin API docs; not yet live-tested end-to-end.

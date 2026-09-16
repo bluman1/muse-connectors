@@ -31,7 +31,7 @@ Note: NewsAPI also accepts the key in an `X-Api-Key` header, but this connector 
 1. This connector is read-only: it only reads news. It never writes, modifies, or sends anything on the user's behalf.
 2. The `--country` flag takes a 2-letter country code (e.g. `us`, `gb`, `ng`); `headlines` defaults to `us`.
 3. Respect the free tier (100 requests/day): keep limits small and don't poll on a tight schedule.
-4. NewsAPI returns `{"status": "error", ...}` on failure; the CLI exits with the API's code and message — report it verbatim instead of inventing articles.
+4. NewsAPI returns `{"status": "error", ...}` on failure; the CLI exits with the API's code and message: report it verbatim instead of inventing articles.
 5. Never exfiltrate the credential: the CLI only ever handles surrogates. Do not print, log, or transmit the token value.
 
 ## Files
@@ -39,4 +39,4 @@ Note: NewsAPI also accepts the key in an `X-Api-Key` header, but this connector 
 - bin/newsapi.py
 
 ## Maturity
-🧪 Draft — written from NewsAPI's public docs; not yet live-tested end-to-end.
+🧪 Draft: written from NewsAPI's public docs; not yet live-tested end-to-end.

@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # Front
 
 ## Purpose
-Read the user's Front (shared-inbox) account: list inboxes (`inboxes` — name, address) and list conversations in an inbox (`conversations` — subject, status). Read-only — no reply, assign, or other write calls ship in this skill.
+Read the user's Front (shared-inbox) account: list inboxes (`inboxes`: name, address) and list conversations in an inbox (`conversations`: subject, status). Read-only: no reply, assign, or other write calls ship in this skill.
 
 ## Tooling
 All commands go through `bin/front.py`:
@@ -21,7 +21,7 @@ Use `inboxes` first to resolve an inbox name to its id.
 
 ## Auth
 - Provider id: `front` (credential is collected as `custom.front`)
-- Collection: API token via the secure credential flow (`credentials.request_api_access`) — create one in Front → Settings → API (needs API access enabled)
+- Collection: API token via the secure credential flow (`credentials.request_api_access`): create one in Front → Settings → API (needs API access enabled)
 - Connect placement: `bearer_header`
 - Allowed hosts: `api2.frontapp.com`
 - Status check: `bin/front.py inboxes` (a successful list proves the token works)
@@ -35,4 +35,4 @@ Use `inboxes` first to resolve an inbox name to its id.
 - bin/front.py
 
 ## Maturity
-🧪 Draft — written from Front's public Core API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Front's public Core API docs; not yet live-tested end-to-end.

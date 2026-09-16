@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # Todoist
 
 ## Purpose
-Work the user's Todoist: list tasks (`tasks` — content, due date, priority, project), create tasks (`create`), and mark tasks done (`complete`).
+Work the user's Todoist: list tasks (`tasks`: content, due date, priority, project), create tasks (`create`), and mark tasks done (`complete`).
 
 ## Tooling
 All commands go through `bin/todoist.py`:
@@ -22,7 +22,7 @@ Task ids come from `tasks` output.
 
 ## Auth
 - Provider id: `todoist` (credential is collected as `custom.todoist`)
-- Collection: API token via the secure credential flow (`credentials.request_api_access`) — find it in Todoist → Settings → Integrations → Developer
+- Collection: API token via the secure credential flow (`credentials.request_api_access`): find it in Todoist → Settings → Integrations → Developer
 - Connect placement: `bearer_header`
 - Allowed hosts: `api.todoist.com`
 - Status check: `bin/todoist.py tasks` (a successful list proves the token works)
@@ -37,4 +37,4 @@ Task ids come from `tasks` output.
 - bin/todoist.py
 
 ## Maturity
-🧪 Draft — written from Todoist's public REST API v1 docs; not yet live-tested end-to-end.
+🧪 Draft: written from Todoist's public REST API v1 docs; not yet live-tested end-to-end.

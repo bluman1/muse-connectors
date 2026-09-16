@@ -7,7 +7,7 @@ metadata: { "includeInPrompt": true }
 # ClickUp
 
 ## Purpose
-Work the user's ClickUp: list workspaces ("teams") (`teams`), list tasks in a list (`tasks`), and create tasks (`create`). ClickUp's API calls workspaces "teams" — `teams` returns workspaces.
+Work the user's ClickUp: list workspaces ("teams") (`teams`), list tasks in a list (`tasks`), and create tasks (`create`). ClickUp's API calls workspaces "teams": `teams` returns workspaces.
 
 ## Tooling
 All commands go through `bin/clickup.py`:
@@ -22,8 +22,8 @@ List ids come from ClickUp (open a list → the URL contains its numeric id). Us
 
 ## Auth
 - Provider id: `clickup` (credential is collected as `custom.clickup`)
-- Collection: personal API token via the secure credential flow (`credentials.request_api_access`) — create one in ClickUp → avatar → Settings → Apps → API Token (tokens start with `pk_`)
-- Connect placement: `custom_header:Authorization` (ClickUp takes the **raw** token in the `Authorization` header — no `Bearer` prefix)
+- Collection: personal API token via the secure credential flow (`credentials.request_api_access`): create one in ClickUp → avatar → Settings → Apps → API Token (tokens start with `pk_`)
+- Connect placement: `custom_header:Authorization` (ClickUp takes the **raw** token in the `Authorization` header: no `Bearer` prefix)
 - Allowed hosts: `api.clickup.com`
 - Status check: `bin/clickup.py teams` (a successful list proves the token works)
 
@@ -37,4 +37,4 @@ List ids come from ClickUp (open a list → the URL contains its numeric id). Us
 - bin/clickup.py
 
 ## Maturity
-🧪 Draft — written from ClickUp's public API v2 docs; not yet live-tested end-to-end.
+🧪 Draft: written from ClickUp's public API v2 docs; not yet live-tested end-to-end.

@@ -38,4 +38,4 @@ bin/github.py create-issue --repo OWNER/REPO --title "T" \
 - bin/github.py
 
 ## Maturity
-🧪 Draft — written from GitHub's public REST API docs; not yet live-tested end-to-end.
+🧪 Draft: written from GitHub's public REST API docs; not yet live-tested end-to-end.

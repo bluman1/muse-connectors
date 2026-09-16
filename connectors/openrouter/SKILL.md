@@ -35,4 +35,4 @@ bin/openrouter.py key      # your key's label, usage, limit
 - bin/openrouter.py
 
 ## Maturity
-🧪 Draft — written from OpenRouter's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from OpenRouter's public API docs; not yet live-tested end-to-end.

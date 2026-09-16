@@ -23,7 +23,7 @@ bin/asana.py create --name "Ship v2" --workspace-gid 1234567890123456 --notes "x
 
 ## Auth
 - Provider id: `asana` (credential is collected as `custom.asana`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — an Asana personal access token (My Settings → Apps → Manage Developer Apps), pasted once into the hosted form
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): an Asana personal access token (My Settings → Apps → Manage Developer Apps), pasted once into the hosted form
 - Allowed hosts: `app.asana.com`
 - Status check: `bin/asana.py me` (must return the user's `gid` and `name`)
 
@@ -37,4 +37,4 @@ bin/asana.py create --name "Ship v2" --workspace-gid 1234567890123456 --notes "x
 - bin/asana.py
 
 ## Maturity
-🧪 Draft — written from Asana's public REST API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Asana's public REST API docs; not yet live-tested end-to-end.

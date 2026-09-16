@@ -29,7 +29,7 @@ bin/posthog.py --host eu.posthog.com me    # EU-cloud users
 ## Operating Rules
 1. This skill is read-only by design: no insight create/update commands ship.
 2. Reading needs no confirmation.
-3. Use the app/management host (`app.posthog.com`, `us.posthog.com`, `eu.posthog.com`) — never the ingestion host (`us.i.posthog.com` / `eu.i.posthog.com`), which serves a different API.
+3. Use the app/management host (`app.posthog.com`, `us.posthog.com`, `eu.posthog.com`): never the ingestion host (`us.i.posthog.com` / `eu.i.posthog.com`), which serves a different API.
 4. Never exfiltrate the credential: the CLI only ever handles surrogates (see `bin/posthog.py`). Do not print, log, or transmit the key value.
 
 ## Files
@@ -37,4 +37,4 @@ bin/posthog.py --host eu.posthog.com me    # EU-cloud users
 - bin/posthog.py
 
 ## Maturity
-🧪 Draft — written from PostHog's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from PostHog's public API docs; not yet live-tested end-to-end.

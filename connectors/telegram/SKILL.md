@@ -22,7 +22,7 @@ Get a `chat-id` from `updates` output (the `chat_id` of an incoming message), or
 
 ## Auth
 - Provider id: `telegram` (credential is collected as `custom.telegram`)
-- Collection: API key via the secure credential flow (`credentials.request_api_access`) — the bot token from @BotFather, pasted once into the hosted form
+- Collection: API key via the secure credential flow (`credentials.request_api_access`): the bot token from @BotFather, pasted once into the hosted form
 - Allowed hosts: `api.telegram.org`
 - Auth mechanism: the token travels as a URL path segment (`https://api.telegram.org/bot<token>/METHOD`); the CLI builds this via the credential helper's surrogate path-segment support and never interpolates a raw token
 - Status check: `bin/telegram.py me` (must return bot `id` and `username`)
@@ -38,4 +38,4 @@ Get a `chat-id` from `updates` output (the `chat_id` of an incoming message), or
 - bin/telegram.py
 
 ## Maturity
-🧪 Draft — written from Telegram's public Bot API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Telegram's public Bot API docs; not yet live-tested end-to-end.

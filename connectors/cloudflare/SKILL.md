@@ -35,4 +35,4 @@ bin/cloudflare.py dns --zone ZONE_ID    # DNS records for a zone (type, name, co
 - bin/cloudflare.py
 
 ## Maturity
-🧪 Draft — written from Cloudflare's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Cloudflare's public API docs; not yet live-tested end-to-end.

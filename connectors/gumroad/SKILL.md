@@ -36,4 +36,4 @@ bin/gumroad.py sales --limit 20 # recent sales
 - bin/gumroad.py
 
 ## Maturity
-🧪 Draft — written from Gumroad's public API docs; not yet live-tested end-to-end.
+🧪 Draft: written from Gumroad's public API docs; not yet live-tested end-to-end.
