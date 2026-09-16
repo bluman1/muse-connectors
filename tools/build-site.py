@@ -10,6 +10,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+SITE_DOMAIN = "museconnectors.link"
+SITE_URL = f"https://{SITE_DOMAIN}/"
+
 CATEGORIES = {
     # communication
     "slack": "Communication", "telegram": "Communication",
@@ -187,12 +190,12 @@ TEMPLATE = r"""<!DOCTYPE html>
 <meta property="og:site_name" content="Muse Connectors">
 <meta property="og:title" content="Muse Connectors: auditable connector skills for Muse">
 <meta property="og:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
-<meta property="og:url" content="https://bluman1.github.io/muse-connectors/">
-<meta property="og:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
+<meta property="og:url" content="https://museconnectors.link/">
+<meta property="og:image" content="https://museconnectors.link/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Muse Connectors: auditable connector skills for Muse">
 <meta name="twitter:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
-<meta name="twitter:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
+<meta name="twitter:image" content="https://museconnectors.link/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -786,6 +789,7 @@ def main():
     out.write_text(json.dumps(connectors, indent=2) + "\n")
     html = TEMPLATE.replace("__FILTER_ORDER_JSON__", json.dumps(FILTER_ORDER))
     (docs / "index.html").write_text(html)
+    (docs / "CNAME").write_text(SITE_DOMAIN + "\n")
     stray = docs / "media-generation-last-upload-handles.json"
     if stray.exists():
         stray.unlink()
