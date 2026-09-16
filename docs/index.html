@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6fb">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12101a">
 <title>Muse Connectors: auditable connector skills for Muse</title>
 <meta name="description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
 <link rel="icon" type="image/png" href="avatar/favicon.png">
@@ -187,6 +189,26 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
   .cbtns{flex-direction:column}
   .cbtns .btn{width:100%}
   .footer{flex-direction:column;gap:12px;padding:24px 20px;text-align:center}
+}
+/* ---------- dark mode (follows device) ---------- */
+@media (prefers-color-scheme:dark){
+:root{
+  --bg:#12101a; --surface:#1c1928; --code-bg:#16131f; --chip-bg:#29253c;
+  --border:#332e48; --divider:#28243a;
+  --ink:#f1edf8; --body:#b8b2cc; --muted:#918aa9; --faint:#6f6887; --code-text:#dbd5ee;
+  --accent:oklch(0.72 0.16 300); --accent-tint:oklch(0.27 0.06 300); --accent-border:oklch(0.48 0.12 300);
+  --live-text:oklch(0.82 0.1 150); --live-bg:oklch(0.27 0.05 150);
+  --draft-text:oklch(0.84 0.1 80); --draft-bg:oklch(0.29 0.05 80);
+}
+.nav{background:rgba(18,16,26,.9)}
+.navlinks a.btn-repo{background:#f1edf8;color:#12101a}
+.navlinks a.btn-repo:hover{background:#fff;color:#000}
+.hero{background:radial-gradient(1000px 480px at 85% 0%,rgba(126,87,255,.16),transparent 60%),linear-gradient(180deg,#171424,#100d18)}
+.card:hover{border-color:var(--accent-border);box-shadow:0 16px 44px rgba(0,0,0,.45)}
+.chip.active{background:#f1edf8;border-color:#f1edf8;color:#12101a}
+.btn-copy{background:#f1edf8;color:#12101a}
+.btn-copy:hover{background:#fff;color:#000}
+.btn-accent{background:var(--accent);color:#12101a}
 }
 </style>
 </head>
