@@ -22,6 +22,18 @@
     "category": "Finance"
   },
   {
+    "id": "amadeus",
+    "name": "Amadeus",
+    "tagline": "Search travel with Amadeus: flight offers and prices, airport autocomplete, hotel offers, cheapest dates.",
+    "auth": "OAuth 2.0 client credentials via the secure credential flow",
+    "hosts": [
+      "test.api.amadeus.com",
+      "api.amadeus.com"
+    ],
+    "maturity": "draft",
+    "category": "Travel"
+  },
+  {
     "id": "anthropic",
     "name": "Anthropic",
     "tagline": "Check your Anthropic API access and list available Claude models. Read-only.",
@@ -55,6 +67,17 @@
     "category": "Project management"
   },
   {
+    "id": "ashby",
+    "name": "Ashby",
+    "tagline": "Search Ashby public job boards (no key needed) and read/write the Ashby ATS: candidates, jobs, applications.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.ashbyhq.com"
+    ],
+    "maturity": "draft",
+    "category": "Jobs"
+  },
+  {
     "id": "attio",
     "name": "Attio",
     "tagline": "Query CRM records, upsert by matching attribute, add notes and tasks.",
@@ -66,6 +89,17 @@
     "category": "CRM"
   },
   {
+    "id": "beatoven",
+    "name": "Beatoven",
+    "tagline": "Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems.",
+    "auth": "API token via the secure credential flow",
+    "hosts": [
+      "public-api.beatoven.ai` (plus the download host Beatoven's own task response returns)"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
+  },
+  {
     "id": "beehiiv",
     "name": "Beehiiv",
     "tagline": "List publications, subscribers, and posts; add subscribers.",
@@ -75,6 +109,19 @@
     ],
     "maturity": "draft",
     "category": "Newsletters"
+  },
+  {
+    "id": "black-forest-labs",
+    "name": "Black Forest Labs",
+    "tagline": "Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.bfl.ai",
+      "api.eu.bfl.ai",
+      "api.us.bfl.ai"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
   },
   {
     "id": "bluesky",
@@ -99,12 +146,34 @@
     "category": "Research"
   },
   {
+    "id": "buttondown",
+    "name": "Buttondown",
+    "tagline": "Read and write Buttondown: list subscribers and emails, add subscribers, draft emails.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.buttondown.com"
+    ],
+    "maturity": "draft",
+    "category": "Newsletters"
+  },
+  {
     "id": "calcom",
     "name": "Cal.com",
     "tagline": "List bookings and event types, create bookings.",
     "auth": "personal API key (per-user, keys start `cal_` / `cal_live_`)",
     "hosts": [
       "api.cal.com"
+    ],
+    "maturity": "draft",
+    "category": "Scheduling"
+  },
+  {
+    "id": "calendly",
+    "name": "Calendly",
+    "tagline": "Read and manage Calendly: list scheduled events, event types, invitees, and availability schedules; cancel bookings.",
+    "auth": "OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.calendly.com"
     ],
     "maturity": "draft",
     "category": "Scheduling"
@@ -166,6 +235,17 @@
     "category": "Translation"
   },
   {
+    "id": "devto",
+    "name": "Dev.to",
+    "tagline": "Read and write dev.to: own profile, own articles (published, drafts, all), public articles by username, create and update articles with a safe draft default.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "dev.to"
+    ],
+    "maturity": "draft",
+    "category": "Blogging"
+  },
+  {
     "id": "digitalocean",
     "name": "DigitalOcean",
     "tagline": "List your DigitalOcean droplets and domains. Read-only.",
@@ -210,6 +290,17 @@
     "category": "AI"
   },
   {
+    "id": "etsy",
+    "name": "Etsy",
+    "tagline": "Read Etsy shop data: receipts, listings, transactions, payment ledger; create listings.",
+    "auth": "OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "openapi.etsy.com"
+    ],
+    "maturity": "draft",
+    "category": "E-commerce"
+  },
+  {
     "id": "exa",
     "name": "Exa",
     "tagline": "Neural web search with page text: one call returns ranked sources with snippets. Read-only.",
@@ -219,6 +310,19 @@
     ],
     "maturity": "draft",
     "category": "Research"
+  },
+  {
+    "id": "fal-ai",
+    "name": "fal.ai",
+    "tagline": "Generate media with fal.ai: images, video, audio, music on one key. Submit jobs to 100s of models, poll status, fetch results, upload files.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "fal.run",
+      "queue.fal.run",
+      "rest.alpha.fal.ai"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
   },
   {
     "id": "figma",
@@ -265,6 +369,17 @@
     "category": "Support"
   },
   {
+    "id": "gemini",
+    "name": "Gemini",
+    "tagline": "Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "generativelanguage.googleapis.com"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
+  },
+  {
     "id": "github",
     "name": "GitHub",
     "tagline": "View your profile, list repos, list open issues, and create issues.",
@@ -296,6 +411,17 @@
     ],
     "maturity": "draft",
     "category": "E-commerce"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "tagline": "HeyGen avatar and talking-head video: prompt-to-video agent, multi-scene avatar video, status polling, avatar and voice lists.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.heygen.com"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
   },
   {
     "id": "home-assistant",
@@ -331,6 +457,39 @@
     "category": "AI"
   },
   {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "tagline": "Ideogram text-to-image generation with the strongest text rendering in the catalog: generate, edit, remix, upscale, describe, balance.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.ideogram.ai"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
+  },
+  {
+    "id": "kit",
+    "name": "Kit",
+    "tagline": "Read and write Kit (ConvertKit): list subscribers, broadcasts, sequences, tags; draft broadcasts.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.kit.com"
+    ],
+    "maturity": "draft",
+    "category": "Newsletters"
+  },
+  {
+    "id": "kling",
+    "name": "Kling",
+    "tagline": "Kling AI video generation with client-side JWT auth: text-to-video, image-to-video, status polling, clip extend, lip-sync.",
+    "auth": "access key + secret key pair via the secure credential flow",
+    "hosts": [
+      "api.klingai.com"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
+  },
+  {
     "id": "langfuse",
     "name": "Langfuse",
     "tagline": "Query traces and observations, manage prompts and scores.",
@@ -341,6 +500,28 @@
     ],
     "maturity": "draft",
     "category": "AI"
+  },
+  {
+    "id": "lemon-squeezy",
+    "name": "Lemon Squeezy",
+    "tagline": "Read Lemon Squeezy revenue: list orders, subscriptions, customers, products; create checkout links.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.lemonsqueezy.com"
+    ],
+    "maturity": "draft",
+    "category": "E-commerce"
+  },
+  {
+    "id": "letta",
+    "name": "Letta",
+    "tagline": "Work with Letta agent memory: list agents, read core-memory blocks, list or add archival passages, create blocks, message an agent to record memory.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.letta.com"
+    ],
+    "maturity": "draft",
+    "category": "Memory"
   },
   {
     "id": "linear",
@@ -363,6 +544,41 @@
     ],
     "maturity": "draft",
     "category": "Email"
+  },
+  {
+    "id": "luma",
+    "name": "Luma",
+    "tagline": "Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.lumalabs.ai"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
+  },
+  {
+    "id": "mastodon",
+    "name": "Mastodon",
+    "tagline": "Read and write Mastodon: verify the account, list own posts and followers, publish toots with native scheduling, upload media.",
+    "auth": "provider OAuth via the secure credential flow",
+    "hosts": [
+      "your Mastodon instance host",
+      "declared at connect time (the `--host` you pass",
+      "e.g. `https://mastodon.social`; it must start with `http://` or `https://`). The credential is only ever sent to that host."
+    ],
+    "maturity": "draft",
+    "category": "Social"
+  },
+  {
+    "id": "mem0",
+    "name": "Mem0",
+    "tagline": "Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.mem0.ai"
+    ],
+    "maturity": "draft",
+    "category": "Memory"
   },
   {
     "id": "mercury",
@@ -475,6 +691,17 @@
     "category": "Weather"
   },
   {
+    "id": "oura",
+    "name": "Oura",
+    "tagline": "Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2.",
+    "auth": "OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.ouraring.com"
+    ],
+    "maturity": "draft",
+    "category": "Health"
+  },
+  {
     "id": "paddle",
     "name": "Paddle",
     "tagline": "View Paddle transactions and customers. Read-only by design.",
@@ -486,6 +713,17 @@
     "category": "E-commerce"
   },
   {
+    "id": "patreon",
+    "name": "Patreon",
+    "tagline": "Read Patreon campaigns, members, tiers, and identity (read-only).",
+    "auth": "Creator's Access Token via the secure credential flow",
+    "hosts": [
+      "www.patreon.com"
+    ],
+    "maturity": "draft",
+    "category": "Creator"
+  },
+  {
     "id": "perplexity",
     "name": "Perplexity",
     "tagline": "Ask questions with citations, search the web.",
@@ -495,6 +733,17 @@
     ],
     "maturity": "draft",
     "category": "AI"
+  },
+  {
+    "id": "philips-hue",
+    "name": "Philips Hue",
+    "tagline": "Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors.",
+    "auth": "Bridge pairing (local) or OAuth2 (remote)",
+    "hosts": [
+      "derived from `--host` at runtime (the bridge's LAN IP or hostname); the CLI refuses to send the key anywhere else"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
   },
   {
     "id": "pipedrive",
@@ -519,6 +768,18 @@
     "category": "Support"
   },
   {
+    "id": "polar",
+    "name": "Polar",
+    "tagline": "Read Polar orders, subscriptions, products, and customers; create checkouts and refunds.",
+    "auth": "Organization Access Token via the secure credential flow",
+    "hosts": [
+      "api.polar.sh",
+      "sandbox-api.polar.sh"
+    ],
+    "maturity": "draft",
+    "category": "E-commerce"
+  },
+  {
     "id": "posthog",
     "name": "PostHog",
     "tagline": "Your PostHog user, projects, and saved insights. Read-only.",
@@ -540,6 +801,17 @@
     ],
     "maturity": "draft",
     "category": "Email"
+  },
+  {
+    "id": "printful",
+    "name": "Printful",
+    "tagline": "Read Printful products and orders, create orders and mockups.",
+    "auth": "personal access token via the secure credential flow",
+    "hosts": [
+      "api.printful.com"
+    ],
+    "maturity": "draft",
+    "category": "E-commerce"
   },
   {
     "id": "railway",
@@ -595,6 +867,17 @@
     ],
     "maturity": "draft",
     "category": "Email"
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "tagline": "Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync.",
+    "auth": "API secret via the secure credential flow",
+    "hosts": [
+      "api.dev.runwayml.com"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
   },
   {
     "id": "sendgrid",
@@ -663,6 +946,17 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "supermemory",
+    "name": "Supermemory",
+    "tagline": "Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.supermemory.ai"
+    ],
+    "maturity": "draft",
+    "category": "Memory"
+  },
+  {
     "id": "tally",
     "name": "Tally",
     "tagline": "List forms, read submissions, manage form blocks.",
@@ -696,6 +990,17 @@
     "category": "Communication"
   },
   {
+    "id": "ticktick",
+    "name": "TickTick",
+    "tagline": "Read and write TickTick: list projects and tasks, create tasks, complete and delete tasks.",
+    "auth": "OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.ticktick.com"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
     "id": "todoist",
     "name": "Todoist",
     "tagline": "List tasks, create tasks, and mark them done in Todoist.",
@@ -716,6 +1021,17 @@
     ],
     "maturity": "draft",
     "category": "Dev tools"
+  },
+  {
+    "id": "twitch",
+    "name": "Twitch",
+    "tagline": "Read and write Twitch via the Helix API: channel profile, follower stats, live stream status, past videos, channel title and game updates, clip creation.",
+    "auth": "provider OAuth via the secure credential flow",
+    "hosts": [
+      "api.twitch.tv"
+    ],
+    "maturity": "draft",
+    "category": "Creator"
   },
   {
     "id": "upstash",
@@ -762,6 +1078,17 @@
     "category": "Social"
   },
   {
+    "id": "ynab",
+    "name": "YNAB",
+    "tagline": "Read and write YNAB budgets: list budgets, accounts, balances, transactions, and categories; record transactions.",
+    "auth": "OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.ynab.com"
+    ],
+    "maturity": "draft",
+    "category": "Finance"
+  },
+  {
     "id": "youtube",
     "name": "YouTube",
     "tagline": "Look up channels and videos, search (reads only).",
@@ -771,5 +1098,16 @@
     ],
     "maturity": "draft",
     "category": "Video"
+  },
+  {
+    "id": "zep",
+    "name": "Zep",
+    "tagline": "Work with Zep's temporal memory: create users and threads, append messages, read distilled facts and history.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.getzep.com"
+    ],
+    "maturity": "draft",
+    "category": "Memory"
   }
 ]

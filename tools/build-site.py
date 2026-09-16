@@ -51,6 +51,22 @@ CATEGORIES = {
     "calcom": "Scheduling", "deepl": "Translation", "beehiiv": "Newsletters",
     "discord": "Communication",
     "loops": "Email",
+    # batch E: memory
+    "mem0": "Memory", "supermemory": "Memory", "zep": "Memory", "letta": "Memory",
+    # batch E: daily life
+    "ticktick": "Productivity", "ynab": "Finance", "oura": "Health",
+    "philips-hue": "Smart home", "calendly": "Scheduling", "amadeus": "Travel",
+    # batch E: money
+    "buttondown": "Newsletters", "lemon-squeezy": "E-commerce", "polar": "E-commerce",
+    "etsy": "E-commerce", "kit": "Newsletters", "printful": "E-commerce",
+    "patreon": "Creator", "ashby": "Jobs",
+    # batch E: media generation
+    "fal-ai": "Media generation", "gemini": "Media generation", "ideogram": "Media generation",
+    "black-forest-labs": "Media generation", "heygen": "Media generation",
+    "luma": "Media generation", "kling": "Media generation", "runway": "Media generation",
+    "beatoven": "Media generation",
+    # batch E: creator
+    "twitch": "Creator", "mastodon": "Social", "devto": "Blogging",
     "dub": "Marketing",
     "tally": "Productivity",
     "firecrawl": "Research",

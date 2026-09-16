@@ -1341,6 +1341,576 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 Never ask me for raw API keys or secrets in chat.
 ```
 
+### Mem0 🧪 Draft
+
+Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.mem0.ai`
+- Maturity: 🧪 Draft: written from Mem0's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mem0/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/mem0/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Supermemory 🧪 Draft
+
+Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.supermemory.ai`
+- Maturity: 🧪 Draft: written from Supermemory's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/supermemory/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/supermemory/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Zep 🧪 Draft
+
+Work with Zep's temporal memory: create users and threads, append messages, read distilled facts and history.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.getzep.com`
+- Maturity: 🧪 Draft: written from Zep's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/zep/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/zep/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Letta 🧪 Draft
+
+Work with Letta agent memory: list agents, read core-memory blocks, list or add archival passages, create blocks, message an agent to record memory.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.letta.com`
+- Maturity: 🧪 Draft: written from Letta's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/letta/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/letta/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### TickTick 🧪 Draft
+
+Read and write TickTick: list projects and tasks, create tasks, complete and delete tasks.
+
+- Auth: OAuth 2.0 via the secure credential flow · Allowed hosts: `api.ticktick.com`
+- Maturity: 🧪 Draft: written from TickTick's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ticktick/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/ticktick/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### YNAB 🧪 Draft
+
+Read and write YNAB budgets: list budgets, accounts, balances, transactions, and categories; record transactions.
+
+- Auth: OAuth 2.0 via the secure credential flow · Allowed hosts: `api.ynab.com`
+- Maturity: 🧪 Draft: written from YNAB's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ynab/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/ynab/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Oura 🧪 Draft
+
+Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2.
+
+- Auth: OAuth 2.0 via the secure credential flow · Allowed hosts: `api.ouraring.com`
+- Maturity: 🧪 Draft: written from Oura's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/oura/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/oura/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Philips Hue 🧪 Draft
+
+Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors.
+
+- Auth: Bridge pairing (local) or OAuth2 (remote) · Allowed hosts: derived from `--host` at runtime (the bridge's LAN IP or hostname); the CLI refuses to send the key anywhere else
+- Maturity: 🧪 Draft: written from Philips Hue's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/philips-hue/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/philips-hue/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Calendly 🧪 Draft
+
+Read and manage Calendly: list scheduled events, event types, invitees, and availability schedules; cancel bookings.
+
+- Auth: OAuth 2.0 via the secure credential flow · Allowed hosts: `api.calendly.com`
+- Maturity: 🧪 Draft: written from Calendly's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/calendly/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/calendly/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Amadeus 🧪 Draft
+
+Search travel with Amadeus: flight offers and prices, airport autocomplete, hotel offers, cheapest dates.
+
+- Auth: OAuth 2.0 client credentials via the secure credential flow · Allowed hosts: `test.api.amadeus.com`, `api.amadeus.com`
+- Maturity: 🧪 Draft: written from Amadeus's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/amadeus/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/amadeus/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Buttondown 🧪 Draft
+
+Read and write Buttondown: list subscribers and emails, add subscribers, draft emails.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.buttondown.com`
+- Maturity: 🧪 Draft: written from Buttondown's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/buttondown/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/buttondown/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Lemon Squeezy 🧪 Draft
+
+Read Lemon Squeezy revenue: list orders, subscriptions, customers, products; create checkout links.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.lemonsqueezy.com`
+- Maturity: 🧪 Draft: written from Lemon Squeezy's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/lemon-squeezy/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/lemon-squeezy/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Polar 🧪 Draft
+
+Read Polar orders, subscriptions, products, and customers; create checkouts and refunds.
+
+- Auth: Organization Access Token via the secure credential flow · Allowed hosts: `api.polar.sh`, `sandbox-api.polar.sh`
+- Maturity: 🧪 Draft: written from Polar's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/polar/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/polar/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Etsy 🧪 Draft
+
+Read Etsy shop data: receipts, listings, transactions, payment ledger; create listings.
+
+- Auth: OAuth 2.0 via the secure credential flow · Allowed hosts: `openapi.etsy.com`
+- Maturity: 🧪 Draft: written from Etsy's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/etsy/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/etsy/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Kit 🧪 Draft
+
+Read and write Kit (ConvertKit): list subscribers, broadcasts, sequences, tags; draft broadcasts.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.kit.com`
+- Maturity: 🧪 Draft: written from Kit's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/kit/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/kit/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Printful 🧪 Draft
+
+Read Printful products and orders, create orders and mockups.
+
+- Auth: personal access token via the secure credential flow · Allowed hosts: `api.printful.com`
+- Maturity: 🧪 Draft: written from Printful's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/printful/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/printful/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Patreon 🧪 Draft
+
+Read Patreon campaigns, members, tiers, and identity (read-only).
+
+- Auth: Creator's Access Token via the secure credential flow · Allowed hosts: `www.patreon.com`
+- Maturity: 🧪 Draft: written from Patreon's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/patreon/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/patreon/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Ashby 🧪 Draft
+
+Search Ashby public job boards (no key needed) and read/write the Ashby ATS: candidates, jobs, applications.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.ashbyhq.com`
+- Maturity: 🧪 Draft: written from Ashby's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ashby/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/ashby/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### fal.ai 🧪 Draft
+
+Generate media with fal.ai: images, video, audio, music on one key. Submit jobs to 100s of models, poll status, fetch results, upload files.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `fal.run`, `queue.fal.run`, `rest.alpha.fal.ai`
+- Maturity: 🧪 Draft: written from fal.ai's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/fal-ai/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/fal-ai/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Gemini 🧪 Draft
+
+Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `generativelanguage.googleapis.com`
+- Maturity: 🧪 Draft: written from Gemini's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/gemini/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/gemini/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Ideogram 🧪 Draft
+
+Ideogram text-to-image generation with the strongest text rendering in the catalog: generate, edit, remix, upscale, describe, balance.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.ideogram.ai`
+- Maturity: 🧪 Draft: written from Ideogram's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ideogram/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/ideogram/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Black Forest Labs 🧪 Draft
+
+Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.bfl.ai`, `api.eu.bfl.ai`, `api.us.bfl.ai`
+- Maturity: 🧪 Draft: written from Black Forest Labs's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/black-forest-labs/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/black-forest-labs/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### HeyGen 🧪 Draft
+
+HeyGen avatar and talking-head video: prompt-to-video agent, multi-scene avatar video, status polling, avatar and voice lists.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.heygen.com`
+- Maturity: 🧪 Draft: written from HeyGen's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/heygen/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/heygen/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Luma 🧪 Draft
+
+Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `api.lumalabs.ai`
+- Maturity: 🧪 Draft: written from Luma's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/luma/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/luma/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Kling 🧪 Draft
+
+Kling AI video generation with client-side JWT auth: text-to-video, image-to-video, status polling, clip extend, lip-sync.
+
+- Auth: access key + secret key pair via the secure credential flow · Allowed hosts: `api.klingai.com`
+- Maturity: 🧪 Draft: written from Kling's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/kling/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/kling/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Runway 🧪 Draft
+
+Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync.
+
+- Auth: API secret via the secure credential flow · Allowed hosts: `api.dev.runwayml.com`
+- Maturity: 🧪 Draft: written from Runway's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/runway/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/runway/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Beatoven 🧪 Draft
+
+Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems.
+
+- Auth: API token via the secure credential flow · Allowed hosts: `public-api.beatoven.ai` (plus the download host Beatoven's own task response returns)
+- Maturity: 🧪 Draft: written from Beatoven's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/beatoven/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/beatoven/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Twitch 🧪 Draft
+
+Read and write Twitch via the Helix API: channel profile, follower stats, live stream status, past videos, channel title and game updates, clip creation.
+
+- Auth: provider OAuth via the secure credential flow · Allowed hosts: `api.twitch.tv`
+- Maturity: 🧪 Draft: written from Twitch's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/twitch/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/twitch/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Mastodon 🧪 Draft
+
+Read and write Mastodon: verify the account, list own posts and followers, publish toots with native scheduling, upload media.
+
+- Auth: provider OAuth via the secure credential flow · Allowed hosts: your Mastodon instance host, declared at connect time (the `--host` you pass, e.g. `https://mastodon.social`; it must start with `http://` or `https://`). The credential is only ever sent to that host.
+- Maturity: 🧪 Draft: written from Mastodon's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mastodon/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/mastodon/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Dev.to 🧪 Draft
+
+Read and write dev.to: own profile, own articles (published, drafts, all), public articles by username, create and update articles with a safe draft default.
+
+- Auth: API key via the secure credential flow · Allowed hosts: `dev.to`
+- Maturity: 🧪 Draft: written from Dev.to's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/devto/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/devto/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
 *To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*
 
 ## Maturity badges
