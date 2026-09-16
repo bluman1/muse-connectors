@@ -63,16 +63,16 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Dub](https://museconnectors.link/#dub) | Create short links, read analytics, track conversions. |
 | [Ecovacs](https://museconnectors.link/#ecovacs) | Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum. |
 | [Elai](https://museconnectors.link/#elai) | Build AI avatar presenter videos with Elai: list available avatars, inspect videos and their render status, submit renders, and poll until a render finishes. Reach for this when the user wants a talking-head video generated from a script or slide deck. |
-| [ElevenLabs](https://museconnectors.link/#elevenlabs) | Check your ElevenLabs subscription usage and list available voices. Read-only. |
+| [ElevenLabs](https://museconnectors.link/#elevenlabs) | Check ElevenLabs subscription usage, list voices, and generate text-to-speech audio (TTS needs --confirm, spends characters). |
 | [Etsy](https://museconnectors.link/#etsy) | Read Etsy shop data: receipts, listings, transactions, payment ledger; create listings. |
 | [Exa](https://museconnectors.link/#exa) | Neural web search with page text: one call returns ranked sources with snippets. Read-only. |
 | [fal.ai](https://museconnectors.link/#fal-ai) | Generate media with fal.ai: images, video, audio, music on one key. Submit jobs to 100s of models, poll status, fetch results, upload files. |
-| [Figma](https://museconnectors.link/#figma) | Look up your Figma user and read file metadata. Read-only. |
+| [Figma](https://museconnectors.link/#figma) | Look up your Figma user, read file metadata, and post comments on files. |
 | [Firecrawl](https://museconnectors.link/#firecrawl) | Scrape pages, crawl sites, search the web. |
 | [FLUX image API](https://museconnectors.link/#black-forest-labs) | Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling. |
 | [Fly.io](https://museconnectors.link/#flyio) | List apps and machines, manage machine lifecycle. |
 | [Framer](https://museconnectors.link/#framer) | Verify a Framer project's Server API connection. Framer's Server API is WebSocket/SDK-only (there is no REST surface): the official framer-api npm package opens a long-lived connection to wss://api.framer.com/channel/headless-plugin with the header Authorization: Token <api_key>, keyed to one project. This connector's CLI performs that same official handshake as a connection check, so auth proves the API key and project pair work. |
-| [Front](https://museconnectors.link/#front) | List Front inboxes and read conversations in your shared inbox. Read-only. |
+| [Front](https://museconnectors.link/#front) | Read your Front shared inbox, and reply, assign teammates, and add tags on conversations (writes need --confirm). |
 | [Gemini (media generation)](https://museconnectors.link/#gemini) | Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing. |
 | [GitHub](https://museconnectors.link/#github) | View your profile, list repos, list open issues, and create issues. |
 | [GitLab](https://museconnectors.link/#gitlab) | Your GitLab user, projects, open merge requests, and issue creation. |
@@ -106,7 +106,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Neon](https://museconnectors.link/#neon) | Inspect Neon serverless Postgres projects, branches, and databases. Branch create and delete need exact-match confirmation; connection passwords are masked. |
 | [Netlify](https://museconnectors.link/#netlify) | List your Netlify sites and recent deploys. Read-only. |
 | [NewsAPI](https://museconnectors.link/#newsapi) | Top headlines and full-text news search. Read-only. |
-| [Notion](https://museconnectors.link/#notion) | Search pages and databases, read page properties, query databases (read-only). |
+| [Notion](https://museconnectors.link/#notion) | Search and query Notion, plus create pages, append blocks, and update page properties (writes need --confirm). |
 | [OctoPrint](https://museconnectors.link/#octoprint) | Control an OctoPrint 3D printer over its local REST API: read printer state and temperatures, monitor print progress, start/pause/cancel/restart jobs, upload and select gcode files, set hotend and bed temperatures, jog or home axes, and (gated) run raw G-code. Use when the user mentions their OctoPrint instance or a printer it drives. |
 | [OpenAI](https://museconnectors.link/#openai) | Check your OpenAI API access and list the models your key can use. Read-only. |
 | [OpenRouter](https://museconnectors.link/#openrouter) | Browse the model catalog with per-token pricing; check your key usage. Read-only. |
@@ -139,16 +139,16 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Restream](https://museconnectors.link/#restream) | Manage Restream multistreaming: read your profile, list streaming destinations (channels), toggle destinations or edit channel metadata, and retrieve your stream key. Use when the user wants to control where a livestream goes without opening the Restream dashboard. |
 | [Runway](https://museconnectors.link/#runway) | Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync. |
 | [SendGrid](https://museconnectors.link/#sendgrid) | Send email, check stats and profile. |
-| [Sentry](https://museconnectors.link/#sentry) | List organizations and projects, triage unresolved issues from the last 24h. Read-only. |
+| [Sentry](https://museconnectors.link/#sentry) | List organizations and projects, triage unresolved issues from the last 24h, and resolve/archive/assign issues. |
 | [Shippo](https://museconnectors.link/#shippo) | Ship through many carriers (USPS, UPS, FedEx, DHL and others) with one API: get rates for a shipment; buy a printable postage label; track a parcel; refund unused labels. Reach for this when the user needs to price or purchase shipping for a package. |
-| [Shopify](https://museconnectors.link/#shopify) | View open orders, products, and customers in your Shopify store. Read-only by design. |
+| [Shopify](https://museconnectors.link/#shopify) | View orders, products, customers; create products and discounts with confirmation. No order or customer writes, ever. |
 | [Slack](https://museconnectors.link/#slack) | Read channels, post messages, list users. The most-requested workplace connector. |
 | [Smartcar](https://museconnectors.link/#smartcar) | Read and control connected cars across many brands (Tesla, Ford, GM, Toyota, BMW, Hyundai and others) through one standardized API. Read odometer, location, charge and battery level, fuel level and tire pressure; lock/unlock doors; start/stop charging; set charge limits and schedules; route the built-in navigation. Use when the user mentions their car and the brand has no dedicated connector here, or asks for cross-brand vehicle telemetry and control. |
 | [SmartThings](https://museconnectors.link/#smartthings) | Read device status and issue capability commands across a Samsung SmartThings account: locations, devices, switches, dimmers, locks, thermostats, sirens, garage door controllers, and window shades. Use it when the user asks about or wants to change the state of anything paired to their SmartThings hub or cloud account. This connector drives real physical hardware, so every write is confirmation-gated (see Operating Rules). |
 | [Spotify](https://museconnectors.link/#spotify) | Read your profile, playlists, top tracks and artists, and search the catalog. Playlist and library writes need your confirmation. |
 | [Square](https://museconnectors.link/#square) | Work with a Square seller account: list locations and payments, create orders, push a checkout to a physical Square Terminal for in-person payment, charge a payment source directly, cancel a pending Terminal checkout, and refund a payment. Reach for this when the user needs to take or return money through Square. |
 | [Stripe](https://museconnectors.link/#stripe) | Read-only Stripe visibility: balance, recent charges, customers. No write commands ship: expanding to writes is a deliberate v2. |
-| [Supabase](https://museconnectors.link/#supabase) | List tables and query rows in your Supabase Postgres database. Read-only. |
+| [Supabase](https://museconnectors.link/#supabase) | List tables, query rows, and insert/update/delete rows in your Supabase Postgres database. |
 | [Supermemory](https://museconnectors.link/#supermemory) | Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings. |
 | [SwitchBot](https://museconnectors.link/#switchbot) | Read status and send commands to SwitchBot devices over the official OpenAPI v1.1: SwitchBot Bot (physical button presser), SwitchBot Lock, Curtain and Blind Tilt motors, plugs, lights, air conditioners, infrared remotes, and saved scenes. Use it when the user asks about or wants to change anything in their SwitchBot setup. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules). |
 | [Tally](https://museconnectors.link/#tally) | List forms, read submissions, manage form blocks. |
@@ -163,7 +163,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [trigger.dev](https://museconnectors.link/#triggerdev) | Trigger background jobs, list runs, manage schedules. |
 | [Tuya](https://museconnectors.link/#tuya) | Read status and send control commands to Tuya Cloud / Smart Life devices: smart plugs and switches, lights, thermostats, curtain motors, and supported smart locks, plus executing saved scenes. Use it when the user asks about or wants to change anything paired through the Tuya or Smart Life app. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules). |
 | [Twitch](https://museconnectors.link/#twitch) | Read and write Twitch via the Helix API: channel profile, follower stats, live stream status, past videos, channel title and game updates, clip creation. |
-| [Typeform](https://museconnectors.link/#typeform) | List forms and responses, and manage response webhooks with confirmation. |
+| [Typeform](https://museconnectors.link/#typeform) | List forms and responses, create forms, and manage response webhooks with confirmation. |
 | [Uber Direct](https://museconnectors.link/#uber-direct) | Dispatch same-day couriers through Uber Direct for food, retail, grocery, or parcel deliveries. Get a price and time quote without dispatching anyone, create a delivery when the user approves, check its status, and cancel a pending one. Reach for this when the user needs something picked up and dropped off locally today. |
 | [UniFi Protect](https://museconnectors.link/#unifi-protect) | Read camera state and still snapshots from a local UniFi Protect console (Protect 5.3+) through the official Integration API, and adjust camera settings: PTZ position, flood lights, chimes, talkback. Use it when the user asks what their UniFi cameras see, wants a snapshot saved, or wants to change camera behavior. Everything runs against the local console; there is no cloud dependency. |
 | [Unsplash](https://museconnectors.link/#unsplash) | Search Unsplash's free stock photo library, browse the latest photos, look up a photo's details, browse a photographer's portfolio or a topic, and download an image while honoring Unsplash's API guidelines. At the Client-ID tier this connector is read-only. |
@@ -176,7 +176,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [X](https://museconnectors.link/#x) | Post, search, like, DM. Note: no usable free read tier. |
 | [xAI (Grok)](https://museconnectors.link/#xai) | Query Grok chat completions and list available Grok models through xAI's OpenAI-compatible API, with per-call token usage surfaced so cost is always visible. |
 | [YNAB](https://museconnectors.link/#ynab) | Read and write YNAB budgets: list budgets, accounts, balances, transactions, and categories; record transactions. |
-| [YouTube](https://museconnectors.link/#youtube) | Look up channels and videos, search (reads only). |
+| [YouTube](https://museconnectors.link/#youtube) | Read channels and videos, search, plus uploads and comments with confirmation. |
 | [Zep](https://museconnectors.link/#zep) | Work with Zep's temporal memory: create users and threads, append messages, read distilled facts and history. |
 
 *To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*

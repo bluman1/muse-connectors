@@ -235,7 +235,7 @@ Allowed hosts: apis.elai.io
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/elai/SKILL.md
 
 # ElevenLabs (elevenlabs)
-Check your ElevenLabs subscription usage and list available voices. Read-only.
+Check ElevenLabs subscription usage, list voices, and generate text-to-speech audio (TTS needs --confirm, spends characters).
 Auth: ElevenLabs API key (per-user, elevenlabs.io/app/settings/api-keys)
 Allowed hosts: api.elevenlabs.io
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/elevenlabs/SKILL.md
@@ -259,7 +259,7 @@ Allowed hosts: fal.run, queue.fal.run, rest.alpha.fal.ai
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/fal-ai/SKILL.md
 
 # Figma (figma)
-Look up your Figma user and read file metadata. Read-only.
+Look up your Figma user, read file metadata, and post comments on files.
 Auth: Figma personal access token (per-user, Figma Settings → Personal access tokens)
 Allowed hosts: api.figma.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/figma/SKILL.md
@@ -289,7 +289,7 @@ Allowed hosts: api.framer.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/framer/SKILL.md
 
 # Front (front)
-List Front inboxes and read conversations in your shared inbox. Read-only.
+Read your Front shared inbox, and reply, assign teammates, and add tags on conversations (writes need --confirm).
 Auth: Front API token (per-user, Front Settings → API)
 Allowed hosts: api2.frontapp.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/front/SKILL.md
@@ -493,7 +493,7 @@ Allowed hosts: newsapi.org
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/newsapi/SKILL.md
 
 # Notion (notion)
-Search pages and databases, read page properties, query databases (read-only).
+Search and query Notion, plus create pages, append blocks, and update page properties (writes need --confirm).
 Auth: Notion internal integration token (per-user, created at notion.so/my-integrations)
 Allowed hosts: api.notion.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/notion/SKILL.md
@@ -691,7 +691,7 @@ Allowed hosts: api.sendgrid.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/sendgrid/SKILL.md
 
 # Sentry (sentry)
-List organizations and projects, triage unresolved issues from the last 24h. Read-only.
+List organizations and projects, triage unresolved issues from the last 24h, and resolve/archive/assign issues.
 Auth: auth token (per-user, sentry.io → Settings → Auth Tokens)
 Allowed hosts: sentry.io
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/sentry/SKILL.md
@@ -703,8 +703,8 @@ Allowed hosts: api.goshippo.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/shippo/SKILL.md
 
 # Shopify (shopify)
-View open orders, products, and customers in your Shopify store. Read-only by design.
-Auth: Shopify Admin API access token (per-user, Shopify admin → Apps → Develop apps → custom app; scopes read_orders/read_products/read_customers)
+View orders, products, customers; create products and discounts with confirmation. No order or customer writes, ever.
+Auth: Shopify Admin API access token (per-user, Shopify admin → Apps → Develop apps → custom app; scopes read_orders/read_products/read_customers plus write_products/write_discounts for writes)
 Allowed hosts: <your-shop>.myshopify.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/shopify/SKILL.md
 
@@ -745,7 +745,7 @@ Allowed hosts: api.stripe.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/stripe/SKILL.md
 
 # Supabase (supabase)
-List tables and query rows in your Supabase Postgres database. Read-only.
+List tables, query rows, and insert/update/delete rows in your Supabase Postgres database.
 Auth: service_role key (per-user, project Settings → API)
 Allowed hosts: <ref>.supabase.co
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/supabase/SKILL.md
@@ -835,7 +835,7 @@ Allowed hosts: api.twitch.tv
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/twitch/SKILL.md
 
 # Typeform (typeform)
-List forms and responses, and manage response webhooks with confirmation.
+List forms and responses, create forms, and manage response webhooks with confirmation.
 Auth: personal access token (per-user)
 Allowed hosts: api.typeform.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/typeform/SKILL.md
@@ -913,8 +913,8 @@ Allowed hosts: api.ynab.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ynab/SKILL.md
 
 # YouTube (youtube)
-Look up channels and videos, search (reads only).
-Auth: API key (per-user; reads only)
+Read channels and videos, search, plus uploads and comments with confirmation.
+Auth: OAuth 2.0 (per-user)
 Allowed hosts: www.googleapis.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/youtube/SKILL.md
 

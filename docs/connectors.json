@@ -356,7 +356,7 @@
   {
     "id": "elevenlabs",
     "name": "ElevenLabs",
-    "tagline": "Check your ElevenLabs subscription usage and list available voices. Read-only.",
+    "tagline": "Check ElevenLabs subscription usage, list voices, and generate text-to-speech audio (TTS needs --confirm, spends characters).",
     "auth": "ElevenLabs API key (per-user, elevenlabs.io/app/settings/api-keys)",
     "hosts": [
       "api.elevenlabs.io"
@@ -398,7 +398,7 @@
   {
     "id": "figma",
     "name": "Figma",
-    "tagline": "Look up your Figma user and read file metadata. Read-only.",
+    "tagline": "Look up your Figma user, read file metadata, and post comments on files.",
     "auth": "Figma personal access token (per-user, Figma Settings \u2192 Personal access tokens)",
     "hosts": [
       "api.figma.com"
@@ -450,7 +450,7 @@
   {
     "id": "front",
     "name": "Front",
-    "tagline": "List Front inboxes and read conversations in your shared inbox. Read-only.",
+    "tagline": "Read your Front shared inbox, and reply, assign teammates, and add tags on conversations (writes need --confirm).",
     "auth": "Front API token (per-user, Front Settings \u2192 API)",
     "hosts": [
       "api2.frontapp.com"
@@ -792,7 +792,7 @@
   {
     "id": "notion",
     "name": "Notion",
-    "tagline": "Search pages and databases, read page properties, query databases (read-only).",
+    "tagline": "Search and query Notion, plus create pages, append blocks, and update page properties (writes need --confirm).",
     "auth": "Notion internal integration token (per-user, created at notion.so/my-integrations)",
     "hosts": [
       "api.notion.com"
@@ -1124,7 +1124,7 @@
   {
     "id": "sentry",
     "name": "Sentry",
-    "tagline": "List organizations and projects, triage unresolved issues from the last 24h. Read-only.",
+    "tagline": "List organizations and projects, triage unresolved issues from the last 24h, and resolve/archive/assign issues.",
     "auth": "auth token (per-user, sentry.io \u2192 Settings \u2192 Auth Tokens)",
     "hosts": [
       "sentry.io"
@@ -1144,8 +1144,8 @@
   {
     "id": "shopify",
     "name": "Shopify",
-    "tagline": "View open orders, products, and customers in your Shopify store. Read-only by design.",
-    "auth": "Shopify Admin API access token (per-user, Shopify admin \u2192 Apps \u2192 Develop apps \u2192 custom app; scopes read_orders/read_products/read_customers)",
+    "tagline": "View orders, products, customers; create products and discounts with confirmation. No order or customer writes, ever.",
+    "auth": "Shopify Admin API access token (per-user, Shopify admin \u2192 Apps \u2192 Develop apps \u2192 custom app; scopes read_orders/read_products/read_customers plus write_products/write_discounts for writes)",
     "hosts": [
       "<your-shop>.myshopify.com"
     ],
@@ -1215,7 +1215,7 @@
   {
     "id": "supabase",
     "name": "Supabase",
-    "tagline": "List tables and query rows in your Supabase Postgres database. Read-only.",
+    "tagline": "List tables, query rows, and insert/update/delete rows in your Supabase Postgres database.",
     "auth": "service_role key (per-user, project Settings \u2192 API)",
     "hosts": [
       "<ref>.supabase.co"
@@ -1372,7 +1372,7 @@
   {
     "id": "typeform",
     "name": "Typeform",
-    "tagline": "List forms and responses, and manage response webhooks with confirmation.",
+    "tagline": "List forms and responses, create forms, and manage response webhooks with confirmation.",
     "auth": "personal access token (per-user)",
     "hosts": [
       "api.typeform.com"
@@ -1502,8 +1502,8 @@
   {
     "id": "youtube",
     "name": "YouTube",
-    "tagline": "Look up channels and videos, search (reads only).",
-    "auth": "API key (per-user; reads only)",
+    "tagline": "Read channels and videos, search, plus uploads and comments with confirmation.",
+    "auth": "OAuth 2.0 (per-user)",
     "hosts": [
       "www.googleapis.com"
     ],
