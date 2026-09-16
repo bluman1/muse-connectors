@@ -178,17 +178,17 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>muse-connectors: auditable connector skills for Muse</title>
+<title>Muse Connectors: auditable connector skills for Muse</title>
 <meta name="description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
 <link rel="icon" type="image/png" href="avatar/favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="muse-connectors">
-<meta property="og:title" content="muse-connectors: auditable connector skills for Muse">
+<meta property="og:site_name" content="Muse Connectors">
+<meta property="og:title" content="Muse Connectors: auditable connector skills for Muse">
 <meta property="og:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
 <meta property="og:url" content="https://bluman1.github.io/muse-connectors/">
 <meta property="og:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="muse-connectors: auditable connector skills for Muse">
+<meta name="twitter:title" content="Muse Connectors: auditable connector skills for Muse">
 <meta name="twitter:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
 <meta name="twitter:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,7 +221,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .navlinks a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-weight:500;cursor:pointer;text-decoration:none;border:0}
 .btn-repo{background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px}
-.btn-repo:hover{background:var(--accent)}
+.btn-repo:hover{background:#000}
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 40px 40px;align-items:end}
 .hero-left{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
@@ -255,7 +255,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .tile{width:40px;height:40px;flex:none;border-radius:12px;background:var(--accent-tint);color:var(--accent);font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center}
 .cmeta{flex:1;min-width:0}
 .cname{background:none;border:0;padding:0;font-family:Sora,sans-serif;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
-.cname:hover{color:var(--accent)}
+.cname:hover{color:var(--ink);text-decoration:underline}
 .ccat{font-size:12px;color:var(--muted);margin-top:2px}
 .pill{flex:none;font-size:11px;font-weight:500;padding:4px 9px;border-radius:999px}
 .pill.live{color:var(--live-text);background:var(--live-bg)}
@@ -267,13 +267,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .hval{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cfoot{display:flex;gap:8px;border-top:1px solid var(--divider);padding-top:14px}
 .btn-copy{flex:1;background:var(--ink);color:#fff;font-size:13px;padding:10px 14px;border-radius:10px}
-.btn-copy:hover{background:var(--accent)}
+.btn-copy:hover{background:#000}
 .btn-view{background:var(--surface);border:1px solid var(--border);color:var(--ink);font-size:13px;padding:10px 14px;border-radius:10px}
 .btn-view:hover{border-color:var(--ink)}
 pre.prompt{background:var(--code-bg);border:1px solid var(--border);border-radius:12px;padding:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--code-text);white-space:pre-wrap;word-break:break-word;margin:0;max-height:320px;overflow:auto}
 .empty{padding:40px 0;text-align:center;font-size:14px;color:var(--muted)}
 /* ---------- detail panel ---------- */
-.detail{margin:28px 40px 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:24px;scroll-margin-top:140px}
+.detail{margin:28px 40px 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;flex-direction:column;gap:24px;scroll-margin-top:140px}
+.detail:not([hidden]){display:flex}
 .dtop{display:flex;justify-content:space-between;align-items:center}
 .crumb{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .x{width:32px;height:32px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--body);font-size:14px;cursor:pointer;line-height:1}
@@ -369,7 +370,7 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
   <nav class="nav">
     <div class="brand">
       <video src="avatar/hatch.mp4" poster="avatar/hatch.jpg" autoplay muted loop playsinline aria-label="Muse avatar"></video>
-      <span class="word">muse-connectors</span>
+      <span class="word">Muse Connectors</span>
       <span class="pilltag">catalog</span>
     </div>
     <div class="navlinks">
@@ -434,7 +435,7 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
   </section>
 
   <footer class="footer">
-    <div>muse-connectors &middot; MIT licensed</div>
+    <div>Muse Connectors &middot; MIT licensed</div>
     <div class="fright">
       <a class="flink" href="https://github.com/bluman1/muse-connectors">Repository</a>
       <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">One-paste install</a>
@@ -634,6 +635,114 @@ fetch("connectors.json").then((r) => {
 """
 
 
+def build_og_image(count):
+    """Regenerate docs/og-image.png with the current connector count.
+
+    build-site.py runs whenever connectors change, so the social preview
+    number can never go stale: it always matches the live catalog.
+    """
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        print("warning: Pillow not installed, skipping og-image.png")
+        return
+    import math
+
+    def find_font(bold):
+        candidates = [
+            "/usr/share/fonts/truetype/dejavu/"
+            + ("DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf"),
+            "/usr/share/fonts/truetype/liberation/"
+            + ("LiberationSans-Bold.ttf" if bold else "LiberationSans-Regular.ttf"),
+        ]
+        for c in candidates:
+            if Path(c).exists():
+                return c
+        return None
+
+    fb_path, fr_path = find_font(True), find_font(False)
+    if not fb_path or not fr_path:
+        print("warning: no suitable fonts found, skipping og-image.png")
+        return
+    avatar_src = ROOT / "docs" / "avatar" / "hatch.jpg"
+    if not avatar_src.exists():
+        print("warning: docs/avatar/hatch.jpg missing, skipping og-image.png")
+        return
+
+    W, H = 1200, 630
+    BG = (13, 17, 23)
+    BLUE = (88, 166, 255)
+    TITLE_C = (230, 237, 243)
+    BODY_C = (139, 148, 158)
+    LINE_C = (64, 72, 82)
+
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+
+    # avatar in blue ring
+    av = Image.open(avatar_src).convert("RGB")
+    s = min(av.size)
+    av = av.crop(((av.width - s) // 2, (av.height - s) // 2,
+                  (av.width + s) // 2, (av.height + s) // 2))
+    r_in = 173
+    av = av.resize((2 * r_in, 2 * r_in), Image.LANCZOS)
+    mask = Image.new("L", (2 * r_in, 2 * r_in), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, 2 * r_in, 2 * r_in), fill=255)
+    img.paste(av, (270 - r_in, 315 - r_in), mask)
+
+    # ring + satellite nodes
+    r, rw = 178, 5
+    d.ellipse((270 - r, 315 - r, 270 + r, 315 + r), outline=BLUE, width=rw)
+    for nx, ny in [(365, 110), (96, 169), (443, 169),
+                   (65, 410), (474, 410), (270, 541)]:
+        d.ellipse((nx - 11, ny - 11, nx + 11, ny + 11), outline=BLUE, width=3)
+        dx, dy = 270 - nx, 315 - ny
+        ln = math.hypot(dx, dy)
+        ux, uy = dx / ln, dy / ln
+        d.line((nx + ux * 14, ny + uy * 14, nx + ux * 40, ny + uy * 40),
+               fill=LINE_C, width=2)
+
+    def size_for(text, target_w, font_path):
+        lo, hi = 1, 300
+        while lo < hi:
+            mid = (lo + hi + 1) // 2
+            f = ImageFont.truetype(font_path, mid)
+            if d.textlength(text, font=f) <= target_w:
+                lo = mid
+            else:
+                hi = mid - 1
+        return lo
+
+    def draw_at(x, y_top, text, font, fill):
+        bb = d.textbbox((0, 0), text, font=font)
+        d.text((x - bb[0], y_top - bb[1]), text, font=font, fill=fill)
+
+    x = 522
+    wordmark = "Muse Connectors"
+    draw_at(x + 4, 169, wordmark,
+            ImageFont.truetype(fb_path, size_for(wordmark, 614, fb_path)),
+            TITLE_C)
+    sub = "Auditable connector skills for Muse."
+    draw_at(x - 2, 261, sub,
+            ImageFont.truetype(fr_path, size_for(sub, 597, fr_path)), BODY_C)
+    line1 = f"{count} open-source connectors. One pasted"
+    # size from the original "50..." width so the line keeps its measure
+    ref1 = "50 open-source connectors. One pasted"
+    fs1 = size_for(ref1, 593, fr_path)
+    draw_at(x, 340, line1, ImageFont.truetype(fr_path, fs1), BODY_C)
+    line2 = "prompt installs each in your Muse."
+    draw_at(x + 1, 385, line2,
+            ImageFont.truetype(fr_path, size_for(line2, 576, fr_path)), BODY_C)
+    d.rectangle((520, 440, 670, 447), fill=BLUE)
+    url = "github.com/bluman1/muse-connectors"
+    draw_at(x, 472, url,
+            ImageFont.truetype(fr_path, size_for(url, 586, fr_path)), BLUE)
+
+    out = ROOT / "docs" / "og-image.png"
+    img.save(out)
+    print(f"wrote {out} ({count} connectors)")
+
+
 def main():
     readme = (ROOT / "README.md").read_text()
     connectors = []
@@ -661,6 +770,7 @@ def main():
         print(f"removed stray {stray.name}")
     print(f"wrote {out} ({len(connectors)} connectors)")
     print(f"wrote {docs / 'index.html'}")
+    build_og_image(len(connectors))
 
 
 if __name__ == "__main__":
