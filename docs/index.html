@@ -89,6 +89,16 @@
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
   .btn:hover { filter: brightness(1.15); }
   .empty { color: var(--muted); text-align: center; padding: 60px 0; display: none; }
+  .contribute {
+    margin-top: 56px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .contribute h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: -0.3px; }
+  .contribute p { color: var(--muted); margin: 0 0 16px; max-width: 640px; }
+  .contribute p code { color: var(--text); font-size: 13px; }
   footer { margin-top: 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 20px; }
   footer a { color: var(--accent); text-decoration: none; }
   #toast {
@@ -113,6 +123,15 @@
   <div class="chips" id="chips"></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty">No connectors match. Try a different search.</div>
+
+  <section class="contribute">
+    <h2>Missing a connector?</h2>
+    <p>This catalog grows the way open source is supposed to: someone needs a connector, builds it, and sends it in. If you've wired up a provider, add it — the pattern is one <code>SKILL.md</code> plus one small script, and there's a template waiting for you.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">How to add a connector</a>
+      <a class="btn" href="https://github.com/bluman1/muse-connectors/tree/main/connectors/_template">Start from the template</a>
+    </div>
+  </section>
 
   <footer>
     <a href="https://github.com/bluman1/muse-connectors">Repository</a> ·
