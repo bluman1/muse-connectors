@@ -216,11 +216,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 40px 40px;align-items:end}
 .hero-left{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
 .eyebrow{font-size:12px;font-weight:500;color:var(--accent);background:var(--accent-tint);border-radius:999px;padding:6px 12px}
-.hero h1{margin:0;font-size:44px;line-height:1.1;font-weight:600;letter-spacing:-0.02em}
+.hero h1{margin:0;font-size:44px;line-height:1.1;font-weight:600;letter-spacing:-0.02em;text-wrap:pretty}
+.hero-sub{margin:0;font-size:17px;line-height:1.6;color:var(--body);max-width:540px;text-wrap:pretty}
 .hero p{margin:0;font-size:17px;line-height:1.6;color:var(--body);max-width:540px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .step{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
-.step .n{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.step .n{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent)}
 .step .t{font-size:14px;font-weight:600}
 .step .b{font-size:13px;line-height:1.5;color:var(--muted)}
 /* ---------- search + filters ---------- */
@@ -373,7 +374,7 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
     <div class="hero-left">
       <span class="eyebrow">Open source &middot; MIT<span class="full"> &middot; zero secrets in repo</span></span>
       <h1>Connect your Muse to anything.<br>One paste. Fully auditable.</h1>
-      <p class="hero-sub">Pick a connector, copy its install prompt, paste it to your Muse. It downloads the skill, verifies it, and walks you through connecting your own account. No skill ever sees your credentials.</p>
+      <p class="hero-sub"><span class="pfull">Pick a connector, copy its install prompt, paste it to your Muse. It downloads the skill, verifies it, and walks you through connecting your own account. No skill ever sees your credentials.</span><span class="pshort">Copy an install prompt, paste it to your Muse, connect your own account. No skill ever sees your credentials.</span></p>
     </div>
     <div class="steps">
       <div class="step"><div class="n">01</div><div class="t">Copy</div><div class="b">the install prompt under any connector.</div></div>
