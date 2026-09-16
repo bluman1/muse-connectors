@@ -38,9 +38,85 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 Never ask me for raw API keys or secrets in chat.
 ```
 
+### GitHub 🧪 Draft
+
+View your profile, list repos, list open issues, and create issues.
+
+- Auth: personal access token (classic, scopes `repo` + `read:user`, per-user) · Allowed hosts: `api.github.com`
+- Maturity: 🧪 Draft — written from GitHub's public REST API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/github/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/github/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Notion 🧪 Draft
+
+Search pages and databases, read page properties, query databases (read-only).
+
+- Auth: Notion internal integration token (per-user, created at notion.so/my-integrations) · Allowed hosts: `api.notion.com`
+- Maturity: 🧪 Draft — written from Notion's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/notion/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/notion/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Linear 🧪 Draft
+
+View your assigned issues and create issues, over Linear's GraphQL API.
+
+- Auth: Linear personal API key (per-user, linear.app/settings/api) · Allowed hosts: `api.linear.app`
+- Maturity: 🧪 Draft — written from Linear's public GraphQL API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/linear/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/linear/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Resend 🧪 Draft
+
+Send email through Resend and check delivery status. Every send is confirmed with you first.
+
+- Auth: Resend API key (per-user, resend.com/api-keys) · Allowed hosts: `api.resend.com`
+- Maturity: 🧪 Draft — written from Resend's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/resend/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/resend/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
 ---
 
-*More connectors are on the way. To add one, see [CONTRIBUTING.md](CONTRIBUTING.md).*
+*To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*
 
 ## Maturity badges
 
