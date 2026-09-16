@@ -1,0 +1,16 @@
+name: audit
+on:
+  push:
+    branches: [main]
+    paths: ['connectors/**', 'tools/audit.sh']
+  pull_request:
+    paths: ['connectors/**', 'tools/audit.sh']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run connector audit
+        run: bash tools/audit.sh
