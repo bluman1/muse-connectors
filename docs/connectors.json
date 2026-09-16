@@ -333,6 +333,16 @@
     "category": "Other"
   },
   {
+    "id": "doordash",
+    "name": "DoorDash",
+    "tagline": "Order DoorDash food and groceries from the terminal with the official agent-first dd-cli.",
+    "auth": "dd-cli login (waitlist-approved DoorDash account; US/Canada) or DD_CLI_ACCESS_TOKEN for headless use",
+    "hosts": [
+      "github.com"
+    ],
+    "category": "Other"
+  },
+  {
     "id": "dub",
     "name": "Dub",
     "tagline": "Create short links, read analytics, track conversions.",

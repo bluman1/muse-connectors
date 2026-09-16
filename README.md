@@ -1,7 +1,7 @@
 # Muse Connectors
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Connectors](https://img.shields.io/badge/connectors-155-blue)](https://museconnectors.link/)
+[![Connectors](https://img.shields.io/badge/connectors-156-blue)](https://museconnectors.link/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![GitHub stars](https://img.shields.io/github/stars/bluman1/muse-connectors?style=social)](https://github.com/bluman1/muse-connectors/stargazers)
 
@@ -24,7 +24,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ## Catalog
 
-All 155 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
+All 156 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
 
 | Connector | What it does |
 |---|---|
@@ -61,6 +61,7 @@ All 155 connectors, searchable with one-click install prompts, at **https://muse
 | [DigitalOcean](https://museconnectors.link/#digitalocean) | List your DigitalOcean droplets and domains. Read-only. |
 | [Discord](https://museconnectors.link/#discord) | Read servers and channels, send messages and DMs. |
 | [DocuSign](https://museconnectors.link/#docusign) | Draft and send signature envelopes (demo environment by default), check envelope status, and download signed documents. |
+| [DoorDash](https://museconnectors.link/#doordash) | Order DoorDash food and groceries from the terminal with the official agent-first dd-cli. |
 | [Dub](https://museconnectors.link/#dub) | Create short links, read analytics, track conversions. |
 | [ecobee](https://museconnectors.link/#ecobee) | Thermostat runtime history and energy reports, plus temperature holds with confirmation. |
 | [Ecovacs](https://museconnectors.link/#ecovacs) | Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum. |

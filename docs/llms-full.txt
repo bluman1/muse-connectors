@@ -1,6 +1,6 @@
 # Muse Connectors
 
-155 open-source, auditable connector skills for Muse (Meta's personal AI agent).
+156 open-source, auditable connector skills for Muse (Meta's personal AI agent).
 Each connector installs with one pasted prompt. Every file it installs is public and auditable.
 
 ## How an agent installs a connector
@@ -221,6 +221,12 @@ Draft and send signature envelopes (demo environment by default), check envelope
 Auth: OAuth 2.0 Authorization Code Grant (per-user)
 Allowed hosts: demo.docusign.net, docusign.net
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/docusign/SKILL.md
+
+# DoorDash (doordash)
+Order DoorDash food and groceries from the terminal with the official agent-first dd-cli.
+Auth: dd-cli login (waitlist-approved DoorDash account; US/Canada) or DD_CLI_ACCESS_TOKEN for headless use
+Allowed hosts: github.com
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/doordash/SKILL.md
 
 # Dub (dub)
 Create short links, read analytics, track conversions.
