@@ -695,37 +695,26 @@ def build_og_image(count):
         return
 
     W, H = 1200, 630
-    BG = (13, 17, 23)
+    BG = (11, 13, 18)
     BLUE = (88, 166, 255)
-    TITLE_C = (230, 237, 243)
-    BODY_C = (139, 148, 158)
-    LINE_C = (64, 72, 82)
+    TITLE_C = (240, 244, 249)
+    BODY_C = (150, 159, 170)
 
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
 
-    # avatar in blue ring
+    # avatar in a clean thin ring (no satellite nodes)
     av = Image.open(avatar_src).convert("RGB")
     s = min(av.size)
     av = av.crop(((av.width - s) // 2, (av.height - s) // 2,
                   (av.width + s) // 2, (av.height + s) // 2))
-    r_in = 173
+    cx, cy, r_in = 250, 315, 150
     av = av.resize((2 * r_in, 2 * r_in), Image.LANCZOS)
     mask = Image.new("L", (2 * r_in, 2 * r_in), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, 2 * r_in, 2 * r_in), fill=255)
-    img.paste(av, (270 - r_in, 315 - r_in), mask)
-
-    # ring + satellite nodes
-    r, rw = 178, 5
-    d.ellipse((270 - r, 315 - r, 270 + r, 315 + r), outline=BLUE, width=rw)
-    for nx, ny in [(365, 110), (96, 169), (443, 169),
-                   (65, 410), (474, 410), (270, 541)]:
-        d.ellipse((nx - 11, ny - 11, nx + 11, ny + 11), outline=BLUE, width=3)
-        dx, dy = 270 - nx, 315 - ny
-        ln = math.hypot(dx, dy)
-        ux, uy = dx / ln, dy / ln
-        d.line((nx + ux * 14, ny + uy * 14, nx + ux * 40, ny + uy * 40),
-               fill=LINE_C, width=2)
+    img.paste(av, (cx - r_in, cy - r_in), mask)
+    d.ellipse((cx - r_in - 3, cy - r_in - 3, cx + r_in + 3, cy + r_in + 3),
+              outline=BLUE, width=4)
 
     def size_for(text, target_w, font_path):
         lo, hi = 1, 300
@@ -742,26 +731,37 @@ def build_og_image(count):
         bb = d.textbbox((0, 0), text, font=font)
         d.text((x - bb[0], y_top - bb[1]), text, font=font, fill=fill)
 
-    x = 522
+    x = 470
+    right = 1140
     wordmark = "Muse Connectors"
-    draw_at(x + 4, 169, wordmark,
-            ImageFont.truetype(fb_path, size_for(wordmark, 614, fb_path)),
+    draw_at(x, 108, wordmark,
+            ImageFont.truetype(fb_path, size_for(wordmark, right - x, fb_path)),
             TITLE_C)
-    sub = "Auditable connector skills for Muse."
-    draw_at(x - 2, 261, sub,
-            ImageFont.truetype(fr_path, size_for(sub, 597, fr_path)), BODY_C)
-    line1 = f"{count} open-source connectors. One pasted"
-    # size from the original "50..." width so the line keeps its measure
-    ref1 = "50 open-source connectors. One pasted"
-    fs1 = size_for(ref1, 593, fr_path)
-    draw_at(x, 340, line1, ImageFont.truetype(fr_path, fs1), BODY_C)
-    line2 = "prompt installs each in your Muse."
-    draw_at(x + 1, 385, line2,
-            ImageFont.truetype(fr_path, size_for(line2, 576, fr_path)), BODY_C)
-    d.rectangle((520, 440, 670, 447), fill=BLUE)
-    url = "github.com/bluman1/muse-connectors"
-    draw_at(x, 472, url,
-            ImageFont.truetype(fr_path, size_for(url, 586, fr_path)), BLUE)
+
+    # hero number with stacked label
+    num = str(count)
+    num_font = ImageFont.truetype(fb_path, 168)
+    num_w = d.textlength(num, font=num_font)
+    draw_at(x, 196, num, num_font, BLUE)
+    lx = x + num_w + 28
+    lab_font = ImageFont.truetype(fr_path,
+                                  size_for("open-source", right - lx, fr_path))
+    draw_at(lx, 218, "open-source", lab_font, BODY_C)
+    draw_at(lx, 278, "connectors", lab_font, BODY_C)
+
+    tag1 = "Auditable connector skills for Muse."
+    draw_at(x, 408, tag1,
+            ImageFont.truetype(fr_path, size_for(tag1, right - x, fr_path)),
+            BODY_C)
+    tag2 = "One pasted prompt installs each in your Muse."
+    draw_at(x, 456, tag2,
+            ImageFont.truetype(fr_path, size_for(tag2, right - x, fr_path)),
+            BODY_C)
+    d.rectangle((x, 516, x + 150, 522), fill=BLUE)
+    url = "museconnectors.link"
+    draw_at(x, 534, url,
+            ImageFont.truetype(fb_path, size_for(url, right - x, fb_path)),
+            BLUE)
 
     out = ROOT / "docs" / "og-image.png"
     img.save(out)
