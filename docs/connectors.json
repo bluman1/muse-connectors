@@ -7,7 +7,6 @@
     "hosts": [
       "api.airtable.com"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -18,7 +17,6 @@
     "hosts": [
       "www.alphavantage.co"
     ],
-    "maturity": "draft",
     "category": "Finance & Commerce"
   },
   {
@@ -30,7 +28,6 @@
       "test.api.amadeus.com",
       "api.amadeus.com"
     ],
-    "maturity": "draft",
     "category": "Travel"
   },
   {
@@ -41,7 +38,6 @@
     "hosts": [
       "api.anthropic.com"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -52,7 +48,6 @@
     "hosts": [
       "api.apollo.io"
     ],
-    "maturity": "draft",
     "category": "Sales & CRM"
   },
   {
@@ -63,7 +58,6 @@
     "hosts": [
       "open-<region>.aqara.com"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -74,7 +68,6 @@
     "hosts": [
       "app.asana.com"
     ],
-    "maturity": "draft",
     "category": "Project management"
   },
   {
@@ -85,7 +78,6 @@
     "hosts": [
       "api.ashbyhq.com"
     ],
-    "maturity": "draft",
     "category": "Jobs"
   },
   {
@@ -96,7 +88,6 @@
     "hosts": [
       "api.attio.com"
     ],
-    "maturity": "draft",
     "category": "Sales & CRM"
   },
   {
@@ -107,7 +98,6 @@
     "hosts": [
       "public-api.beatoven.ai"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -118,7 +108,6 @@
     "hosts": [
       "api.beehiiv.com"
     ],
-    "maturity": "draft",
     "category": "Newsletters"
   },
   {
@@ -131,7 +120,6 @@
       "api.eu.bfl.ai",
       "api.us.bfl.ai"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -142,7 +130,6 @@
     "hosts": [
       "bsky.social"
     ],
-    "maturity": "draft",
     "category": "Social"
   },
   {
@@ -153,7 +140,6 @@
     "hosts": [
       "api.search.brave.com"
     ],
-    "maturity": "draft",
     "category": "Search & Data"
   },
   {
@@ -164,7 +150,6 @@
     "hosts": [
       "api.buttondown.com"
     ],
-    "maturity": "draft",
     "category": "Newsletters"
   },
   {
@@ -175,7 +160,6 @@
     "hosts": [
       "www.buzzsprout.com"
     ],
-    "maturity": "draft",
     "category": "Podcasting"
   },
   {
@@ -186,7 +170,6 @@
     "hosts": [
       "api.cal.com"
     ],
-    "maturity": "draft",
     "category": "Scheduling"
   },
   {
@@ -197,7 +180,6 @@
     "hosts": [
       "api.calendly.com"
     ],
-    "maturity": "draft",
     "category": "Scheduling"
   },
   {
@@ -208,7 +190,6 @@
     "hosts": [
       "api.canva.com"
     ],
-    "maturity": "draft",
     "category": "Design"
   },
   {
@@ -219,7 +200,6 @@
     "hosts": [
       "api.cartesia.ai"
     ],
-    "maturity": "draft",
     "category": "Voice AI"
   },
   {
@@ -230,7 +210,6 @@
     "hosts": [
       "api.clerk.com"
     ],
-    "maturity": "draft",
     "category": "Developer & Infra"
   },
   {
@@ -241,7 +220,6 @@
     "hosts": [
       "api.clickup.com"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -252,7 +230,6 @@
     "hosts": [
       "api.cloudflare.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -263,7 +240,6 @@
     "hosts": [
       "api.cloudinary.com"
     ],
-    "maturity": "draft",
     "category": "Media management"
   },
   {
@@ -274,7 +250,6 @@
     "hosts": [
       "coda.io"
     ],
-    "maturity": "draft",
     "category": "Notes & docs"
   },
   {
@@ -285,7 +260,6 @@
     "hosts": [
       "api.deepgram.com"
     ],
-    "maturity": "draft",
     "category": "Voice AI"
   },
   {
@@ -297,7 +271,6 @@
       "api-free.deepl.com",
       "api.deepl.com"
     ],
-    "maturity": "draft",
     "category": "Translation"
   },
   {
@@ -308,7 +281,6 @@
     "hosts": [
       "api.deepseek.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -319,7 +291,6 @@
     "hosts": [
       "api.descript.com"
     ],
-    "maturity": "draft",
     "category": "Video"
   },
   {
@@ -330,7 +301,6 @@
     "hosts": [
       "dev.to"
     ],
-    "maturity": "draft",
     "category": "Blogging"
   },
   {
@@ -341,7 +311,6 @@
     "hosts": [
       "api.digitalocean.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -352,7 +321,6 @@
     "hosts": [
       "discord.com"
     ],
-    "maturity": "draft",
     "category": "Communication"
   },
   {
@@ -364,7 +332,6 @@
       "demo.docusign.net",
       "docusign.net"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -375,7 +342,6 @@
     "hosts": [
       "api.dub.co"
     ],
-    "maturity": "draft",
     "category": "Marketing"
   },
   {
@@ -387,7 +353,6 @@
       "open.ecovacs.com",
       "open.ecovacs.cn"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -398,7 +363,6 @@
     "hosts": [
       "apis.elai.io"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -409,7 +373,6 @@
     "hosts": [
       "api.elevenlabs.io"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -420,7 +383,6 @@
     "hosts": [
       "openapi.etsy.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -431,7 +393,6 @@
     "hosts": [
       "api.exa.ai"
     ],
-    "maturity": "draft",
     "category": "Search & Data"
   },
   {
@@ -444,7 +405,6 @@
       "queue.fal.run",
       "rest.alpha.fal.ai"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -455,7 +415,6 @@
     "hosts": [
       "api.figma.com"
     ],
-    "maturity": "draft",
     "category": "Design"
   },
   {
@@ -466,7 +425,6 @@
     "hosts": [
       "api.firecrawl.dev"
     ],
-    "maturity": "draft",
     "category": "Search & Data"
   },
   {
@@ -477,7 +435,6 @@
     "hosts": [
       "api.machines.dev"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -488,7 +445,6 @@
     "hosts": [
       "api.framer.com"
     ],
-    "maturity": "draft",
     "category": "Design"
   },
   {
@@ -499,7 +455,6 @@
     "hosts": [
       "api2.frontapp.com"
     ],
-    "maturity": "draft",
     "category": "Support"
   },
   {
@@ -510,7 +465,6 @@
     "hosts": [
       "generativelanguage.googleapis.com"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -521,7 +475,6 @@
     "hosts": [
       "api.github.com"
     ],
-    "maturity": "draft",
     "category": "Developer & Infra"
   },
   {
@@ -532,7 +485,6 @@
     "hosts": [
       "gitlab.com"
     ],
-    "maturity": "draft",
     "category": "Developer & Infra"
   },
   {
@@ -543,7 +495,6 @@
     "hosts": [
       "smartdevicemanagement.googleapis.com"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -554,7 +505,6 @@
     "hosts": [
       "api.gumroad.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -565,7 +515,6 @@
     "hosts": [
       "api.heygen.com"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -576,7 +525,6 @@
     "hosts": [
       "your instance host"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -587,7 +535,6 @@
     "hosts": [
       "the host you pass via --host"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -598,7 +545,6 @@
     "hosts": [
       "the host you pass via --host"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -609,7 +555,6 @@
     "hosts": [
       "api.hubapi.com"
     ],
-    "maturity": "draft",
     "category": "Sales & CRM"
   },
   {
@@ -620,7 +565,6 @@
     "hosts": [
       "huggingface.co"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -631,7 +575,6 @@
     "hosts": [
       "api.hume.ai"
     ],
-    "maturity": "draft",
     "category": "Voice AI"
   },
   {
@@ -642,7 +585,6 @@
     "hosts": [
       "api.ideogram.ai"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -653,7 +595,6 @@
     "hosts": [
       "api.kit.com"
     ],
-    "maturity": "draft",
     "category": "Newsletters"
   },
   {
@@ -664,7 +605,6 @@
     "hosts": [
       "api.klingai.com"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -676,7 +616,6 @@
       "cloud.langfuse.com",
       "us.cloud.langfuse.com"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -687,7 +626,6 @@
     "hosts": [
       "api.withleaf.io"
     ],
-    "maturity": "draft",
     "category": "Agritech"
   },
   {
@@ -698,7 +636,6 @@
     "hosts": [
       "api.lemonsqueezy.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -709,7 +646,6 @@
     "hosts": [
       "api.letta.com"
     ],
-    "maturity": "draft",
     "category": "Memory"
   },
   {
@@ -720,7 +656,6 @@
     "hosts": [
       "api.linear.app"
     ],
-    "maturity": "draft",
     "category": "Project management"
   },
   {
@@ -731,7 +666,6 @@
     "hosts": [
       "api.lob.com"
     ],
-    "maturity": "draft",
     "category": "Logistics"
   },
   {
@@ -742,7 +676,6 @@
     "hosts": [
       "app.loops.so"
     ],
-    "maturity": "draft",
     "category": "Email"
   },
   {
@@ -753,7 +686,6 @@
     "hosts": [
       "api.lumalabs.ai"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -765,7 +697,6 @@
       "your Mastodon instance host",
       "declared at connect time. The credential is only ever sent to that host"
     ],
-    "maturity": "draft",
     "category": "Social"
   },
   {
@@ -776,7 +707,6 @@
     "hosts": [
       "api.mem0.ai"
     ],
-    "maturity": "draft",
     "category": "Memory"
   },
   {
@@ -787,7 +717,6 @@
     "hosts": [
       "api.mercury.com"
     ],
-    "maturity": "draft",
     "category": "Finance & Commerce"
   },
   {
@@ -798,7 +727,6 @@
     "hosts": [
       "api.mistral.ai"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -809,7 +737,6 @@
     "hosts": [
       "api.monday.com"
     ],
-    "maturity": "draft",
     "category": "Project management"
   },
   {
@@ -820,7 +747,6 @@
     "hosts": [
       "the host you pass via --host"
     ],
-    "maturity": "draft",
     "category": "3D printing"
   },
   {
@@ -831,7 +757,6 @@
     "hosts": [
       "your n8n instance host"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -842,7 +767,6 @@
     "hosts": [
       "console.neon.tech"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -853,7 +777,6 @@
     "hosts": [
       "api.netlify.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -864,7 +787,6 @@
     "hosts": [
       "newsapi.org"
     ],
-    "maturity": "draft",
     "category": "Search & Data"
   },
   {
@@ -875,7 +797,6 @@
     "hosts": [
       "api.notion.com"
     ],
-    "maturity": "draft",
     "category": "Notes & docs"
   },
   {
@@ -886,7 +807,6 @@
     "hosts": [
       "the host you pass via --host"
     ],
-    "maturity": "draft",
     "category": "3D printing"
   },
   {
@@ -897,7 +817,6 @@
     "hosts": [
       "api.openai.com"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -908,7 +827,6 @@
     "hosts": [
       "openrouter.ai"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -919,7 +837,6 @@
     "hosts": [
       "api.openweathermap.org"
     ],
-    "maturity": "draft",
     "category": "Weather"
   },
   {
@@ -930,7 +847,6 @@
     "hosts": [
       "api.opus.pro"
     ],
-    "maturity": "draft",
     "category": "Video"
   },
   {
@@ -941,7 +857,6 @@
     "hosts": [
       "api.ouraring.com"
     ],
-    "maturity": "draft",
     "category": "Health"
   },
   {
@@ -952,7 +867,6 @@
     "hosts": [
       "api.paddle.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -963,7 +877,6 @@
     "hosts": [
       "www.patreon.com"
     ],
-    "maturity": "draft",
     "category": "Creator"
   },
   {
@@ -974,7 +887,6 @@
     "hosts": [
       "api.perplexity.ai"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -985,7 +897,6 @@
     "hosts": [
       "api.pexels.com"
     ],
-    "maturity": "draft",
     "category": "Stock media"
   },
   {
@@ -996,7 +907,6 @@
     "hosts": [
       "derived from --host at runtime; the CLI refuses to send the key anywhere else"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1007,7 +917,6 @@
     "hosts": [
       "{company}.pipedrive.com"
     ],
-    "maturity": "draft",
     "category": "Sales & CRM"
   },
   {
@@ -1018,7 +927,6 @@
     "hosts": [
       "core-api.uk.plain.com"
     ],
-    "maturity": "draft",
     "category": "Support"
   },
   {
@@ -1029,18 +937,16 @@
     "hosts": [
       "api.play.ht"
     ],
-    "maturity": "draft",
     "category": "Voice AI"
   },
   {
     "id": "podbean",
     "name": "Podbean",
-    "tagline": "Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector (see Maturity).",
+    "tagline": "Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector.",
     "auth": "provider OAuth 2.0 via the secure credential flow",
     "hosts": [
       "api.podbean.com"
     ],
-    "maturity": "draft",
     "category": "Podcasting"
   },
   {
@@ -1052,7 +958,6 @@
       "api.polar.sh",
       "sandbox-api.polar.sh"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -1063,7 +968,6 @@
     "hosts": [
       "gamma-api.polymarket.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1075,7 +979,6 @@
       "configurable",
       "default app.posthog.com"
     ],
-    "maturity": "draft",
     "category": "Monitoring"
   },
   {
@@ -1086,7 +989,6 @@
     "hosts": [
       "api.postmarkapp.com"
     ],
-    "maturity": "draft",
     "category": "Email"
   },
   {
@@ -1097,7 +999,6 @@
     "hosts": [
       "api.printful.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -1108,7 +1009,6 @@
     "hosts": [
       "connect.prusa3d.com"
     ],
-    "maturity": "draft",
     "category": "3D printing"
   },
   {
@@ -1119,7 +1019,6 @@
     "hosts": [
       "api.rach.io"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1130,7 +1029,6 @@
     "hosts": [
       "backboard.railway.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -1141,7 +1039,6 @@
     "hosts": [
       "api.ramp.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1152,7 +1049,6 @@
     "hosts": [
       "readwise.io"
     ],
-    "maturity": "draft",
     "category": "Reading"
   },
   {
@@ -1163,7 +1059,6 @@
     "hosts": [
       "api.remove.bg"
     ],
-    "maturity": "draft",
     "category": "Design"
   },
   {
@@ -1174,7 +1069,6 @@
     "hosts": [
       "api.render.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -1185,7 +1079,6 @@
     "hosts": [
       "api.replicate.com"
     ],
-    "maturity": "draft",
     "category": "AI & ML"
   },
   {
@@ -1196,7 +1089,6 @@
     "hosts": [
       "api.resend.com"
     ],
-    "maturity": "draft",
     "category": "Email"
   },
   {
@@ -1207,7 +1099,6 @@
     "hosts": [
       "api.restream.io"
     ],
-    "maturity": "draft",
     "category": "Livestreaming"
   },
   {
@@ -1218,7 +1109,6 @@
     "hosts": [
       "api.dev.runwayml.com"
     ],
-    "maturity": "draft",
     "category": "Media generation"
   },
   {
@@ -1229,7 +1119,6 @@
     "hosts": [
       "api.sendgrid.com"
     ],
-    "maturity": "draft",
     "category": "Email"
   },
   {
@@ -1240,7 +1129,6 @@
     "hosts": [
       "sentry.io"
     ],
-    "maturity": "draft",
     "category": "Monitoring"
   },
   {
@@ -1251,7 +1139,6 @@
     "hosts": [
       "api.goshippo.com"
     ],
-    "maturity": "draft",
     "category": "Logistics"
   },
   {
@@ -1262,7 +1149,6 @@
     "hosts": [
       "<your-shop>.myshopify.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -1273,7 +1159,6 @@
     "hosts": [
       "slack.com"
     ],
-    "maturity": "live",
     "category": "Communication"
   },
   {
@@ -1284,7 +1169,6 @@
     "hosts": [
       "api.smartcar.com"
     ],
-    "maturity": "draft",
     "category": "Vehicles"
   },
   {
@@ -1295,7 +1179,6 @@
     "hosts": [
       "api.smartthings.com"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1306,7 +1189,6 @@
     "hosts": [
       "api.spotify.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1318,7 +1200,6 @@
       "connect.squareup.com",
       "connect.squareupsandbox.com"
     ],
-    "maturity": "draft",
     "category": "E-commerce"
   },
   {
@@ -1329,7 +1210,6 @@
     "hosts": [
       "api.stripe.com"
     ],
-    "maturity": "draft",
     "category": "Finance & Commerce"
   },
   {
@@ -1340,7 +1220,6 @@
     "hosts": [
       "<ref>.supabase.co"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -1351,7 +1230,6 @@
     "hosts": [
       "api.supermemory.ai"
     ],
-    "maturity": "draft",
     "category": "Memory"
   },
   {
@@ -1362,7 +1240,6 @@
     "hosts": [
       "api.switch-bot.com"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1373,7 +1250,6 @@
     "hosts": [
       "api.tally.so"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -1384,7 +1260,6 @@
     "hosts": [
       "api.tavily.com"
     ],
-    "maturity": "draft",
     "category": "Search & Data"
   },
   {
@@ -1395,7 +1270,6 @@
     "hosts": [
       "api.telegram.org"
     ],
-    "maturity": "draft",
     "category": "Communication"
   },
   {
@@ -1408,7 +1282,6 @@
       "fleet-api.prd.eu.vn.cloud.tesla.com",
       "fleet-api.prd.cn.vn.cloud.tesla.com"
     ],
-    "maturity": "draft",
     "category": "Vehicles"
   },
   {
@@ -1421,7 +1294,6 @@
       "fleet-api.prd.eu.vn.cloud.tesla.com",
       "fleet-api.prd.cn.vn.cloud.tesla.com"
     ],
-    "maturity": "draft",
     "category": "Energy"
   },
   {
@@ -1432,7 +1304,6 @@
     "hosts": [
       "api.ticktick.com"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -1443,7 +1314,6 @@
     "hosts": [
       "open.tiktokapis.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1454,7 +1324,6 @@
     "hosts": [
       "api.todoist.com"
     ],
-    "maturity": "draft",
     "category": "Productivity"
   },
   {
@@ -1465,7 +1334,6 @@
     "hosts": [
       "api.transistor.fm"
     ],
-    "maturity": "draft",
     "category": "Podcasting"
   },
   {
@@ -1476,7 +1344,6 @@
     "hosts": [
       "api.trigger.dev"
     ],
-    "maturity": "draft",
     "category": "Developer & Infra"
   },
   {
@@ -1490,7 +1357,6 @@
       "openapi.tuyacn.com",
       "openapi.tuyain.com"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1501,7 +1367,6 @@
     "hosts": [
       "api.twitch.tv"
     ],
-    "maturity": "draft",
     "category": "Creator"
   },
   {
@@ -1512,7 +1377,6 @@
     "hosts": [
       "api.typeform.com"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1523,7 +1387,6 @@
     "hosts": [
       "api.uber.com"
     ],
-    "maturity": "draft",
     "category": "Logistics"
   },
   {
@@ -1534,7 +1397,6 @@
     "hosts": [
       "the host you pass via --host"
     ],
-    "maturity": "draft",
     "category": "Smart home"
   },
   {
@@ -1545,7 +1407,6 @@
     "hosts": [
       "api.unsplash.com"
     ],
-    "maturity": "draft",
     "category": "Stock media"
   },
   {
@@ -1556,7 +1417,6 @@
     "hosts": [
       "*.upstash.io"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -1567,7 +1427,6 @@
     "hosts": [
       "api.vapi.ai"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1578,7 +1437,6 @@
     "hosts": [
       "the host you pass via --api-host"
     ],
-    "maturity": "draft",
     "category": "Video"
   },
   {
@@ -1589,7 +1447,6 @@
     "hosts": [
       "api.vercel.com"
     ],
-    "maturity": "draft",
     "category": "Cloud & hosting"
   },
   {
@@ -1600,7 +1457,6 @@
     "hosts": [
       "api.webflow.com"
     ],
-    "maturity": "draft",
     "category": "Design"
   },
   {
@@ -1611,7 +1467,6 @@
     "hosts": [
       "api.wise.com"
     ],
-    "maturity": "draft",
     "category": "Finance & Commerce"
   },
   {
@@ -1622,7 +1477,6 @@
     "hosts": [
       "api.x.com"
     ],
-    "maturity": "draft",
     "category": "Social"
   },
   {
@@ -1633,7 +1487,6 @@
     "hosts": [
       "api.x.ai"
     ],
-    "maturity": "draft",
     "category": "Other"
   },
   {
@@ -1644,7 +1497,6 @@
     "hosts": [
       "api.ynab.com"
     ],
-    "maturity": "draft",
     "category": "Finance & Commerce"
   },
   {
@@ -1655,7 +1507,6 @@
     "hosts": [
       "www.googleapis.com"
     ],
-    "maturity": "draft",
     "category": "Video"
   },
   {
@@ -1666,7 +1517,6 @@
     "hosts": [
       "api.getzep.com"
     ],
-    "maturity": "draft",
     "category": "Memory"
   }
 ]

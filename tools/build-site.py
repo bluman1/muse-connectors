@@ -147,10 +147,9 @@ def parse_entries(readme):
     blocks = re.split(r"(?m)^### ", readme)[1:]
     for b in blocks:
         header, rest = b.split("\n", 1)
-        hm = re.match(r"(.+?)\s+(✅|🧪|👥)", header)
-        if not hm:
+        name = re.sub(r"\s+(✅|🧪|👥).*$", "", header).strip()
+        if not name:
             continue
-        name, badge = hm.groups()
         tagline = next((ln.strip() for ln in rest.split("\n") if ln.strip()), "")
         am = re.search(r"^- Auth:\s+(.*?)\s+·\s+Allowed hosts:\s+(.*?)\s*$",
                        rest, re.M)
@@ -161,7 +160,7 @@ def parse_entries(readme):
         id_m = ID_RE.search(b)
         if not id_m:
             continue
-        entries.append((id_m.group(1), name.strip(), badge, tagline, auth, hosts))
+        entries.append((id_m.group(1), name, tagline, auth, hosts))
     return entries
 
 
@@ -198,22 +197,26 @@ TEMPLATE = r"""<!DOCTYPE html>
 <meta name="twitter:image" content="https://museconnectors.link/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'Optimistic Display';src:url('https://about.fb.com/wp-content/themes/fbcorp/fonts/optimistic/Optimistic_Display_W_Md.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Optimistic Display';src:url('https://about.fb.com/wp-content/themes/fbcorp/fonts/optimistic/Optimistic_Display_W_Bd.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Optimistic Text';src:url('https://about.fb.com/wp-content/themes/fbcorp/fonts/optimistic/Optimistic_Text_W_Rg.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Optimistic Text';src:url('https://about.fb.com/wp-content/themes/fbcorp/fonts/optimistic/Optimistic_Text_W_Bd.woff2') format('woff2');font-weight:700;font-display:swap}
 :root{
   --bg:#f7f6fb; --surface:#fff; --code-bg:#f3f1f9; --chip-bg:#eeebf6;
   --border:#e6e2f0; --divider:#efedf5;
   --ink:#17141f; --body:#4b4660; --muted:#6b6580; --faint:#a39db5; --code-text:#2a2538;
   --accent:oklch(0.45 0.2 300); --accent-tint:oklch(0.95 0.03 300); --accent-border:oklch(0.75 0.1 300);
   --live-text:oklch(0.4 0.14 150); --live-bg:oklch(0.95 0.05 150);
-  --draft-text:oklch(0.5 0.12 70); --draft-bg:oklch(0.96 0.05 80);
   --dark:#17141f; --dark-card:#221e2d; --dark-code:#2a2538; --dark-body:#b9b3cc;
   --dark-label:oklch(0.8 0.12 300);
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-system,"Segoe UI",sans-serif;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Optimistic Text',-apple-system,"Segoe UI",sans-serif;}
+h1,h2,.brand .word,.dname,.seccard .t,.step .t{font-family:'Optimistic Display',-apple-system,"Segoe UI",sans-serif;}
 .wrap{max-width:1200px;margin:0 auto}
 /* ---------- nav ---------- */
 .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid var(--border)}
@@ -224,7 +227,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .navlinks{display:flex;align-items:center;gap:28px}
 .navlinks a{font-size:14px;color:var(--body);text-decoration:none}
 .navlinks a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-weight:500;cursor:pointer;text-decoration:none;border:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Optimistic Display',sans-serif;font-weight:500;cursor:pointer;text-decoration:none;border:0}
 .navlinks a.btn-repo{background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px}
 .navlinks a.btn-repo:hover{background:#000;color:#fff}
 /* ---------- hero ---------- */
@@ -244,11 +247,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .searchrow{display:flex;align-items:center;gap:16px}
 .search{flex:1;display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;height:44px;padding:0 14px}
 .sicon{width:8px;height:8px;border:2px solid var(--muted);border-radius:999px;flex:none}
-.search input{flex:1;border:0;outline:0;background:transparent;font-family:Sora,sans-serif;font-size:14px;color:var(--ink);min-width:0}
+.search input{flex:1;border:0;outline:0;background:transparent;font-family:'Optimistic Text',sans-serif;font-size:14px;color:var(--ink);min-width:0}
 .search input::placeholder{color:var(--faint)}
 .count{font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--surface);border:1px solid var(--border);color:var(--body);font-family:Sora,sans-serif;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;cursor:pointer}
+.chip{background:var(--surface);border:1px solid var(--border);color:var(--body);font-family:'Optimistic Text',sans-serif;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;cursor:pointer}
 .chip:hover{border-color:var(--ink);color:var(--ink)}
 .chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
 /* ---------- catalog grid ---------- */
@@ -259,13 +262,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .chead{display:flex;gap:12px;align-items:flex-start}
 .tile{width:40px;height:40px;flex:none;border-radius:12px;background:var(--accent-tint);color:var(--accent);font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center}
 .cmeta{flex:1;min-width:0}
-.cname{background:none;border:0;padding:0;font-family:Sora,sans-serif;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
+.cname{background:none;border:0;padding:0;font-family:'Optimistic Display',sans-serif;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;text-align:left}
 .cname:hover{color:var(--ink);text-decoration:underline}
 .ccat{font-size:12px;color:var(--muted);margin-top:2px}
-.pill{flex:none;font-size:11px;font-weight:500;padding:4px 9px;border-radius:999px}
-.pill.live{color:var(--live-text);background:var(--live-bg)}
-.pill.draft{color:var(--draft-text);background:var(--draft-bg)}
-.pshort{display:none}
 .cdesc{margin:0;font-size:13.5px;line-height:1.55;color:var(--body)}
 .hosts{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;gap:8px;min-width:0}
 .hlabel{color:var(--faint);flex:none}
@@ -299,6 +298,9 @@ pre.prompt{background:var(--code-bg);border:1px solid var(--border);border-radiu
 .prow .btn-copy{padding:12px 14px}
 .btn-audit{background:var(--surface);border:1px solid var(--border);color:var(--ink);font-size:13px;padding:12px 18px;border-radius:10px;white-space:nowrap}
 .btn-audit:hover{border-color:var(--ink)}
+.btn-issue{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:13px;padding:12px 18px;border-radius:10px;white-space:nowrap}
+.btn-issue:hover{border-color:var(--ink);color:var(--ink)}
+.issuenote{margin:14px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}
 /* ---------- security ---------- */
 .security{margin:0 40px;background:var(--dark);color:#fff;border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
 .slabel{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--dark-label);margin-bottom:16px}
@@ -376,7 +378,6 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
   --ink:#f4f4f6; --body:#b9b9c2; --muted:#92929d; --faint:#6e6e79; --code-text:#dcdce4;
   --accent:oklch(0.75 0.08 300); --accent-tint:oklch(0.24 0.02 300); --accent-border:oklch(0.42 0.05 300);
   --live-text:oklch(0.82 0.1 150); --live-bg:oklch(0.27 0.05 150);
-  --draft-text:oklch(0.84 0.1 80); --draft-bg:oklch(0.29 0.05 80);
 }
 .nav{background:rgba(14,14,17,.9)}
 .navlinks a.btn-repo{background:#f4f4f6;color:#0e0e11}
@@ -459,12 +460,24 @@ code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);paddi
     </div>
   </section>
 
+  <section class="contribute">
+    <div class="left">
+      <h2>Something not working?</h2>
+      <p>A connector misbehaving is a bug report, not a dead end. Open an issue with the connector name, what you ran, and the error output. Every report gets read, and fixes ship fast.</p>
+    </div>
+    <div class="cbtns">
+      <a class="btn btn-ghost" href="https://github.com/bluman1/muse-connectors/issues">Browse issues</a>
+      <a class="btn btn-accent" href="https://github.com/bluman1/muse-connectors/issues/new?title=%5Bconnector-name%5D%20&body=%2A%2AWhat%20I%20tried%3A%2A%2A%0A%0A%2A%2AWhat%20happened%3A%2A%2A%0A%0A%2A%2AWhat%20I%20expected%3A%2A%2A%0A%0A%2A%2AError%20output%3A%2A%2A%0A%60%60%60%0A%60%60%60">Report an issue</a>
+    </div>
+  </section>
+
   <footer class="footer">
     <div>Muse Connectors &middot; MIT licensed</div>
     <div class="fright">
       <a class="flink" href="https://github.com/bluman1/muse-connectors">Repository</a>
       <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">One-paste install</a>
       <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">Add a connector</a>
+      <a class="flink" href="https://github.com/bluman1/muse-connectors/issues/new">Report an issue</a>
     </div>
   </footer>
 </div>
@@ -485,11 +498,11 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 4. Run the skill's status check and report what the connector can now do.
 Never ask me for raw API keys or secrets in chat.`;
 
-function pill(c) {
-  const live = c.maturity === "live";
-  const label = live ? "Live-tested" : (c.maturity === "community" ? "Community" : "Draft");
-  const short = live ? "Live" : label;
-  return `<span class="pill ${live ? "live" : "draft"}"><span class="pfull">${label}</span><span class="pshort">${esc(short)}</span></span>`;
+function issueURL(c) {
+  const title = `[${c.id}] `;
+  const body = `**What I tried:**\n\n**What happened:**\n\n**What I expected:**\n\n**Error output (paste it here):**\n\`\`\`\n\`\`\``;
+  return "https://github.com/bluman1/muse-connectors/issues/new?title="
+    + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
 }
 
 function cardHTML(c) {
@@ -503,7 +516,6 @@ function cardHTML(c) {
         <button class="cname" data-act="detail">${esc(c.name)}</button>
         <div class="ccat">${esc(c.category)}</div>
       </div>
-      ${pill(c)}
     </div>
     <p class="cdesc">${esc(c.tagline)}</p>
     <div class="hosts"><span class="hlabel">hosts</span><span class="hval">${esc(c.hosts.join(", "))}</span></div>
@@ -515,35 +527,29 @@ function cardHTML(c) {
   </article>`;
 }
 
-function maturityText(c) {
-  if (c.maturity === "live") return "Live-tested: installed from a raw URL on a fresh Muse and exercised against the real API.";
-  if (c.maturity === "community") return "Community: contributed by the community. Review the code before connecting.";
-  return "Draft: written from the provider's public docs, awaiting a live test. Review the code before connecting.";
-}
-
 function detailHTML(c) {
   const initial = esc(c.name.trim().charAt(0).toUpperCase());
-  const mat = c.maturity === "live" ? "Live-tested" : (c.maturity === "community" ? "Community" : "Draft");
   return `<div class="dtop">
       <div class="crumb">connectors / ${esc(c.id)}</div>
       <button class="x" data-act="close" aria-label="Close">\u2715</button>
     </div>
     <div class="dident">
       <div class="dtile">${initial}</div>
-      <div><div class="dname">${esc(c.name)}</div><div class="dsub">${esc(c.category)} &middot; ${mat}</div></div>
+      <div><div class="dname">${esc(c.name)}</div><div class="dsub">${esc(c.category)}</div></div>
     </div>
     <p class="ddesc">${esc(c.tagline)}</p>
     <div class="facts">
       <div class="fact"><div class="flabel">Auth</div><div class="fval">${esc(c.auth)}</div></div>
       <div class="fact"><div class="flabel">Allowed hosts</div><div class="fval mono">${esc(c.hosts.join(", "))}</div></div>
-      <div class="fact"><div class="flabel">Maturity</div><div class="fval">${maturityText(c)}</div></div>
     </div>
     <div class="plabel">Install prompt</div>
     <pre class="prompt">${esc(promptFor(c.id))}</pre>
     <div class="prow">
       <button class="btn btn-copy" data-act="copy">${state.copiedSlug === c.id ? "Copied \u2713" : "Copy install prompt"}</button>
       <a class="btn btn-audit" href="https://github.com/bluman1/muse-connectors/blob/main/connectors/${esc(c.id)}/SKILL.md">Audit SKILL.md</a>
-    </div>`;
+      <a class="btn btn-issue" href="${issueURL(c)}" target="_blank" rel="noopener">Report an issue</a>
+    </div>
+    <p class="issuenote">Something broken? Hit <strong>Report an issue</strong> and paste what happened. Every report gets read and fixed.</p>`;
 }
 
 function matches(c) {
@@ -818,7 +824,7 @@ def build_og_image(count):
 def main():
     readme = (ROOT / "README.md").read_text()
     connectors = []
-    for cid, name, badge, tagline, auth, hosts in parse_entries(readme):
+    for cid, name, tagline, auth, hosts in parse_entries(readme):
         raw_cat = CATEGORIES.get(cid, "Other")
         connectors.append({
             "id": cid,
@@ -826,7 +832,6 @@ def main():
             "tagline": tagline.strip(),
             "auth": auth.strip(),
             "hosts": hosts,
-            "maturity": {"✅": "live", "🧪": "draft", "👥": "community"}[badge],
             "category": NORMALIZE.get(raw_cat, raw_cat),
         })
     connectors.sort(key=lambda c: c["name"].lower())
