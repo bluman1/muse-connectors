@@ -19,12 +19,12 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ## Catalog
 
-### Slack 🧪 Draft
+### Slack ✅ Live-tested
 
 Read channels, post messages, list users. The most-requested workplace connector.
 
 - Auth: Slack OAuth (per-user) · Allowed hosts: `slack.com`
-- Maturity: 🧪 Draft: written from Slack's public Web API docs, not yet live-tested end-to-end.
+- Maturity: ✅ Live-tested: installed from a raw URL and exercised against the real Slack API.
 
 Copy, paste to your Muse:
 

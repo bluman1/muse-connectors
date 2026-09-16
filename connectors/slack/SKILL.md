@@ -41,4 +41,4 @@ Channel arguments accept channel IDs (`C...`). Use `channels` to resolve a `#nam
 - bin/slack.py
 
 ## Maturity
-🧪 Draft: written from Slack's public Web API docs; not yet live-tested end-to-end.
+✅ Live-tested: installed from a raw URL and exercised against the real Slack API.
