@@ -1,0 +1,310 @@
+[
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "tagline": "List Airtable bases, read table records, and add records.",
+    "auth": "Airtable personal access token (per-user, airtable.com/create/tokens)",
+    "hosts": [
+      "api.airtable.com"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "tagline": "Check your Anthropic API access and list available Claude models. Read-only.",
+    "auth": "Anthropic API key (per-user, console.anthropic.com)",
+    "hosts": [
+      "api.anthropic.com"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
+    "id": "asana",
+    "name": "Asana",
+    "tagline": "View your assigned Asana tasks and create new ones.",
+    "auth": "Asana personal access token (per-user, My Settings \u2192 Apps \u2192 Manage Developer Apps)",
+    "hosts": [
+      "app.asana.com"
+    ],
+    "maturity": "draft",
+    "category": "Project management"
+  },
+  {
+    "id": "clickup",
+    "name": "ClickUp",
+    "tagline": "List ClickUp workspaces and tasks, and create tasks.",
+    "auth": "ClickUp personal API token (per-user, Settings \u2192 Apps \u2192 API Token)",
+    "hosts": [
+      "api.clickup.com"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "tagline": "List your Cloudflare zones and read DNS records. Read-only.",
+    "auth": "API token (per-user, dash.cloudflare.com \u2192 My Profile \u2192 API Tokens; needs Zone:Read + DNS:Read)",
+    "hosts": [
+      "api.cloudflare.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
+    "id": "digitalocean",
+    "name": "DigitalOcean",
+    "tagline": "List your DigitalOcean droplets and domains. Read-only.",
+    "auth": "personal access token (per-user, cloud.digitalocean.com \u2192 API)",
+    "hosts": [
+      "api.digitalocean.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "tagline": "Check your ElevenLabs subscription usage and list available voices. Read-only.",
+    "auth": "ElevenLabs API key (per-user, elevenlabs.io/app/settings/api-keys)",
+    "hosts": [
+      "api.elevenlabs.io"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "tagline": "Look up your Figma user and read file metadata. Read-only.",
+    "auth": "Figma personal access token (per-user, Figma Settings \u2192 Personal access tokens)",
+    "hosts": [
+      "api.figma.com"
+    ],
+    "maturity": "draft",
+    "category": "Design"
+  },
+  {
+    "id": "front",
+    "name": "Front",
+    "tagline": "List Front inboxes and read conversations in your shared inbox. Read-only.",
+    "auth": "Front API token (per-user, Front Settings \u2192 API)",
+    "hosts": [
+      "api2.frontapp.com"
+    ],
+    "maturity": "draft",
+    "category": "Support"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "tagline": "View your profile, list repos, list open issues, and create issues.",
+    "auth": "personal access token (classic, scopes `repo` + `read:user`, per-user)",
+    "hosts": [
+      "api.github.com"
+    ],
+    "maturity": "draft",
+    "category": "Dev tools"
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "tagline": "Your GitLab user, projects, open merge requests, and issue creation.",
+    "auth": "personal access token (per-user, gitlab.com \u2192 Preferences \u2192 Access Tokens; `read_api` for reads, `api` to create issues)",
+    "hosts": [
+      "gitlab.com"
+    ],
+    "maturity": "draft",
+    "category": "Dev tools"
+  },
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "tagline": "List and search contacts, create contacts, and list deals in your HubSpot CRM.",
+    "auth": "HubSpot private app token (per-user, HubSpot Settings \u2192 Integrations \u2192 Private Apps)",
+    "hosts": [
+      "api.hubapi.com"
+    ],
+    "maturity": "draft",
+    "category": "CRM"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "tagline": "Verify your Hugging Face account and search the model hub. Read-only.",
+    "auth": "Hugging Face user access token (per-user, huggingface.co/settings/tokens)",
+    "hosts": [
+      "huggingface.co"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "tagline": "View your assigned issues and create issues, over Linear's GraphQL API.",
+    "auth": "Linear personal API key (per-user, linear.app/settings/api)",
+    "hosts": [
+      "api.linear.app"
+    ],
+    "maturity": "draft",
+    "category": "Project management"
+  },
+  {
+    "id": "netlify",
+    "name": "Netlify",
+    "tagline": "List your Netlify sites and recent deploys. Read-only.",
+    "auth": "personal access token (per-user, app.netlify.com \u2192 User settings \u2192 Applications)",
+    "hosts": [
+      "api.netlify.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "tagline": "Search pages and databases, read page properties, query databases (read-only).",
+    "auth": "Notion internal integration token (per-user, created at notion.so/my-integrations)",
+    "hosts": [
+      "api.notion.com"
+    ],
+    "maturity": "draft",
+    "category": "Notes & docs"
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "tagline": "Check your OpenAI API access and list the models your key can use. Read-only.",
+    "auth": "OpenAI API key (per-user, platform.openai.com/api-keys)",
+    "hosts": [
+      "api.openai.com"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "tagline": "Browse the model catalog with per-token pricing; check your key usage. Read-only.",
+    "auth": "API key (per-user, openrouter.ai/keys)",
+    "hosts": [
+      "openrouter.ai"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
+    "id": "render",
+    "name": "Render",
+    "tagline": "List your Render services and recent deploys. Read-only.",
+    "auth": "API key (per-user, dashboard.render.com \u2192 Account Settings \u2192 API Keys)",
+    "hosts": [
+      "api.render.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
+    "id": "resend",
+    "name": "Resend",
+    "tagline": "Send email through Resend and check delivery status. Every send is confirmed with you first.",
+    "auth": "Resend API key (per-user, resend.com/api-keys)",
+    "hosts": [
+      "api.resend.com"
+    ],
+    "maturity": "draft",
+    "category": "Email"
+  },
+  {
+    "id": "sentry",
+    "name": "Sentry",
+    "tagline": "List organizations and projects, triage unresolved issues from the last 24h. Read-only.",
+    "auth": "auth token (per-user, sentry.io \u2192 Settings \u2192 Auth Tokens)",
+    "hosts": [
+      "sentry.io"
+    ],
+    "maturity": "draft",
+    "category": "Monitoring"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "tagline": "Read channels, post messages, search history, list users. The most-requested workplace connector.",
+    "auth": "Slack OAuth (per-user)",
+    "hosts": [
+      "slack.com"
+    ],
+    "maturity": "draft",
+    "category": "Communication"
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe",
+    "tagline": "Read-only Stripe visibility: balance, recent charges, customers. No write commands ship \u2014 expanding to writes is a deliberate v2.",
+    "auth": "Stripe restricted API key (per-user, Dashboard \u2192 Developers \u2192 API keys; read-only permissions suffice)",
+    "hosts": [
+      "api.stripe.com"
+    ],
+    "maturity": "draft",
+    "category": "Finance"
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "tagline": "List tables and query rows in your Supabase Postgres database. Read-only.",
+    "auth": "service_role key (per-user, project Settings \u2192 API)",
+    "hosts": [
+      "<ref>.supabase.co"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
+    "id": "tavily",
+    "name": "Tavily",
+    "tagline": "Fast, clean web research: one call returns an AI answer plus ranked sources with snippets. Read-only.",
+    "auth": "Tavily API key (per-user, tavily.com)",
+    "hosts": [
+      "api.tavily.com"
+    ],
+    "maturity": "draft",
+    "category": "Research"
+  },
+  {
+    "id": "telegram",
+    "name": "Telegram",
+    "tagline": "Send messages and read updates through your own Telegram bot. Bots can't message users who haven't started them first.",
+    "auth": "Telegram bot token from @BotFather (per-user, single token)",
+    "hosts": [
+      "api.telegram.org"
+    ],
+    "maturity": "draft",
+    "category": "Communication"
+  },
+  {
+    "id": "todoist",
+    "name": "Todoist",
+    "tagline": "List tasks, create tasks, and mark them done in Todoist.",
+    "auth": "Todoist API token (per-user, Settings \u2192 Integrations \u2192 Developer)",
+    "hosts": [
+      "api.todoist.com"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "tagline": "See your Vercel account, projects, and recent deployments.",
+    "auth": "personal token (per-user, vercel.com/account/tokens)",
+    "hosts": [
+      "api.vercel.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  }
+]
