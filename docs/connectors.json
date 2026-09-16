@@ -301,6 +301,17 @@
     "category": "Translation"
   },
   {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "tagline": "Chat with DeepSeek's models and check account balance: OpenAI-compatible chat completions with thinking mode, model listing, and balance lookup via the official API.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.deepseek.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "descript",
     "name": "Descript",
     "tagline": "Work with Descript's API (open beta): list projects, inspect Underlord/agent jobs, submit a publish job, and poll a job until it finishes. Use when the user wants to drive Descript editing or publishing programmatically.",
@@ -778,6 +789,17 @@
     ],
     "maturity": "draft",
     "category": "Finance & Commerce"
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral",
+    "tagline": "Mistral AI's La Plateforme API: chat completions, embeddings, document OCR, and model listing via Bearer API key.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.mistral.ai"
+    ],
+    "maturity": "draft",
+    "category": "Other"
   },
   {
     "id": "monday",
@@ -1602,6 +1624,17 @@
     ],
     "maturity": "draft",
     "category": "Social"
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "tagline": "Query Grok chat completions and list available Grok models through xAI's OpenAI-compatible API, with per-call token usage surfaced so cost is always visible.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.x.ai"
+    ],
+    "maturity": "draft",
+    "category": "Other"
   },
   {
     "id": "ynab",
