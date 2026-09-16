@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>muse-connectors — auditable connector skills for Muse</title>
 <meta name="description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="muse-connectors">
+<meta property="og:title" content="muse-connectors — auditable connector skills for Muse">
+<meta property="og:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
+<meta property="og:url" content="https://bluman1.github.io/muse-connectors/">
+<meta property="og:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="muse-connectors — auditable connector skills for Muse">
+<meta name="twitter:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
+<meta name="twitter:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
 <style>
   :root {
     --bg: #0d1117;
@@ -25,7 +36,10 @@
     line-height: 1.5;
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
-  header h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .brandrow { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  .brandrow svg { flex-shrink: 0; }
+  header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
+  header h1 .muse { color: var(--accent); }
   header h1 .dim { color: var(--muted); font-weight: 400; }
   header p { color: var(--muted); margin: 0 0 6px; max-width: 640px; }
   header p a { color: var(--accent); text-decoration: none; }
@@ -112,7 +126,21 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>muse-connectors <span class="dim">/ catalog</span></h1>
+    <div class="brandrow">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="mark" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58a6ff"/>
+            <stop offset="1" stop-color="#1f6feb"/>
+          </linearGradient>
+        </defs>
+        <rect width="48" height="48" rx="12" fill="url(#mark)"/>
+        <circle cx="15" cy="24" r="4.5" fill="#fff"/>
+        <circle cx="33" cy="24" r="4.5" fill="#fff"/>
+        <path d="M19.5 24h9" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <h1><span class="muse">muse</span>-connectors <span class="dim">/ catalog</span></h1>
+    </div>
     <p>Open-source, auditable connector skills for Muse. Pick one, copy its install prompt, paste it to your Muse — it downloads the skill, verifies it, and walks you through connecting your own account. Every file is public in <a href="https://github.com/bluman1/muse-connectors">the repo</a>, and no skill ever sees your credentials.</p>
     <div class="count" id="count"></div>
   </header>
