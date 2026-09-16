@@ -220,8 +220,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-syst
 .navlinks a{font-size:14px;color:var(--body);text-decoration:none}
 .navlinks a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-weight:500;cursor:pointer;text-decoration:none;border:0}
-.btn-repo{background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px}
-.btn-repo:hover{background:#000}
+.navlinks a.btn-repo{background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px}
+.navlinks a.btn-repo:hover{background:#000;color:#fff}
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 40px 40px;align-items:end}
 .hero-left{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
