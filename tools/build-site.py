@@ -85,6 +85,32 @@ CATEGORIES = {
     "n8n": "Productivity",
     "langfuse": "AI",
     "bluesky": "Social",
+    # batch F: design / stock / media management
+    "canva": "Design", "webflow": "Design", "framer": "Design",
+    "pexels": "Stock media", "unsplash": "Stock media",
+    "cloudinary": "Media management", "remove-bg": "Design",
+    # batch F: podcasting
+    "transistor": "Podcasting", "buzzsprout": "Podcasting",
+    "podbean": "Podcasting",
+    # batch F: video / livestreaming
+    "descript": "Video", "opusclip": "Video", "veed": "Video",
+    "restream": "Livestreaming",
+    # batch F: voice AI / avatar video
+    "cartesia": "Voice AI", "hume-ai": "Voice AI", "playht": "Voice AI",
+    "deepgram": "Voice AI", "elai": "Media generation",
+    # batch F: smart home
+    "smartthings": "Smart home", "tuya": "Smart home",
+    "switchbot": "Smart home", "google-nest": "Smart home",
+    "aqara": "Smart home", "hubitat": "Smart home", "homey": "Smart home",
+    "unifi-protect": "Smart home", "ecovacs": "Smart home",
+    "rachio": "Smart home",
+    # batch F: energy / vehicles / 3d printing
+    "tesla-powerwall": "Energy", "tesla-fleet-api": "Vehicles",
+    "smartcar": "Vehicles", "octoprint": "3D printing",
+    "moonraker": "3D printing", "prusa-connect": "3D printing",
+    # batch F: logistics / commerce / agritech
+    "shippo": "Logistics", "uber-direct": "Logistics", "lob": "Logistics",
+    "square": "E-commerce", "leaf-agriculture": "Agritech",
 }
 
 ID_RE = re.compile(r"connectors/([a-z0-9-]+)/SKILL\.md")

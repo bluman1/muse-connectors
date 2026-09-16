@@ -56,6 +56,17 @@
     "category": "Sales"
   },
   {
+    "id": "aqara",
+    "name": "Aqara",
+    "tagline": "Read device attributes and send control commands to Aqara devices through the Aqara Open Cloud API: plugs and wall switches, lights (brightness, color temperature), air conditioners, supported locks, curtain motors, and saved scenes, organized by homes and rooms. Use it when the user asks about or wants to change anything in their Aqara setup. Zigbee devices need an Aqara hub online. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
+    "auth": "OAuth-style account authorization via the secure credential flow",
+    "hosts": [
+      "open-<region>.aqara.com` (e.g. `open-us.aqara.com`)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
     "id": "asana",
     "name": "Asana",
     "tagline": "View your assigned Asana tasks and create new ones.",
@@ -157,6 +168,17 @@
     "category": "Newsletters"
   },
   {
+    "id": "buzzsprout",
+    "name": "Buzzsprout",
+    "tagline": "Manage podcast episodes on Buzzsprout: list and fetch episodes, create, update, or delete them, and list embed players. Use when the user wants to publish or manage podcast episodes on a Buzzsprout-hosted show.",
+    "auth": "API token via the secure credential flow",
+    "hosts": [
+      "www.buzzsprout.com"
+    ],
+    "maturity": "draft",
+    "category": "Podcasting"
+  },
+  {
     "id": "calcom",
     "name": "Cal.com",
     "tagline": "List bookings and event types, create bookings.",
@@ -177,6 +199,28 @@
     ],
     "maturity": "draft",
     "category": "Scheduling"
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "tagline": "Read and manage Canva designs through the Canva Connect API: list designs and folders, inspect a design, create designs, upload assets, and export designs. Exports are async jobs: submit with export, then poll with export-status until the job succeeds.",
+    "auth": "provider OAuth 2.0 + PKCE via the secure credential flow",
+    "hosts": [
+      "api.canva.com"
+    ],
+    "maturity": "draft",
+    "category": "Design"
+  },
+  {
+    "id": "cartesia",
+    "name": "Cartesia",
+    "tagline": "Generate spoken audio from text with Cartesia's Sonic models (40+ languages) and browse the Cartesia voice library. Reach for this when the user wants narration, voiceovers, or spoken-audio files produced from a script.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.cartesia.ai"
+    ],
+    "maturity": "draft",
+    "category": "Voice AI"
   },
   {
     "id": "clerk",
@@ -212,6 +256,17 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "cloudinary",
+    "name": "Cloudinary",
+    "tagline": "Manage media on Cloudinary through the Upload and Admin APIs: upload images and videos, list and inspect assets, update metadata and tags, delete assets, and check plan usage (credits, storage, bandwidth, transformations).",
+    "auth": "cloud_name + API key + secret via the secure credential flow",
+    "hosts": [
+      "api.cloudinary.com"
+    ],
+    "maturity": "draft",
+    "category": "Media management"
+  },
+  {
     "id": "coda",
     "name": "Coda",
     "tagline": "List docs, read tables and rows, add rows. Your docs as a database.",
@@ -221,6 +276,17 @@
     ],
     "maturity": "draft",
     "category": "Notes & docs"
+  },
+  {
+    "id": "deepgram",
+    "name": "Deepgram",
+    "tagline": "Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.deepgram.com"
+    ],
+    "maturity": "draft",
+    "category": "Voice AI"
   },
   {
     "id": "deepl",
@@ -233,6 +299,17 @@
     ],
     "maturity": "draft",
     "category": "Translation"
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "tagline": "Work with Descript's API (open beta): list projects, inspect Underlord/agent jobs, submit a publish job, and poll a job until it finishes. Use when the user wants to drive Descript editing or publishing programmatically.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.descript.com"
+    ],
+    "maturity": "draft",
+    "category": "Video"
   },
   {
     "id": "devto",
@@ -277,6 +354,29 @@
     ],
     "maturity": "draft",
     "category": "Marketing"
+  },
+  {
+    "id": "ecovacs",
+    "name": "Ecovacs",
+    "tagline": "Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum.",
+    "auth": "Access Key via the secure credential flow",
+    "hosts": [
+      "open.ecovacs.com",
+      "open.ecovacs.cn` (region-selected)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
+    "id": "elai",
+    "name": "Elai",
+    "tagline": "Build AI avatar presenter videos with Elai: list available avatars, inspect videos and their render status, submit renders, and poll until a render finishes. Reach for this when the user wants a talking-head video generated from a script or slide deck.",
+    "auth": "API token via the secure credential flow",
+    "hosts": [
+      "apis.elai.io"
+    ],
+    "maturity": "draft",
+    "category": "Media generation"
   },
   {
     "id": "elevenlabs",
@@ -358,6 +458,17 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "framer",
+    "name": "Framer",
+    "tagline": "Verify a Framer project's Server API connection. Framer's Server API is WebSocket/SDK-only (there is no REST surface): the official framer-api npm package opens a long-lived connection to wss://api.framer.com/channel/headless-plugin with the header Authorization: Token <api_key>, keyed to one project. This connector's CLI performs that same official handshake as a connection check, so auth proves the API key and project pair work.",
+    "auth": "per-project API key via the secure credential flow",
+    "hosts": [
+      "api.framer.com` (WebSocket only)"
+    ],
+    "maturity": "draft",
+    "category": "Design"
+  },
+  {
     "id": "front",
     "name": "Front",
     "tagline": "List Front inboxes and read conversations in your shared inbox. Read-only.",
@@ -402,6 +513,17 @@
     "category": "Dev tools"
   },
   {
+    "id": "google-nest",
+    "name": "Google Nest",
+    "tagline": "Read traits and execute commands on Google Nest devices through the Smart Device Management (SDM) API: thermostats (mode, setpoints, ambient readings), cameras and doorbells (events, live-stream generation). Use it when the user asks about their Nest thermostat, wants to change heating/cooling, or wants camera/doorbell state. Thermostat commands start or stop real HVAC, so they are confirmation-gated (see Operating Rules).",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "smartdevicemanagement.googleapis.com"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
     "id": "gumroad",
     "name": "Gumroad",
     "tagline": "View your Gumroad products and sales. Read-only by design.",
@@ -435,6 +557,28 @@
     "category": "Smart home"
   },
   {
+    "id": "homey",
+    "name": "Homey",
+    "tagline": "Read device state and write capability values on a Homey Pro (local) or Homey cloud account through the Homey Web API: lights and outlets, dimmers and color, thermostats, connected locks, blinds and curtains, plus listing Flows (automations). Use it when the user asks about or wants to change anything paired to their Homey. Writes drive real physical hardware, so they are confirmation-gated (see Operating Rules).",
+    "auth": "personal API token or OAuth via the secure credential flow",
+    "hosts": [
+      "the host you pass via `--host` (your Homey's LAN IP/hostname or cloud URL; the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
+    "id": "hubitat",
+    "name": "Hubitat",
+    "tagline": "Read device states and invoke capability commands on a Hubitat Elevation hub through the official Maker API app: lights and dimmers, deadbolt locks, garage door controllers, thermostats, location modes, and the Hubitat Safety Monitor (HSM). Use it when the user asks about or wants to change anything paired to their Hubitat hub. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
+    "auth": "Maker API token via the secure credential flow",
+    "hosts": [
+      "the host you pass via `--host` (your hub's LAN IP/hostname or cloud relay URL; the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
     "id": "hubspot",
     "name": "HubSpot",
     "tagline": "List and search contacts, create contacts, and list deals in your HubSpot CRM.",
@@ -455,6 +599,17 @@
     ],
     "maturity": "draft",
     "category": "AI"
+  },
+  {
+    "id": "hume-ai",
+    "name": "Hume AI",
+    "tagline": "Synthesize speech with Hume's Octave TTS models and read EVI (Empathic Voice Interface) conversational configs. Reach for this when the user wants expressive TTS audio from text or wants to inspect an EVI voice-agent configuration.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.hume.ai"
+    ],
+    "maturity": "draft",
+    "category": "Voice AI"
   },
   {
     "id": "ideogram",
@@ -502,6 +657,17 @@
     "category": "AI"
   },
   {
+    "id": "leaf-agriculture",
+    "name": "Leaf Agriculture",
+    "tagline": "Read and manage farm data through Leaf Agriculture, a unified farm-data API that aggregates the partner-gated OEM platforms under self-serve access: John Deere, CNH Industrial (Case IH/New Holland), Climate FieldView, Trimble, Raven and AgLeader. The primitives it exposes (fields, boundaries, machine operation files for planting/harvest/application/tillage, plus as-applied irrigation) are exactly what a farmer-first fintech and supply-chain digitization product consumes. This is the practical route to partner-gated OEM data without a partnership agreement: individual provider connections need that grower's OAuth consent, which is the normal data-access model rather than a partnership gate.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.withleaf.io"
+    ],
+    "maturity": "draft",
+    "category": "Agritech"
+  },
+  {
     "id": "lemon-squeezy",
     "name": "Lemon Squeezy",
     "tagline": "Read Lemon Squeezy revenue: list orders, subscriptions, customers, products; create checkout links.",
@@ -533,6 +699,17 @@
     ],
     "maturity": "draft",
     "category": "Project management"
+  },
+  {
+    "id": "lob",
+    "name": "Lob",
+    "tagline": "Send physical mail through Lob's Print and Mail API: verify US addresses; create postcards and letters that get printed and mailed; list what was sent; cancel a piece while it is still before production. Reach for this when the user wants a real letter or postcard in the mail rather than an email.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.lob.com"
+    ],
+    "maturity": "draft",
+    "category": "Logistics"
   },
   {
     "id": "loops",
@@ -603,6 +780,17 @@
     "category": "Project management"
   },
   {
+    "id": "moonraker",
+    "name": "Moonraker",
+    "tagline": "Control a Klipper-based 3D printer through the Moonraker API server (the backend behind Mainsail, Fluidd and RatOS): read server and print status, list and upload gcode files, start/pause/resume/cancel prints, trigger the emergency stop, toggle smart-plug devices, and (gated) run raw G-code. Use when the user mentions Moonraker, Klipper, Mainsail, or Fluidd.",
+    "auth": "no credential needed on most LAN installs (optional API key via the secure credential flow)",
+    "hosts": [
+      "the host you pass via `--host` (your printer's Moonraker server; the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "3D printing"
+  },
+  {
     "id": "n8n",
     "name": "n8n",
     "tagline": "List and manage workflows, read executions.",
@@ -658,6 +846,17 @@
     "category": "Notes & docs"
   },
   {
+    "id": "octoprint",
+    "name": "OctoPrint",
+    "tagline": "Control an OctoPrint 3D printer over its local REST API: read printer state and temperatures, monitor print progress, start/pause/cancel/restart jobs, upload and select gcode files, set hotend and bed temperatures, jog or home axes, and (gated) run raw G-code. Use when the user mentions their OctoPrint instance or a printer it drives.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "the host you pass via `--host` (your OctoPrint server; the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "3D printing"
+  },
+  {
     "id": "openai",
     "name": "OpenAI",
     "tagline": "Check your OpenAI API access and list the models your key can use. Read-only.",
@@ -689,6 +888,17 @@
     ],
     "maturity": "draft",
     "category": "Weather"
+  },
+  {
+    "id": "opusclip",
+    "name": "OpusClip",
+    "tagline": "Turn long-form videos into short, captioned, vertical clips with OpusClip's API: create a clip project from a video URL, check the project's render status, and list the resulting clips with their virality scores. API access requires a Pro-tier (or higher) OpusClip plan and is in beta.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.opus.pro"
+    ],
+    "maturity": "draft",
+    "category": "Video"
   },
   {
     "id": "oura",
@@ -735,6 +945,17 @@
     "category": "AI"
   },
   {
+    "id": "pexels",
+    "name": "Pexels",
+    "tagline": "Search Pexels' royalty-free stock library: find photos and videos by keyword, browse curated/trending photos and popular videos, look up a single photo or video, and read collection contents. The Pexels API is read-only, so this connector cannot change anything.",
+    "auth": "free API key via the secure credential flow",
+    "hosts": [
+      "api.pexels.com"
+    ],
+    "maturity": "draft",
+    "category": "Stock media"
+  },
+  {
     "id": "philips-hue",
     "name": "Philips Hue",
     "tagline": "Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors.",
@@ -766,6 +987,28 @@
     ],
     "maturity": "draft",
     "category": "Support"
+  },
+  {
+    "id": "playht",
+    "name": "PlayHT",
+    "tagline": "Generate spoken audio from text with PlayHT voices, browse stock and cloned voices, and create instant voice clones. Reach for this when the user wants narration or voiceovers, a voice library lookup, or a voice cloned from a sample.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.play.ht"
+    ],
+    "maturity": "draft",
+    "category": "Voice AI"
+  },
+  {
+    "id": "podbean",
+    "name": "Podbean",
+    "tagline": "Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector (see Maturity).",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.podbean.com"
+    ],
+    "maturity": "draft",
+    "category": "Podcasting"
   },
   {
     "id": "polar",
@@ -814,6 +1057,28 @@
     "category": "E-commerce"
   },
   {
+    "id": "prusa-connect",
+    "name": "Prusa Connect",
+    "tagline": "Read Prusa 3D printer state through the official Prusa Connect cloud API: list printers and their state, list jobs and files, view cameras, read print statistics, and upload gcode files to printer storage. Use when the user mentions Prusa Connect or a networked Prusa printer (MK3/MK4/CORE One).",
+    "auth": "personal API token via the secure credential flow",
+    "hosts": [
+      "connect.prusa3d.com"
+    ],
+    "maturity": "draft",
+    "category": "3D printing"
+  },
+  {
+    "id": "rachio",
+    "name": "Rachio",
+    "tagline": "Control a Rachio smart irrigation controller through the public Rachio API. Check who is signed in, see what the controller is currently running, start watering a specific zone for a set number of seconds, and shut all water off in an emergency. Reach for this when the user asks about sprinklers, watering schedules, or irrigation zones.",
+    "auth": "personal API key via the secure credential flow",
+    "hosts": [
+      "api.rach.io"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
     "id": "railway",
     "name": "Railway",
     "tagline": "List projects and deployments, set variables, redeploy.",
@@ -834,6 +1099,17 @@
     ],
     "maturity": "draft",
     "category": "Reading"
+  },
+  {
+    "id": "remove-bg",
+    "name": "remove.bg",
+    "tagline": "Remove the background from an image with the remove.bg API: submit a local file or an image URL, get back a transparent PNG saved to a local path. Also check the account's remaining credits.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.remove.bg"
+    ],
+    "maturity": "draft",
+    "category": "Design"
   },
   {
     "id": "render",
@@ -869,6 +1145,17 @@
     "category": "Email"
   },
   {
+    "id": "restream",
+    "name": "Restream",
+    "tagline": "Manage Restream multistreaming: read your profile, list streaming destinations (channels), toggle destinations or edit channel metadata, and retrieve your stream key. Use when the user wants to control where a livestream goes without opening the Restream dashboard.",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.restream.io"
+    ],
+    "maturity": "draft",
+    "category": "Livestreaming"
+  },
+  {
     "id": "runway",
     "name": "Runway",
     "tagline": "Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync.",
@@ -902,6 +1189,17 @@
     "category": "Monitoring"
   },
   {
+    "id": "shippo",
+    "name": "Shippo",
+    "tagline": "Ship through many carriers (USPS, UPS, FedEx, DHL and others) with one API: get rates for a shipment; buy a printable postage label; track a parcel; refund unused labels. Reach for this when the user needs to price or purchase shipping for a package.",
+    "auth": "API token via the secure credential flow",
+    "hosts": [
+      "api.goshippo.com"
+    ],
+    "maturity": "draft",
+    "category": "Logistics"
+  },
+  {
     "id": "shopify",
     "name": "Shopify",
     "tagline": "View open orders, products, and customers in your Shopify store. Read-only by design.",
@@ -922,6 +1220,40 @@
     ],
     "maturity": "live",
     "category": "Communication"
+  },
+  {
+    "id": "smartcar",
+    "name": "Smartcar",
+    "tagline": "Read and control connected cars across many brands (Tesla, Ford, GM, Toyota, BMW, Hyundai and others) through one standardized API. Read odometer, location, charge and battery level, fuel level and tire pressure; lock/unlock doors; start/stop charging; set charge limits and schedules; route the built-in navigation. Use when the user mentions their car and the brand has no dedicated connector here, or asks for cross-brand vehicle telemetry and control.",
+    "auth": "provider OAuth 2.0 (Smartcar Connect) via the secure credential flow",
+    "hosts": [
+      "api.smartcar.com"
+    ],
+    "maturity": "draft",
+    "category": "Vehicles"
+  },
+  {
+    "id": "smartthings",
+    "name": "SmartThings",
+    "tagline": "Read device status and issue capability commands across a Samsung SmartThings account: locations, devices, switches, dimmers, locks, thermostats, sirens, garage door controllers, and window shades. Use it when the user asks about or wants to change the state of anything paired to their SmartThings hub or cloud account. This connector drives real physical hardware, so every write is confirmation-gated (see Operating Rules).",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "api.smartthings.com"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
+    "id": "square",
+    "name": "Square",
+    "tagline": "Work with a Square seller account: list locations and payments, create orders, push a checkout to a physical Square Terminal for in-person payment, charge a payment source directly, cancel a pending Terminal checkout, and refund a payment. Reach for this when the user needs to take or return money through Square.",
+    "auth": "provider OAuth 2.0 or personal access token via the secure credential flow",
+    "hosts": [
+      "connect.squareup.com",
+      "connect.squareupsandbox.com"
+    ],
+    "maturity": "draft",
+    "category": "E-commerce"
   },
   {
     "id": "stripe",
@@ -957,6 +1289,17 @@
     "category": "Memory"
   },
   {
+    "id": "switchbot",
+    "name": "SwitchBot",
+    "tagline": "Read status and send commands to SwitchBot devices over the official OpenAPI v1.1: SwitchBot Bot (physical button presser), SwitchBot Lock, Curtain and Blind Tilt motors, plugs, lights, air conditioners, infrared remotes, and saved scenes. Use it when the user asks about or wants to change anything in their SwitchBot setup. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
+    "auth": "token + secret pair via the secure credential flow",
+    "hosts": [
+      "api.switch-bot.com"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
     "id": "tally",
     "name": "Tally",
     "tagline": "List forms, read submissions, manage form blocks.",
@@ -990,6 +1333,32 @@
     "category": "Communication"
   },
   {
+    "id": "tesla-fleet-api",
+    "name": "Tesla Fleet API",
+    "tagline": "Control Tesla vehicles through the official Tesla Fleet API: read live vehicle state, wake a sleeping car, and send signed commands (lock/unlock, keyless drive, charge control, preconditioning, honk/flash, trunk, sentry/valet, speed limit, navigation). Use when the user mentions their Tesla car or asks for vehicle actuation.",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "fleet-api.prd.na.vn.cloud.tesla.com",
+      "fleet-api.prd.eu.vn.cloud.tesla.com",
+      "fleet-api.prd.cn.vn.cloud.tesla.com` (region-selected)"
+    ],
+    "maturity": "draft",
+    "category": "Vehicles"
+  },
+  {
+    "id": "tesla-powerwall",
+    "name": "Tesla Powerwall",
+    "tagline": "Monitor and control Tesla energy sites (Powerwall, solar) through the official Tesla Fleet API. Read live power flows, battery state, and site settings; change backup reserve percentage, operation mode, and Storm Watch. Use when the user mentions their Powerwall, Tesla energy site, backup reserve, or storm mode.",
+    "auth": "provider OAuth 2.0 via the secure credential flow",
+    "hosts": [
+      "fleet-api.prd.na.vn.cloud.tesla.com",
+      "fleet-api.prd.eu.vn.cloud.tesla.com",
+      "fleet-api.prd.cn.vn.cloud.tesla.com` (region-selected)"
+    ],
+    "maturity": "draft",
+    "category": "Energy"
+  },
+  {
     "id": "ticktick",
     "name": "TickTick",
     "tagline": "Read and write TickTick: list projects and tasks, create tasks, complete and delete tasks.",
@@ -1012,6 +1381,17 @@
     "category": "Productivity"
   },
   {
+    "id": "transistor",
+    "name": "Transistor",
+    "tagline": "Manage podcast hosting on Transistor.fm: list shows and episodes, create draft episodes, update or delete them, and upload episode audio via Transistor's two-step upload flow. Use when the user wants to publish or manage podcast episodes programmatically.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.transistor.fm"
+    ],
+    "maturity": "draft",
+    "category": "Podcasting"
+  },
+  {
     "id": "triggerdev",
     "name": "Trigger.dev",
     "tagline": "Trigger background jobs, list runs, manage schedules.",
@@ -1021,6 +1401,20 @@
     ],
     "maturity": "draft",
     "category": "Dev tools"
+  },
+  {
+    "id": "tuya",
+    "name": "Tuya",
+    "tagline": "Read status and send control commands to Tuya Cloud / Smart Life devices: smart plugs and switches, lights, thermostats, curtain motors, and supported smart locks, plus executing saved scenes. Use it when the user asks about or wants to change anything paired through the Tuya or Smart Life app. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
+    "auth": "Access ID + Access Secret pair via the secure credential flow",
+    "hosts": [
+      "openapi.tuyaus.com",
+      "openapi.tuyaeu.com",
+      "openapi.tuyacn.com",
+      "openapi.tuyain.com` (region-selected)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
   },
   {
     "id": "twitch",
@@ -1034,6 +1428,39 @@
     "category": "Creator"
   },
   {
+    "id": "uber-direct",
+    "name": "Uber Direct",
+    "tagline": "Dispatch same-day couriers through Uber Direct for food, retail, grocery, or parcel deliveries. Get a price and time quote without dispatching anyone, create a delivery when the user approves, check its status, and cancel a pending one. Reach for this when the user needs something picked up and dropped off locally today.",
+    "auth": "provider OAuth 2.0 client-credentials via the secure credential flow",
+    "hosts": [
+      "api.uber.com"
+    ],
+    "maturity": "draft",
+    "category": "Logistics"
+  },
+  {
+    "id": "unifi-protect",
+    "name": "UniFi Protect",
+    "tagline": "Read camera state and still snapshots from a local UniFi Protect console (Protect 5.3+) through the official Integration API, and adjust camera settings: PTZ position, flood lights, chimes, talkback. Use it when the user asks what their UniFi cameras see, wants a snapshot saved, or wants to change camera behavior. Everything runs against the local console; there is no cloud dependency.",
+    "auth": "integration key via the secure credential flow",
+    "hosts": [
+      "the host you pass via `--host` (your console's IP/hostname; the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "Smart home"
+  },
+  {
+    "id": "unsplash",
+    "name": "Unsplash",
+    "tagline": "Search Unsplash's free stock photo library, browse the latest photos, look up a photo's details, browse a photographer's portfolio or a topic, and download an image while honoring Unsplash's API guidelines. At the Client-ID tier this connector is read-only.",
+    "auth": "access key via the secure credential flow",
+    "hosts": [
+      "api.unsplash.com"
+    ],
+    "maturity": "draft",
+    "category": "Stock media"
+  },
+  {
     "id": "upstash",
     "name": "Upstash",
     "tagline": "Run Redis commands over REST.",
@@ -1045,6 +1472,17 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "veed",
+    "name": "VEED",
+    "tagline": "Remove backgrounds from video with VEED's direct developer API (POST /v1/video/background-remove): standard quality, fast throughput and green-screen chroma-key with spill suppression. Outputs are VP9-with-alpha or H.264 RGB+alpha, up to 4K.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "the host you pass via `--api-host` (the credential is only ever sent there)"
+    ],
+    "maturity": "draft",
+    "category": "Video"
+  },
+  {
     "id": "vercel",
     "name": "Vercel",
     "tagline": "See your Vercel account, projects, and recent deployments.",
@@ -1054,6 +1492,17 @@
     ],
     "maturity": "draft",
     "category": "Cloud & hosting"
+  },
+  {
+    "id": "webflow",
+    "name": "Webflow",
+    "tagline": "Work with the Webflow Data API v2: list sites, inspect site details, browse CMS collections and items, create/update/delete CMS items, and publish a site. Uses a per-site token from Site Settings.",
+    "auth": "per-site token via the secure credential flow",
+    "hosts": [
+      "api.webflow.com"
+    ],
+    "maturity": "draft",
+    "category": "Design"
   },
   {
     "id": "wise",
