@@ -1096,7 +1096,7 @@ Never ask me for raw API keys or secrets in chat.
 
 ### Neon 🧪 Draft
 
-Manage Postgres projects, branches, and compute.
+Inspect Neon serverless Postgres projects, branches, and databases. Branch create and delete need exact-match confirmation; connection passwords are masked.
 
 - Auth: API key (per-user) · Allowed hosts: `console.neon.tech`
 - Maturity: 🧪 Draft: written from Neon's public API docs, not yet live-tested end-to-end.
@@ -2667,6 +2667,139 @@ You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
 2. Save them under ~/workspace/skills/leaf-agriculture/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
 3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Spotify 🧪 Draft
+
+Read your profile, playlists, top tracks and artists, and search the catalog. Playlist and library writes need your confirmation.
+
+- Auth: OAuth 2.0 Authorization Code (per-user) · Allowed hosts: `api.spotify.com`
+- Maturity: 🧪 Draft: written from Spotify's public Web API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/spotify/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/spotify/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### TikTok 🧪 Draft
+
+Read your TikTok profile and video list. API access needs TikTok app approval first, and posting is not shipped.
+
+- Auth: OAuth 2.0 (per-user; TikTok app approval required) · Allowed hosts: `open.tiktokapis.com`
+- Maturity: 🧪 Draft: written from TikTok's public API v2 docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/tiktok/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/tiktok/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### DocuSign 🧪 Draft
+
+Draft and send signature envelopes (demo environment by default), check envelope status, and download signed documents.
+
+- Auth: OAuth 2.0 Authorization Code Grant (per-user) · Allowed hosts: `demo.docusign.net`, `docusign.net`
+- Maturity: 🧪 Draft: written from DocuSign's public eSignature API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/docusign/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/docusign/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Typeform 🧪 Draft
+
+List forms and responses, and manage response webhooks with confirmation.
+
+- Auth: personal access token (per-user) · Allowed hosts: `api.typeform.com`
+- Maturity: 🧪 Draft: written from Typeform's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/typeform/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/typeform/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Ramp 🧪 Draft
+
+Read-only view of corporate spend: transactions, cards and limits, users, departments. No spend actions by design.
+
+- Auth: OAuth 2.0 client credentials (per-user) · Allowed hosts: `api.ramp.com`
+- Maturity: 🧪 Draft: written from Ramp's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/ramp/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/ramp/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Vapi 🧪 Draft
+
+Manage voice AI assistants, phone numbers, and calls. Outbound calls need exact-match confirmation; test numbers by default.
+
+- Auth: API key (per-user) · Allowed hosts: `api.vapi.ai`
+- Maturity: 🧪 Draft: written from Vapi's public API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/vapi/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/vapi/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. Follow the skill's `## Auth` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
+4. Run the skill's status check and report what the connector can now do.
+Never ask me for raw API keys or secrets in chat.
+```
+
+### Polymarket 🧪 Draft
+
+Read-only prediction market data: events, markets, prices, order books. No trading, no API key needed.
+
+- Auth: none, public API · Allowed hosts: `gamma-api.polymarket.com`
+- Maturity: 🧪 Draft: written from Polymarket's public Gamma API docs, not yet live-tested end-to-end.
+
+Copy, paste to your Muse:
+
+```
+Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/polymarket/SKILL.md
+You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
+1. Read its `## Files` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
+2. Save them under ~/workspace/skills/polymarket/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+3. This connector needs no credential: the Gamma API is public. Skip the credential flow.
 4. Run the skill's status check and report what the connector can now do.
 Never ask me for raw API keys or secrets in chat.
 ```

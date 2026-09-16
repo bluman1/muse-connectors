@@ -345,6 +345,18 @@
     "category": "Communication"
   },
   {
+    "id": "docusign",
+    "name": "DocuSign",
+    "tagline": "Draft and send signature envelopes (demo environment by default), check envelope status, and download signed documents.",
+    "auth": "OAuth 2.0 Authorization Code Grant (per-user)",
+    "hosts": [
+      "demo.docusign.net",
+      "docusign.net"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "dub",
     "name": "Dub",
     "tagline": "Create short links, read analytics, track conversions.",
@@ -803,7 +815,7 @@
   {
     "id": "neon",
     "name": "Neon",
-    "tagline": "Manage Postgres projects, branches, and compute.",
+    "tagline": "Inspect Neon serverless Postgres projects, branches, and databases. Branch create and delete need exact-match confirmation; connection passwords are masked.",
     "auth": "API key (per-user)",
     "hosts": [
       "console.neon.tech"
@@ -1022,6 +1034,17 @@
     "category": "E-commerce"
   },
   {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "tagline": "Read-only prediction market data: events, markets, prices, order books. No trading, no API key needed.",
+    "auth": "none, public API",
+    "hosts": [
+      "gamma-api.polymarket.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "posthog",
     "name": "PostHog",
     "tagline": "Your PostHog user, projects, and saved insights. Read-only.",
@@ -1087,6 +1110,17 @@
     ],
     "maturity": "draft",
     "category": "Cloud & hosting"
+  },
+  {
+    "id": "ramp",
+    "name": "Ramp",
+    "tagline": "Read-only view of corporate spend: transactions, cards and limits, users, departments. No spend actions by design.",
+    "auth": "OAuth 2.0 client credentials (per-user)",
+    "hosts": [
+      "api.ramp.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
   },
   {
     "id": "readwise",
@@ -1243,6 +1277,17 @@
     "category": "Smart home"
   },
   {
+    "id": "spotify",
+    "name": "Spotify",
+    "tagline": "Read your profile, playlists, top tracks and artists, and search the catalog. Playlist and library writes need your confirmation.",
+    "auth": "OAuth 2.0 Authorization Code (per-user)",
+    "hosts": [
+      "api.spotify.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "square",
     "name": "Square",
     "tagline": "Work with a Square seller account: list locations and payments, create orders, push a checkout to a physical Square Terminal for in-person payment, charge a payment source directly, cancel a pending Terminal checkout, and refund a payment. Reach for this when the user needs to take or return money through Square.",
@@ -1369,6 +1414,17 @@
     "category": "Productivity"
   },
   {
+    "id": "tiktok",
+    "name": "TikTok",
+    "tagline": "Read your TikTok profile and video list. API access needs TikTok app approval first, and posting is not shipped.",
+    "auth": "OAuth 2.0 (per-user; TikTok app approval required)",
+    "hosts": [
+      "open.tiktokapis.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "todoist",
     "name": "Todoist",
     "tagline": "List tasks, create tasks, and mark them done in Todoist.",
@@ -1427,6 +1483,17 @@
     "category": "Creator"
   },
   {
+    "id": "typeform",
+    "name": "Typeform",
+    "tagline": "List forms and responses, and manage response webhooks with confirmation.",
+    "auth": "personal access token (per-user)",
+    "hosts": [
+      "api.typeform.com"
+    ],
+    "maturity": "draft",
+    "category": "Other"
+  },
+  {
     "id": "uber-direct",
     "name": "Uber Direct",
     "tagline": "Dispatch same-day couriers through Uber Direct for food, retail, grocery, or parcel deliveries. Get a price and time quote without dispatching anyone, create a delivery when the user approves, check its status, and cancel a pending one. Reach for this when the user needs something picked up and dropped off locally today.",
@@ -1469,6 +1536,17 @@
     ],
     "maturity": "draft",
     "category": "Cloud & hosting"
+  },
+  {
+    "id": "vapi",
+    "name": "Vapi",
+    "tagline": "Manage voice AI assistants, phone numbers, and calls. Outbound calls need exact-match confirmation; test numbers by default.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.vapi.ai"
+    ],
+    "maturity": "draft",
+    "category": "Other"
   },
   {
     "id": "veed",
