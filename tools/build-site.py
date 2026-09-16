@@ -51,31 +51,43 @@ CATEGORIES = {
     "calcom": "Scheduling", "deepl": "Translation", "beehiiv": "Newsletters",
 }
 
-ENTRY_RE = re.compile(
-    r"^### (.+?) (✅|🧪|👥).*$"      # name + badge
-    r"\n\n(.+?)\n\n"                  # tagline
-    r"- Auth: (.+?) · Allowed hosts: `(.+?)`\n"
-    r"- Maturity: .*$",
-    re.M,
-)
 ID_RE = re.compile(r"connectors/([a-z0-9-]+)/SKILL\.md")
+
+
+def parse_entries(readme):
+    entries = []
+    blocks = re.split(r"(?m)^### ", readme)[1:]
+    for b in blocks:
+        header, rest = b.split("\n", 1)
+        hm = re.match(r"(.+?)\s+(✅|🧪|👥)", header)
+        if not hm:
+            continue
+        name, badge = hm.groups()
+        tagline = next((ln.strip() for ln in rest.split("\n") if ln.strip()), "")
+        am = re.search(r"^- Auth:\s+(.*?)\s+·\s+Allowed hosts:\s+(.*?)\s*$",
+                       rest, re.M)
+        if not am:
+            continue
+        auth, hosts = am.groups()
+        hosts = hosts.strip().strip("`")
+        id_m = ID_RE.search(b)
+        if not id_m:
+            continue
+        entries.append((id_m.group(1), name.strip(), badge, tagline, auth,
+                        [h.strip().strip("`") for h in hosts.split(",")]))
+    return entries
 
 
 def main():
     readme = (ROOT / "README.md").read_text()
     connectors = []
-    for m in ENTRY_RE.finditer(readme):
-        name, badge, tagline, auth, hosts = m.groups()
-        id_m = ID_RE.search(readme[m.start(): m.start() + 2000])
-        if not id_m:
-            continue
-        cid = id_m.group(1)
+    for cid, name, badge, tagline, auth, hosts in parse_entries(readme):
         connectors.append({
             "id": cid,
             "name": name.strip(),
             "tagline": tagline.strip(),
             "auth": auth.strip(),
-            "hosts": [h.strip() for h in hosts.split(",")],
+            "hosts": hosts,
             "maturity": {"✅": "live", "🧪": "draft", "👥": "community"}[badge],
             "category": CATEGORIES.get(cid, "Other"),
         })
