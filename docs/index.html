@@ -16,247 +16,442 @@
 <meta name="twitter:title" content="muse-connectors: auditable connector skills for Muse">
 <meta name="twitter:description" content="Browse every open-source Muse connector. Copy a one-paste install prompt, audit the code, connect your own account.">
 <meta name="twitter:image" content="https://bluman1.github.io/muse-connectors/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0d1117;
-    --panel: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --accent: #58a6ff;
-    --green: #3fb950;
-    --chip: #21262d;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
-  .brandrow { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-  .avatar-orbit { position: relative; width: 64px; height: 64px; flex-shrink: 0; }
-  .avatar-orbit video {
-    width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
-    border: 2px solid var(--accent); display: block; background: #fff;
-  }
-  .avatar-orbit .ring { position: absolute; inset: -8px; animation: spin 14s linear infinite; }
-  .avatar-orbit .ring i {
-    position: absolute; width: 8px; height: 8px; border-radius: 50%;
-    background: var(--bg); border: 2px solid var(--accent);
-  }
-  .avatar-orbit .ring i:nth-child(1) { top: 0; left: 50%; margin-left: -4px; }
-  .avatar-orbit .ring i:nth-child(2) { top: 50%; right: 0; margin-top: -4px; }
-  .avatar-orbit .ring i:nth-child(3) { bottom: 0; left: 50%; margin-left: -4px; }
-  .avatar-orbit .ring i:nth-child(4) { top: 50%; left: 0; margin-top: -4px; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) { .avatar-orbit .ring { animation: none; } }
-  header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
-  header h1 .muse { color: var(--accent); }
-  header h1 .dim { color: var(--muted); font-weight: 400; }
-  header p { color: var(--muted); margin: 0 0 6px; max-width: 640px; }
-  header p a { color: var(--accent); text-decoration: none; }
-  .count { color: var(--muted); font-size: 14px; margin: 18px 0 12px; }
-  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
-  #search {
-    flex: 1 1 260px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 15px;
-    padding: 10px 14px;
-    outline: none;
-  }
-  #search:focus { border-color: var(--accent); }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-  .chip {
-    background: var(--chip);
-    border: 1px solid var(--border);
-    color: var(--muted);
-    border-radius: 999px;
-    padding: 6px 14px;
-    font-size: 13px;
-    cursor: pointer;
-    user-select: none;
-  }
-  .chip.active { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .card:hover { border-color: var(--accent); }
-  .card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .card-top h2 { font-size: 17px; margin: 0; }
-  .card-top h2 a { color: var(--text); text-decoration: none; }
-  .card-top h2 a:hover { color: var(--accent); }
-  .badge { font-size: 12px; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
-  .badge.live { color: var(--green); border-color: var(--green); }
-  .tagline { color: var(--muted); font-size: 14px; margin: 0; flex: 1; }
-  .meta { font-size: 12.5px; color: var(--muted); margin: 0; }
-  .meta code { color: var(--text); font-size: 12px; }
-  .actions { display: flex; gap: 8px; margin-top: 4px; }
-  .btn {
-    border: 1px solid var(--border);
-    background: var(--chip);
-    color: var(--text);
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 13.5px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
-  .btn:hover { filter: brightness(1.15); }
-  .empty { color: var(--muted); text-align: center; padding: 60px 0; display: none; }
-  .contribute {
-    margin-top: 56px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px;
-  }
-  .contribute h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: -0.3px; }
-  .contribute p { color: var(--muted); margin: 0 0 16px; max-width: 640px; }
-  .contribute p code { color: var(--text); font-size: 13px; }
-  footer { margin-top: 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 20px; }
-  footer a { color: var(--accent); text-decoration: none; }
-  #toast {
-    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
-    background: var(--green); color: #0d1117; font-weight: 600; font-size: 14px;
-    padding: 10px 20px; border-radius: 999px; opacity: 0; transition: all .25s; pointer-events: none;
-  }
-  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+:root{
+  --bg:#f7f6fb; --surface:#fff; --code-bg:#f3f1f9; --chip-bg:#eeebf6;
+  --border:#e6e2f0; --divider:#efedf5;
+  --ink:#17141f; --body:#4b4660; --muted:#6b6580; --faint:#a39db5; --code-text:#2a2538;
+  --accent:oklch(0.45 0.2 300); --accent-tint:oklch(0.95 0.03 300); --accent-border:oklch(0.75 0.1 300);
+  --live-text:oklch(0.4 0.14 150); --live-bg:oklch(0.95 0.05 150);
+  --draft-text:oklch(0.5 0.12 70); --draft-bg:oklch(0.96 0.05 80);
+  --dark:#17141f; --dark-card:#221e2d; --dark-code:#2a2538; --dark-body:#b9b3cc;
+  --dark-label:oklch(0.8 0.12 300);
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Sora,-apple-system,"Segoe UI",sans-serif;}
+.wrap{max-width:1200px;margin:0 auto}
+/* ---------- nav ---------- */
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand video{width:36px;height:36px;border-radius:12px;object-fit:cover;display:block;background:var(--chip-bg)}
+.brand .word{font-size:15px;font-weight:600}
+.pilltag{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--chip-bg);border-radius:999px;padding:4px 10px}
+.navlinks{display:flex;align-items:center;gap:28px}
+.navlinks a{font-size:14px;color:var(--body);text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:Sora,sans-serif;font-weight:500;cursor:pointer;text-decoration:none;border:0}
+.btn-repo{background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px}
+.btn-repo:hover{background:var(--accent)}
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 40px 40px;align-items:end}
+.hero-left{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.eyebrow{font-size:12px;font-weight:500;color:var(--accent);background:var(--accent-tint);border-radius:999px;padding:6px 12px}
+.hero h1{margin:0;font-size:44px;line-height:1.1;font-weight:600;letter-spacing:-0.02em}
+.hero p{margin:0;font-size:17px;line-height:1.6;color:var(--body);max-width:540px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.step .t{font-size:14px;font-weight:600}
+.step .b{font-size:13px;line-height:1.5;color:var(--muted)}
+/* ---------- search + filters ---------- */
+.finder{position:sticky;top:0;z-index:2;background:var(--bg);padding:16px 40px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:14px}
+.searchrow{display:flex;align-items:center;gap:16px}
+.search{flex:1;display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;height:44px;padding:0 14px}
+.sicon{width:8px;height:8px;border:2px solid var(--muted);border-radius:999px;flex:none}
+.search input{flex:1;border:0;outline:0;background:transparent;font-family:Sora,sans-serif;font-size:14px;color:var(--ink);min-width:0}
+.search input::placeholder{color:var(--faint)}
+.count{font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--border);color:var(--body);font-family:Sora,sans-serif;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;cursor:pointer}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+/* ---------- catalog grid ---------- */
+.catalog{padding:28px 40px 48px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px;transition:border-color .12s ease,box-shadow .12s ease}
+.card:hover{border-color:var(--accent-border);box-shadow:0 8px 24px rgba(23,20,31,.06)}
+.chead{display:flex;gap:12px;align-items:flex-start}
+.tile{width:40px;height:40px;flex:none;border-radius:12px;background:var(--accent-tint);color:var(--accent);font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.cmeta{flex:1;min-width:0}
+.cname{background:none;border:0;padding:0;font-family:Sora,sans-serif;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;text-align:left}
+.cname:hover{color:var(--accent)}
+.ccat{font-size:12px;color:var(--muted);margin-top:2px}
+.pill{flex:none;font-size:11px;font-weight:500;padding:4px 9px;border-radius:999px}
+.pill.live{color:var(--live-text);background:var(--live-bg)}
+.pill.draft{color:var(--draft-text);background:var(--draft-bg)}
+.pshort{display:none}
+.cdesc{margin:0;font-size:13.5px;line-height:1.55;color:var(--body)}
+.hosts{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;gap:8px;min-width:0}
+.hlabel{color:var(--faint);flex:none}
+.hval{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cfoot{display:flex;gap:8px;border-top:1px solid var(--divider);padding-top:14px}
+.btn-copy{flex:1;background:var(--ink);color:#fff;font-size:13px;padding:10px 14px;border-radius:10px}
+.btn-copy:hover{background:var(--accent)}
+.btn-view{background:var(--surface);border:1px solid var(--border);color:var(--ink);font-size:13px;padding:10px 14px;border-radius:10px}
+.btn-view:hover{border-color:var(--ink)}
+pre.prompt{background:var(--code-bg);border:1px solid var(--border);border-radius:12px;padding:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--code-text);white-space:pre-wrap;word-break:break-word;margin:0;max-height:320px;overflow:auto}
+.empty{padding:40px 0;text-align:center;font-size:14px;color:var(--muted)}
+/* ---------- detail panel ---------- */
+.detail{margin:28px 40px 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:24px}
+.dtop{display:flex;justify-content:space-between;align-items:center}
+.crumb{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.x{width:32px;height:32px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--body);font-size:14px;cursor:pointer;line-height:1}
+.x:hover{border-color:var(--ink);color:var(--ink)}
+.dident{display:flex;gap:16px;align-items:center}
+.dtile{width:52px;height:52px;flex:none;border-radius:16px;background:var(--accent-tint);color:var(--accent);font-size:22px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.dname{font-size:24px;font-weight:600;letter-spacing:-0.02em}
+.dsub{font-size:13px;color:var(--muted);margin-top:4px}
+.ddesc{margin:0;font-size:15px;line-height:1.6;color:var(--body)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fact{background:var(--bg);border-radius:12px;padding:14px;min-width:0}
+.flabel{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+.fval{font-size:13.5px;line-height:1.5;color:var(--ink);overflow-wrap:break-word}
+.fval.mono{font-family:var(--mono);font-size:13px}
+.plabel{font-size:13px;font-weight:500}
+.prow{display:flex;gap:8px}
+.prow .btn-copy{padding:12px 14px}
+.btn-audit{background:var(--surface);border:1px solid var(--border);color:var(--ink);font-size:13px;padding:12px 18px;border-radius:10px;white-space:nowrap}
+.btn-audit:hover{border-color:var(--ink)}
+/* ---------- security ---------- */
+.security{margin:0 40px;background:var(--dark);color:#fff;border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.slabel{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--dark-label);margin-bottom:16px}
+.security h2{margin:0 0 16px;font-size:30px;line-height:1.15;font-weight:600}
+.security .sbody{margin:0;font-size:15px;line-height:1.6;color:var(--dark-body)}
+code.inline{font-family:var(--mono);font-size:13px;background:var(--dark-code);color:#fff;padding:2px 6px;border-radius:6px}
+.seccards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.seccard{background:var(--dark-card);border-radius:16px;padding:20px}
+.seccard .t{font-size:14px;font-weight:600;margin-bottom:8px}
+.seccard .b{font-size:13px;line-height:1.5;color:var(--dark-body)}
+/* ---------- contribute ---------- */
+.contribute{margin:40px 40px 0;padding:40px;border:1px dashed var(--accent-border);border-radius:24px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.contribute .left{max-width:560px}
+.contribute h2{margin:0 0 12px;font-size:24px;font-weight:600}
+.contribute p{margin:0;font-size:14.5px;line-height:1.6;color:var(--body)}
+code.lite{font-family:var(--mono);font-size:13px;background:var(--chip-bg);padding:2px 6px;border-radius:6px;color:var(--code-text)}
+.cbtns{display:flex;gap:12px;flex:none}
+.btn-ghost{background:var(--surface);border:1px solid var(--border);color:var(--ink);font-size:13px;padding:11px 18px;border-radius:999px}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-accent{background:var(--accent);color:#fff;font-size:13px;padding:11px 18px;border-radius:999px}
+/* ---------- footer ---------- */
+.footer{display:flex;justify-content:space-between;align-items:center;padding:32px 40px;font-size:13px;color:var(--muted)}
+.flink{color:var(--muted);text-decoration:none}
+.flink:hover{color:var(--ink)}
+.fright{display:flex;gap:20px}
+/* ---------- mid screens ---------- */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding:48px 40px 32px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .security{grid-template-columns:1fr;gap:32px}
+  .contribute{flex-direction:column;align-items:flex-start}
+}
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+  .nav{padding:18px 20px}
+  .brand video{width:32px;height:32px;border-radius:10px}
+  .brand .word{font-size:14px}
+  .navlinks{gap:0}
+  .navlinks a{display:none}
+  .btn-repo{font-size:12px;padding:8px 14px}
+  .btn-repo .full{display:none}
+  .hero{padding:28px 20px 20px}
+  .eyebrow .full{display:none}
+  .hero h1{font-size:28px;line-height:1.15}
+  .hero p{font-size:14px}
+  .steps{display:none}
+  .finder{padding:12px 20px}
+  .search{height:46px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;padding:9px 14px}
+  .catalog{padding:20px 20px 32px}
+  .grid{grid-template-columns:1fr}
+  .card{padding:18px}
+  .pfull{display:none}
+  .pshort{display:inline}
+  .hosts{display:none}
+  .btn-copy,.btn-view{padding:13px}
+  .detail{margin:20px 20px 0;padding:20px}
+  .facts{grid-template-columns:1fr}
+  .prow{flex-direction:column}
+  .btn-audit{text-align:center}
+  .security{margin:0 20px;padding:28px}
+  .seccards{grid-template-columns:1fr}
+  .contribute{margin:28px 20px 0;padding:28px;flex-direction:column;align-items:stretch}
+  .cbtns{flex-direction:column}
+  .cbtns .btn{width:100%}
+  .footer{flex-direction:column;gap:12px;padding:24px 20px;text-align:center}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="brandrow">
-      <div class="avatar-orbit" aria-hidden="true">
-        <video src="avatar/hatch.mp4" autoplay loop muted playsinline></video>
-        <span class="ring"><i></i><i></i><i></i><i></i></span>
-      </div>
-      <h1><span class="muse">muse</span>-connectors <span class="dim">/ catalog</span></h1>
+  <nav class="nav">
+    <div class="brand">
+      <video src="avatar/hatch.mp4" autoplay muted loop playsinline aria-label="Muse avatar"></video>
+      <span class="word">muse-connectors</span>
+      <span class="pilltag">catalog</span>
     </div>
-    <p>Open-source, auditable connector skills for Muse. Pick one, copy its install prompt, paste it to your Muse: it downloads the skill, verifies it, and walks you through connecting your own account. Every file is public in <a href="https://github.com/bluman1/muse-connectors">the repo</a>, and no skill ever sees your credentials.</p>
-    <div class="count" id="count"></div>
+    <div class="navlinks">
+      <a href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">How it works</a>
+      <a href="#security">Security</a>
+      <a href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">Contribute</a>
+      <a class="btn btn-repo" href="https://github.com/bluman1/muse-connectors"><span class="full">Repository</span><span class="pshort">Repo</span></a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-left">
+      <span class="eyebrow">Open source &middot; MIT<span class="full"> &middot; zero secrets in repo</span></span>
+      <h1>Connect your Muse to anything.<br>One paste. Fully auditable.</h1>
+      <p class="hero-sub">Pick a connector, copy its install prompt, paste it to your Muse. It downloads the skill, verifies it, and walks you through connecting your own account. No skill ever sees your credentials.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="t">Copy</div><div class="b">the install prompt under any connector.</div></div>
+      <div class="step"><div class="n">02</div><div class="t">Paste</div><div class="b">it into a chat with your Muse.</div></div>
+      <div class="step"><div class="n">03</div><div class="t">Connect</div><div class="b">your own account through Muse&rsquo;s secure vault.</div></div>
+    </div>
   </header>
 
-  <div class="controls">
-    <input id="search" type="search" placeholder="Search connectors: try &quot;email&quot;, &quot;deploy&quot;, &quot;bank&quot;…" autocomplete="off">
+  <div class="finder" id="finder">
+    <div class="searchrow">
+      <label class="search"><span class="sicon"></span><input id="q" type="search" placeholder="Search connectors, hosts, capabilities&hellip;" autocomplete="off"></label>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="chips" id="chips"></div>
   </div>
-  <div class="chips" id="chips"></div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty">No connectors match. Try a different search.</div>
 
-  <section class="contribute">
-    <h2>Missing a connector?</h2>
-    <p>This catalog grows the way open source is supposed to: someone needs a connector, builds it, and sends it in. If you've wired up a provider, add it: the pattern is one <code>SKILL.md</code> plus one small script, and there's a template waiting for you.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">How to add a connector</a>
-      <a class="btn" href="https://github.com/bluman1/muse-connectors/tree/main/connectors/_template">Start from the template</a>
+  <main class="catalog" id="catalog">
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>No connectors match. Try a different search or category.</div>
+  </main>
+
+  <section class="detail" id="detail" hidden></section>
+
+  <section class="security" id="security">
+    <div>
+      <div class="slabel">security model</div>
+      <h2>Auditable by design</h2>
+      <p class="sbody">Every file a skill installs is public in the repo. Run <code class="inline">tools/audit.sh</code> to verify; every PR touching connectors must pass it.</p>
+    </div>
+    <div class="seccards">
+      <div class="seccard"><div class="t">Zero secrets in the repo</div><div class="b">Skills are code and docs only.</div></div>
+      <div class="seccard"><div class="t">Credentials never travel</div><div class="b">Your key lives in your private vault; skills only handle single-use surrogates.</div></div>
+      <div class="seccard"><div class="t">Declared allowed hosts</div><div class="b">Each SKILL.md lists where it may send your credential. Nowhere else.</div></div>
+      <div class="seccard"><div class="t">File-exact installs</div><div class="b">A Files manifest means your Muse fetches exactly those files and nothing else.</div></div>
     </div>
   </section>
 
-  <footer>
-    <a href="https://github.com/bluman1/muse-connectors">Repository</a> ·
-    <a href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">How the one-paste install works</a> ·
-    <a href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">Add a connector</a> ·
-    MIT licensed
+  <section class="contribute">
+    <div class="left">
+      <h2>Missing a connector?</h2>
+      <p>Someone needs a connector, builds it, and sends it in. The pattern is one <code class="lite">SKILL.md</code> plus one small script, and there&rsquo;s a template waiting for you.</p>
+    </div>
+    <div class="cbtns">
+      <a class="btn btn-ghost" href="https://github.com/bluman1/muse-connectors/tree/main/connectors/_template">Start from the template</a>
+      <a class="btn btn-accent" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">How to add a connector</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>muse-connectors &middot; MIT licensed</div>
+    <div class="fright">
+      <a class="flink" href="https://github.com/bluman1/muse-connectors">Repository</a>
+      <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/INSTALL.md">One-paste install</a>
+      <a class="flink" href="https://github.com/bluman1/muse-connectors/blob/main/CONTRIBUTING.md">Add a connector</a>
+    </div>
   </footer>
 </div>
-<div id="toast">Install prompt copied</div>
-
 <script>
-const RAW = id => `https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/${id}/SKILL.md`;
-const installPrompt = id =>
-`Install this connector: ${RAW(id)}
+"use strict";
+const FILTER_ORDER = ["Communication", "Productivity", "Email", "Sales & CRM", "AI & ML", "Search & Data", "Finance & Commerce", "Developer & Infra", "Project management", "Notes & docs", "Cloud & hosting", "Monitoring", "Support", "Design", "Smart home", "Energy", "Vehicles", "3D printing", "E-commerce", "Logistics", "Marketing", "Newsletters", "Blogging", "Social", "Creator", "Video", "Livestreaming", "Podcasting", "Voice AI", "Media generation", "Media management", "Stock media", "Translation", "Reading", "Scheduling", "Travel", "Health", "Memory", "Jobs", "Weather", "Agritech", "Other"];
+const state = { q: "", cat: "All", openSlug: null, copiedSlug: null, detailSlug: null };
+let connectors = [];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+const promptFor = (slug) => `Install this connector: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/${slug}/SKILL.md
 You are Muse. Fetch the URL above: it is a connector skill's SKILL.md.
 1. Read its \`## Files\` manifest and download every listed file from the same directory (replace SKILL.md in the URL with each relative path).
-2. Save them under ~/workspace/skills/${id}/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
+2. Save them under ~/workspace/skills/${slug}/, preserving paths. Compile any bin/*.py with python3 -m py_compile.
 3. Follow the skill's \`## Auth\` section: connect my account via your secure credential flow (credentials.request_api_access) for the provider id it names.
 4. Run the skill's status check and report what the connector can now do.
 Never ask me for raw API keys or secrets in chat.`;
 
-let all = [], activeCat = "All";
-
-function badge(m) {
-  if (m === "live") return `<span class="badge live">✅ Live-tested</span>`;
-  if (m === "community") return `<span class="badge">👥 Community</span>`;
-  return `<span class="badge">🧪 Draft</span>`;
+function pill(c) {
+  const live = c.maturity === "live";
+  const label = live ? "Live-tested" : (c.maturity === "community" ? "Community" : "Draft");
+  const short = live ? "Live" : label;
+  return `<span class="pill ${live ? "live" : "draft"}"><span class="pfull">${label}</span><span class="pshort">${esc(short)}</span></span>`;
 }
 
-function card(c) {
-  return `<div class="card" data-id="${c.id}">
-    <div class="card-top">
-      <h2><a href="https://github.com/bluman1/muse-connectors/tree/main/connectors/${c.id}">${c.name}</a></h2>
-      ${badge(c.maturity)}
+function cardHTML(c) {
+  const initial = esc(c.name.trim().charAt(0).toUpperCase());
+  const open = state.openSlug === c.id;
+  const copied = state.copiedSlug === c.id;
+  return `<article class="card" data-slug="${esc(c.id)}">
+    <div class="chead">
+      <div class="tile">${initial}</div>
+      <div class="cmeta">
+        <button class="cname" data-act="detail">${esc(c.name)}</button>
+        <div class="ccat">${esc(c.category)}</div>
+      </div>
+      ${pill(c)}
     </div>
-    <p class="tagline">${c.tagline}</p>
-    <p class="meta">Auth: ${c.auth}</p>
-    <p class="meta">Hosts: ${c.hosts.map(h => `<code>${h}</code>`).join(", ")}</p>
-    <div class="actions">
-      <button class="btn primary" onclick="copyPrompt('${c.id}')">Copy install prompt</button>
-      <a class="btn" href="https://github.com/bluman1/muse-connectors/tree/main/connectors/${c.id}">Source</a>
+    <p class="cdesc">${esc(c.tagline)}</p>
+    <div class="hosts"><span class="hlabel">hosts</span><span class="hval">${esc(c.hosts.join(", "))}</span></div>
+    <div class="cfoot">
+      <button class="btn btn-copy" data-act="copy">${copied ? "Copied \u2713" : "Copy install prompt"}</button>
+      <button class="btn btn-view" data-act="view">${open ? "Hide" : "View"}</button>
     </div>
-  </div>`;
+    ${open ? `<pre class="prompt">${esc(promptFor(c.id))}</pre>` : ""}
+  </article>`;
+}
+
+function maturityText(c) {
+  if (c.maturity === "live") return "Live-tested: installed from a raw URL on a fresh Muse and exercised against the real API.";
+  if (c.maturity === "community") return "Community: contributed by the community. Review the code before connecting.";
+  return "Draft: written from the provider's public docs, awaiting a live test. Review the code before connecting.";
+}
+
+function detailHTML(c) {
+  const initial = esc(c.name.trim().charAt(0).toUpperCase());
+  const mat = c.maturity === "live" ? "Live-tested" : (c.maturity === "community" ? "Community" : "Draft");
+  return `<div class="dtop">
+      <div class="crumb">connectors / ${esc(c.id)}</div>
+      <button class="x" data-act="close" aria-label="Close">\u2715</button>
+    </div>
+    <div class="dident">
+      <div class="dtile">${initial}</div>
+      <div><div class="dname">${esc(c.name)}</div><div class="dsub">${esc(c.category)} &middot; ${mat}</div></div>
+    </div>
+    <p class="ddesc">${esc(c.tagline)}</p>
+    <div class="facts">
+      <div class="fact"><div class="flabel">Auth</div><div class="fval">${esc(c.auth)}</div></div>
+      <div class="fact"><div class="flabel">Allowed hosts</div><div class="fval mono">${esc(c.hosts.join(", "))}</div></div>
+      <div class="fact"><div class="flabel">Maturity</div><div class="fval">${maturityText(c)}</div></div>
+    </div>
+    <div class="plabel">Install prompt</div>
+    <pre class="prompt">${esc(promptFor(c.id))}</pre>
+    <div class="prow">
+      <button class="btn btn-copy" data-act="copy">${state.copiedSlug === c.id ? "Copied \u2713" : "Copy install prompt"}</button>
+      <a class="btn btn-audit" href="https://github.com/bluman1/muse-connectors/blob/main/connectors/${esc(c.id)}/SKILL.md">Audit SKILL.md</a>
+    </div>`;
+}
+
+function matches(c) {
+  if (state.cat !== "All" && c.category !== state.cat) return false;
+  if (!state.q) return true;
+  const hay = (c.name + " " + c.tagline + " " + c.hosts.join(" ") + " " + c.auth + " " + c.category).toLowerCase();
+  return hay.indexOf(state.q) !== -1;
 }
 
 function render() {
-  const q = document.getElementById("search").value.trim().toLowerCase();
-  const list = all.filter(c =>
-    (activeCat === "All" || c.category === activeCat) &&
-    (!q || (c.name + " " + c.tagline + " " + c.auth + " " + c.category).toLowerCase().includes(q))
-  );
-  document.getElementById("grid").innerHTML = list.map(card).join("");
-  document.getElementById("empty").style.display = list.length ? "none" : "block";
-  document.getElementById("count").textContent =
-    `${list.length} of ${all.length} connectors` + (activeCat !== "All" ? ` in ${activeCat}` : "");
-}
-
-function copyPrompt(id) {
-  const done = () => {
-    const t = document.getElementById("toast");
-    t.classList.add("show");
-    setTimeout(() => t.classList.remove("show"), 1800);
-  };
-  const text = installPrompt(id);
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(done).catch(() => fallback());
-  } else fallback();
-  function fallback() {
-    const ta = document.createElement("textarea");
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    try { document.execCommand("copy"); done(); } catch (e) {}
-    ta.remove();
+  const detail = $("detail"), catalog = $("catalog");
+  if (state.detailSlug) {
+    const c = connectors.find((x) => x.id === state.detailSlug);
+    catalog.hidden = true; detail.hidden = false;
+    detail.innerHTML = c ? detailHTML(c) : "";
+  } else {
+    detail.hidden = true; catalog.hidden = false; detail.innerHTML = "";
+    const list = connectors.filter(matches);
+    $("count").textContent = list.length + " of " + connectors.length;
+    $("grid").innerHTML = list.map(cardHTML).join("");
+    $("empty").hidden = list.length > 0;
   }
 }
 
-fetch("connectors.json").then(r => r.json()).then(data => {
-  all = data;
-  const cats = ["All", ...new Set(all.map(c => c.category))].sort((a, b) =>
-    a === "All" ? -1 : b === "All" ? 1 : a.localeCompare(b));
-  document.getElementById("chips").innerHTML = cats.map(c =>
-    `<span class="chip${c === "All" ? " active" : ""}" data-cat="${c}">${c}</span>`).join("");
-  document.querySelectorAll(".chip").forEach(el => el.addEventListener("click", () => {
-    document.querySelectorAll(".chip").forEach(x => x.classList.remove("active"));
-    el.classList.add("active");
-    activeCat = el.dataset.cat;
-    render();
-  }));
+function renderChips() {
+  const present = [...new Set(connectors.map((c) => c.category))];
+  const ordered = ["All"]
+    .concat(FILTER_ORDER.filter((c) => present.indexOf(c) !== -1))
+    .concat(present.filter((c) => FILTER_ORDER.indexOf(c) === -1).sort());
+  $("chips").innerHTML = ordered.map((c) =>
+    `<button class="chip${state.cat === c ? " active" : ""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+}
+
+function copyPrompt(slug) {
+  const text = promptFor(slug);
+  const done = () => {
+    state.copiedSlug = slug; render();
+    setTimeout(() => { if (state.copiedSlug === slug) { state.copiedSlug = null; render(); } }, 1600);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else fallbackCopy(text, done);
+}
+function fallbackCopy(text, done) {
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); } catch (e) {}
+  document.body.removeChild(ta); done();
+}
+
+function openDetail(slug, scroll) {
+  state.detailSlug = slug; state.openSlug = null;
+  try { history.replaceState(null, "", "#" + slug); } catch (e) {}
   render();
+  if (scroll !== false) {
+    const f = $("finder");
+    if (f && f.scrollIntoView) f.scrollIntoView();
+  }
+}
+function closeDetail() {
+  state.detailSlug = null;
+  try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  render();
+}
+
+document.addEventListener("click", (e) => {
+  const chip = e.target.closest("[data-cat]");
+  if (chip) {
+    state.cat = chip.getAttribute("data-cat"); state.openSlug = null;
+    renderChips(); render(); return;
+  }
+  const actEl = e.target.closest("[data-act]");
+  if (!actEl) return;
+  const card = e.target.closest("[data-slug]");
+  const slug = card ? card.getAttribute("data-slug") : state.detailSlug;
+  if (!slug) return;
+  const a = actEl.getAttribute("data-act");
+  if (a === "copy") copyPrompt(slug);
+  else if (a === "view") { state.openSlug = state.openSlug === slug ? null : slug; render(); }
+  else if (a === "detail") openDetail(slug);
+  else if (a === "close") closeDetail();
 });
-document.getElementById("search").addEventListener("input", render);
+
+$("q").addEventListener("input", (e) => {
+  state.q = e.target.value.trim().toLowerCase();
+  state.openSlug = null; render();
+});
+
+function setMobilePlaceholder() {
+  $("q").placeholder = window.matchMedia("(max-width: 640px)").matches
+    ? "Search connectors\u2026" : "Search connectors, hosts, capabilities\u2026";
+}
+window.addEventListener("resize", setMobilePlaceholder);
+
+fetch("connectors.json").then((r) => {
+  if (!r.ok) throw new Error("http " + r.status);
+  return r.json();
+}).then((data) => {
+  connectors = data;
+  setMobilePlaceholder();
+  renderChips(); render();
+  const h = location.hash.replace(/^#/, "");
+  if (h && connectors.some((c) => c.id === h)) openDetail(h, false);
+}).catch(() => {
+  $("count").textContent = "";
+  $("grid").innerHTML = "";
+  const em = $("empty"); em.hidden = false;
+  em.textContent = "Could not load the connector catalog. Check your connection and reload.";
+});
 </script>
 </body>
 </html>

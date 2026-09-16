@@ -19,7 +19,7 @@
       "www.alphavantage.co"
     ],
     "maturity": "draft",
-    "category": "Finance"
+    "category": "Finance & Commerce"
   },
   {
     "id": "amadeus",
@@ -42,7 +42,7 @@
       "api.anthropic.com"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "apollo",
@@ -53,7 +53,7 @@
       "api.apollo.io"
     ],
     "maturity": "draft",
-    "category": "Sales"
+    "category": "Sales & CRM"
   },
   {
     "id": "aqara",
@@ -97,7 +97,7 @@
       "api.attio.com"
     ],
     "maturity": "draft",
-    "category": "CRM"
+    "category": "Sales & CRM"
   },
   {
     "id": "beatoven",
@@ -154,7 +154,7 @@
       "api.search.brave.com"
     ],
     "maturity": "draft",
-    "category": "Research"
+    "category": "Search & Data"
   },
   {
     "id": "buttondown",
@@ -231,7 +231,7 @@
       "api.clerk.com"
     ],
     "maturity": "draft",
-    "category": "Dev tools"
+    "category": "Developer & Infra"
   },
   {
     "id": "clickup",
@@ -387,7 +387,7 @@
       "api.elevenlabs.io"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "etsy",
@@ -409,7 +409,7 @@
       "api.exa.ai"
     ],
     "maturity": "draft",
-    "category": "Research"
+    "category": "Search & Data"
   },
   {
     "id": "fal-ai",
@@ -444,7 +444,7 @@
       "api.firecrawl.dev"
     ],
     "maturity": "draft",
-    "category": "Research"
+    "category": "Search & Data"
   },
   {
     "id": "flyio",
@@ -499,7 +499,7 @@
       "api.github.com"
     ],
     "maturity": "draft",
-    "category": "Dev tools"
+    "category": "Developer & Infra"
   },
   {
     "id": "gitlab",
@@ -510,7 +510,7 @@
       "gitlab.com"
     ],
     "maturity": "draft",
-    "category": "Dev tools"
+    "category": "Developer & Infra"
   },
   {
     "id": "google-nest",
@@ -587,7 +587,7 @@
       "api.hubapi.com"
     ],
     "maturity": "draft",
-    "category": "CRM"
+    "category": "Sales & CRM"
   },
   {
     "id": "huggingface",
@@ -598,7 +598,7 @@
       "huggingface.co"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "hume-ai",
@@ -654,7 +654,7 @@
       "us.cloud.langfuse.com"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "leaf-agriculture",
@@ -766,7 +766,7 @@
       "api.mercury.com"
     ],
     "maturity": "draft",
-    "category": "Finance"
+    "category": "Finance & Commerce"
   },
   {
     "id": "monday",
@@ -832,7 +832,7 @@
       "newsapi.org"
     ],
     "maturity": "draft",
-    "category": "Research"
+    "category": "Search & Data"
   },
   {
     "id": "notion",
@@ -865,7 +865,7 @@
       "api.openai.com"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "openrouter",
@@ -876,7 +876,7 @@
       "openrouter.ai"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "openweathermap",
@@ -942,7 +942,7 @@
       "api.perplexity.ai"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "pexels",
@@ -975,7 +975,7 @@
       "{company}.pipedrive.com"
     ],
     "maturity": "draft",
-    "category": "CRM"
+    "category": "Sales & CRM"
   },
   {
     "id": "plain",
@@ -1131,7 +1131,7 @@
       "api.replicate.com"
     ],
     "maturity": "draft",
-    "category": "AI"
+    "category": "AI & ML"
   },
   {
     "id": "resend",
@@ -1264,7 +1264,7 @@
       "api.stripe.com"
     ],
     "maturity": "draft",
-    "category": "Finance"
+    "category": "Finance & Commerce"
   },
   {
     "id": "supabase",
@@ -1319,7 +1319,7 @@
       "api.tavily.com"
     ],
     "maturity": "draft",
-    "category": "Research"
+    "category": "Search & Data"
   },
   {
     "id": "telegram",
@@ -1400,7 +1400,7 @@
       "api.trigger.dev"
     ],
     "maturity": "draft",
-    "category": "Dev tools"
+    "category": "Developer & Infra"
   },
   {
     "id": "tuya",
@@ -1513,7 +1513,7 @@
       "api.wise.com"
     ],
     "maturity": "draft",
-    "category": "Finance"
+    "category": "Finance & Commerce"
   },
   {
     "id": "x",
@@ -1535,7 +1535,7 @@
       "api.ynab.com"
     ],
     "maturity": "draft",
-    "category": "Finance"
+    "category": "Finance & Commerce"
   },
   {
     "id": "youtube",
