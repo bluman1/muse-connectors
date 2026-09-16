@@ -55,6 +55,17 @@
     "category": "Project management"
   },
   {
+    "id": "attio",
+    "name": "Attio",
+    "tagline": "Query CRM records, upsert by matching attribute, add notes and tasks.",
+    "auth": "API key (per-workspace)",
+    "hosts": [
+      "api.attio.com"
+    ],
+    "maturity": "draft",
+    "category": "CRM"
+  },
+  {
     "id": "beehiiv",
     "name": "Beehiiv",
     "tagline": "List publications, subscribers, and posts; add subscribers.",
@@ -64,6 +75,17 @@
     ],
     "maturity": "draft",
     "category": "Newsletters"
+  },
+  {
+    "id": "bluesky",
+    "name": "Bluesky",
+    "tagline": "Read timelines, search posts, post and follow.",
+    "auth": "App password (per-account; session-based)",
+    "hosts": [
+      "bsky.social"
+    ],
+    "maturity": "draft",
+    "category": "Social"
   },
   {
     "id": "brave-search",
@@ -86,6 +108,17 @@
     ],
     "maturity": "draft",
     "category": "Scheduling"
+  },
+  {
+    "id": "clerk",
+    "name": "Clerk",
+    "tagline": "List, create, update, and delete users.",
+    "auth": "Secret API key (per-project)",
+    "hosts": [
+      "api.clerk.com"
+    ],
+    "maturity": "draft",
+    "category": "Dev tools"
   },
   {
     "id": "clickup",
@@ -144,6 +177,28 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "discord",
+    "name": "Discord",
+    "tagline": "Read servers and channels, send messages and DMs.",
+    "auth": "Bot token (per-server install)",
+    "hosts": [
+      "discord.com"
+    ],
+    "maturity": "draft",
+    "category": "Communication"
+  },
+  {
+    "id": "dub",
+    "name": "Dub",
+    "tagline": "Create short links, read analytics, track conversions.",
+    "auth": "API key (per-workspace)",
+    "hosts": [
+      "api.dub.co"
+    ],
+    "maturity": "draft",
+    "category": "Marketing"
+  },
+  {
     "id": "elevenlabs",
     "name": "ElevenLabs",
     "tagline": "Check your ElevenLabs subscription usage and list available voices. Read-only.",
@@ -175,6 +230,28 @@
     ],
     "maturity": "draft",
     "category": "Design"
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "tagline": "Scrape pages, crawl sites, search the web.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.firecrawl.dev"
+    ],
+    "maturity": "draft",
+    "category": "Research"
+  },
+  {
+    "id": "flyio",
+    "name": "Fly.io",
+    "tagline": "List apps and machines, manage machine lifecycle.",
+    "auth": "API token (app or org scoped)",
+    "hosts": [
+      "api.machines.dev"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
   },
   {
     "id": "front",
@@ -254,6 +331,18 @@
     "category": "AI"
   },
   {
+    "id": "langfuse",
+    "name": "Langfuse",
+    "tagline": "Query traces and observations, manage prompts and scores.",
+    "auth": "Public+secret key pair (per-project; host declared at connect time)",
+    "hosts": [
+      "cloud.langfuse.com",
+      "us.cloud.langfuse.com"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
     "id": "linear",
     "name": "Linear",
     "tagline": "View your assigned issues and create issues, over Linear's GraphQL API.",
@@ -263,6 +352,17 @@
     ],
     "maturity": "draft",
     "category": "Project management"
+  },
+  {
+    "id": "loops",
+    "name": "Loops",
+    "tagline": "Manage email contacts, trigger loops, send transactional email.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "app.loops.so"
+    ],
+    "maturity": "draft",
+    "category": "Email"
   },
   {
     "id": "mercury",
@@ -285,6 +385,28 @@
     ],
     "maturity": "draft",
     "category": "Project management"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "tagline": "List and manage workflows, read executions.",
+    "auth": "API key (instance; host declared at connect time)",
+    "hosts": [
+      "your n8n instance host"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "tagline": "Manage Postgres projects, branches, and compute.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "console.neon.tech"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
   },
   {
     "id": "netlify",
@@ -364,6 +486,17 @@
     "category": "E-commerce"
   },
   {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "tagline": "Ask questions with citations, search the web.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.perplexity.ai"
+    ],
+    "maturity": "draft",
+    "category": "AI"
+  },
+  {
     "id": "pipedrive",
     "name": "Pipedrive",
     "tagline": "List deals and contacts, create deals. CRM for your pipeline.",
@@ -373,6 +506,17 @@
     ],
     "maturity": "draft",
     "category": "CRM"
+  },
+  {
+    "id": "plain",
+    "name": "Plain",
+    "tagline": "Find customers, manage support threads.",
+    "auth": "Machine-user API key",
+    "hosts": [
+      "core-api.uk.plain.com"
+    ],
+    "maturity": "draft",
+    "category": "Support"
   },
   {
     "id": "posthog",
@@ -398,6 +542,17 @@
     "category": "Email"
   },
   {
+    "id": "railway",
+    "name": "Railway",
+    "tagline": "List projects and deployments, set variables, redeploy.",
+    "auth": "API token (account or workspace)",
+    "hosts": [
+      "backboard.railway.com"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
     "id": "readwise",
     "name": "Readwise",
     "tagline": "Search your highlights and books, save new highlights.",
@@ -418,6 +573,17 @@
     ],
     "maturity": "draft",
     "category": "Cloud & hosting"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "tagline": "Run AI models, poll predictions.",
+    "auth": "API key (per-user)",
+    "hosts": [
+      "api.replicate.com"
+    ],
+    "maturity": "draft",
+    "category": "AI"
   },
   {
     "id": "resend",
@@ -497,6 +663,17 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "tally",
+    "name": "Tally",
+    "tagline": "List forms, read submissions, manage form blocks.",
+    "auth": "API key (per-user; free on all plans)",
+    "hosts": [
+      "api.tally.so"
+    ],
+    "maturity": "draft",
+    "category": "Productivity"
+  },
+  {
     "id": "tavily",
     "name": "Tavily",
     "tagline": "Fast, clean web research: one call returns an AI answer plus ranked sources with snippets. Read-only.",
@@ -530,6 +707,28 @@
     "category": "Productivity"
   },
   {
+    "id": "triggerdev",
+    "name": "Trigger.dev",
+    "tagline": "Trigger background jobs, list runs, manage schedules.",
+    "auth": "API key (per-environment)",
+    "hosts": [
+      "api.trigger.dev"
+    ],
+    "maturity": "draft",
+    "category": "Dev tools"
+  },
+  {
+    "id": "upstash",
+    "name": "Upstash",
+    "tagline": "Run Redis commands over REST.",
+    "auth": "Per-database token (host declared at connect time)",
+    "hosts": [
+      "*.upstash.io"
+    ],
+    "maturity": "draft",
+    "category": "Cloud & hosting"
+  },
+  {
     "id": "vercel",
     "name": "Vercel",
     "tagline": "See your Vercel account, projects, and recent deployments.",
@@ -550,5 +749,27 @@
     ],
     "maturity": "draft",
     "category": "Finance"
+  },
+  {
+    "id": "x",
+    "name": "X",
+    "tagline": "Post, search, like, DM. Note: no usable free read tier.",
+    "auth": "OAuth2 PKCE (per-user; paid read access)",
+    "hosts": [
+      "api.x.com"
+    ],
+    "maturity": "draft",
+    "category": "Social"
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "tagline": "Look up channels and videos, search (reads only).",
+    "auth": "API key (per-user; reads only)",
+    "hosts": [
+      "www.googleapis.com"
+    ],
+    "maturity": "draft",
+    "category": "Video"
   }
 ]
