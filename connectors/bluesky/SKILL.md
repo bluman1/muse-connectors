@@ -2,6 +2,9 @@
 name: "bluesky"
 description: "Read and write Bluesky: view profiles and timelines, search posts, post, follow, read notifications. Trigger phrases: bluesky, atproto."
 metadata: { "includeInPrompt": true }
+tagline: "Read timelines, search posts, post and follow."
+catalog_auth: "App password (per-account; session-based)"
+catalog_hosts: ["bsky.social"]
 ---
 
 # Bluesky

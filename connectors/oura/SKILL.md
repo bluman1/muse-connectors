@@ -2,6 +2,9 @@
 name: "oura"
 description: "Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2. Trigger phrases: oura, sleep score, readiness, my sleep."
 metadata: { "includeInPrompt": true }
+tagline: "Read Oura Ring health data: sleep scores, sleep sessions, readiness, workouts, and SpO2."
+catalog_auth: "OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.ouraring.com"]
 ---
 
 # Oura

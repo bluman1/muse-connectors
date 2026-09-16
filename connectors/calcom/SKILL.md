@@ -2,6 +2,9 @@
 name: "calcom"
 description: "Read and write Cal.com: list bookings and event types, create bookings. Trigger phrases: cal.com, my bookings, schedule a call."
 metadata: { "includeInPrompt": true }
+tagline: "List bookings and event types, create bookings."
+catalog_auth: "personal API key (per-user, keys start `cal_` / `cal_live_`)"
+catalog_hosts: ["api.cal.com"]
 ---
 
 # Cal.com

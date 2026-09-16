@@ -2,6 +2,9 @@
 name: "tavily"
 description: "Fast, clean web research: search with an AI answer and cited sources. Trigger phrases: research this, web search, look up, tavily, find sources."
 metadata: { "includeInPrompt": true }
+tagline: "Fast, clean web research: one call returns an AI answer plus ranked sources with snippets. Read-only."
+catalog_auth: "Tavily API key (per-user, tavily.com)"
+catalog_hosts: ["api.tavily.com"]
 ---
 
 # Tavily

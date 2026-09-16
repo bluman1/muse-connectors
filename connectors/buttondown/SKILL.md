@@ -2,6 +2,9 @@
 name: "buttondown"
 description: "Read and write Buttondown: list subscribers and emails, add subscribers, draft emails. Trigger phrases: buttondown, newsletter subscribers, email list."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write Buttondown: list subscribers and emails, add subscribers, draft emails."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.buttondown.com"]
 ---
 
 # Buttondown

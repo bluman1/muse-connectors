@@ -2,6 +2,9 @@
 name: "railway"
 description: "Read and write Railway: list projects and deployments, set environment variables, redeploy. Trigger phrases: railway, deploy."
 metadata: { "includeInPrompt": true }
+tagline: "List projects and deployments, set variables, redeploy."
+catalog_auth: "API token (account or workspace)"
+catalog_hosts: ["backboard.railway.com"]
 ---
 
 # Railway

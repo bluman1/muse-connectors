@@ -2,6 +2,9 @@
 name: "deepl"
 description: "Translate text with DeepL: translate between 30+ languages, list languages, check usage. Trigger phrases: deepl, translate this."
 metadata: { "includeInPrompt": true }
+tagline: "Translate text between 30+ languages, check usage."
+catalog_auth: "API key (per-user; free keys use api-free.deepl.com, paid keys use api.deepl.com)"
+catalog_hosts: ["api-free.deepl.com", "api.deepl.com"]
 ---
 
 # DeepL

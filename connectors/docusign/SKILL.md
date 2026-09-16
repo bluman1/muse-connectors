@@ -2,6 +2,9 @@
 name: "docusign"
 description: "DocuSign eSignature: draft and send signature envelopes (demo env default), check envelope status, download signed documents. Trigger phrases: docusign, send for signature, signature envelope, envelope status, signed document."
 metadata: { "includeInPrompt": true }
+tagline: "Draft and send signature envelopes (demo environment by default), check envelope status, and download signed documents."
+catalog_auth: "OAuth 2.0 Authorization Code Grant (per-user)"
+catalog_hosts: ["demo.docusign.net", "docusign.net"]
 ---
 
 # DocuSign

@@ -2,6 +2,9 @@
 name: "vapi"
 description: "Manage Vapi voice AI: assistants, phone numbers, calls. Outbound calls are high actuation and need exact-match confirmation; test numbers by default. Trigger phrases: vapi, voice assistant, outbound call, AI phone call."
 metadata: { "includeInPrompt": true }
+tagline: "Manage voice AI assistants, phone numbers, and calls. Outbound calls need exact-match confirmation; test numbers by default."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.vapi.ai"]
 ---
 
 # Vapi

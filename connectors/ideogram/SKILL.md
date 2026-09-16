@@ -2,6 +2,9 @@
 name: "ideogram"
 description: "Ideogram text-to-image generation with the strongest text rendering in the catalog: generate, edit, remix, upscale, describe, balance. Trigger phrases: ideogram, text in image, thumbnail with words, ideogram generate, magic fill."
 metadata: { "includeInPrompt": true }
+tagline: "Ideogram text-to-image generation with the strongest text rendering in the catalog: generate, edit, remix, upscale, describe, balance."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.ideogram.ai"]
 ---
 
 # Ideogram

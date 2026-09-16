@@ -2,6 +2,9 @@
 name: "framer"
 description: "Check a Framer project's Server API connection: verify the per-project API key with the official handshake. Trigger phrases: framer, framer api, framer project."
 metadata: { "includeInPrompt": true }
+tagline: "Verify a Framer project's Server API connection. Framer's Server API is WebSocket/SDK-only (there is no REST surface): the official framer-api npm package opens a long-lived connection to wss://api.framer.com/channel/headless-plugin with the header Authorization: Token <api_key>, keyed to one project. This connector's CLI performs that same official handshake as a connection check, so auth proves the API key and project pair work."
+catalog_auth: "per-project API key via the secure credential flow"
+catalog_hosts: ["api.framer.com"]
 ---
 
 # Framer

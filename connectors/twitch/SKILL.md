@@ -2,6 +2,9 @@
 name: "twitch"
 description: "Read and write Twitch via the Helix API: channel profile, follower stats, live stream status, past videos, channel title and game updates, clip creation. Trigger phrases: twitch, stream stats, stream followers, channel update."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write Twitch via the Helix API: channel profile, follower stats, live stream status, past videos, channel title and game updates, clip creation."
+catalog_auth: "provider OAuth via the secure credential flow"
+catalog_hosts: ["api.twitch.tv"]
 ---
 
 # Twitch

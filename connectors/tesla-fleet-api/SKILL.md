@@ -2,6 +2,9 @@
 name: "tesla-fleet-api"
 description: "Control Tesla vehicles through the official Tesla Fleet API: lock/unlock, remote start, charge control, preconditioning, honk, trunk. Trigger phrases: tesla car, tesla vehicle, lock my tesla, precondition tesla, tesla charge."
 metadata: { "includeInPrompt": true }
+tagline: "Control Tesla vehicles through the official Tesla Fleet API: read live vehicle state, wake a sleeping car, and send signed commands (lock/unlock, keyless drive, charge control, preconditioning, honk/flash, trunk, sentry/valet, speed limit, navigation). Use when the user mentions their Tesla car or asks for vehicle actuation."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["fleet-api.prd.na.vn.cloud.tesla.com", "fleet-api.prd.eu.vn.cloud.tesla.com", "fleet-api.prd.cn.vn.cloud.tesla.com"]
 ---
 
 # Tesla Fleet API (vehicles)

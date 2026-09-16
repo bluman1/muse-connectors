@@ -2,6 +2,9 @@
 name: "supabase"
 description: "Read a Supabase Postgres database over PostgREST: list tables, query rows. Trigger phrases: supabase, supabase table, query supabase."
 metadata: { "includeInPrompt": true }
+tagline: "List tables and query rows in your Supabase Postgres database. Read-only."
+catalog_auth: "service_role key (per-user, project Settings \u2192 API)"
+catalog_hosts: ["<ref>.supabase.co"]
 ---
 
 # Supabase

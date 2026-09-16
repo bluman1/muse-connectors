@@ -2,6 +2,9 @@
 name: "ecovacs"
 description: "Control Ecovacs DEEBOT robot vacuums through the Ecovacs Open Platform: device list, status, battery, cleaning start/pause/stop, dock return. Trigger phrases: ecovacs, deebot, robot vacuum, start cleaning, dock vacuum."
 metadata: { "includeInPrompt": true }
+tagline: "Control Ecovacs DEEBOT robot vacuums through the official Ecovacs Open Platform: list bound robots, read robot state and battery, start/pause/resume/stop cleaning, send the robot back to its dock, and set the sweep/mop work mode. Use when the user mentions their DEEBOT or robot vacuum."
+catalog_auth: "Access Key via the secure credential flow"
+catalog_hosts: ["open.ecovacs.com", "open.ecovacs.cn"]
 ---
 
 # Ecovacs

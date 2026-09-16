@@ -2,6 +2,9 @@
 name: "descript"
 description: "Work with Descript projects and async Underlord/agent jobs: list projects, submit publish jobs, poll job status. Trigger phrases: descript, video editing, publish video, descript project."
 metadata: { "includeInPrompt": true }
+tagline: "Work with Descript's API (open beta): list projects, inspect Underlord/agent jobs, submit a publish job, and poll a job until it finishes. Use when the user wants to drive Descript editing or publishing programmatically."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.descript.com"]
 ---
 
 # Descript

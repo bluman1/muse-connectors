@@ -2,6 +2,9 @@
 name: "alphavantage"
 description: "Stock quotes and daily price history. Trigger phrases: stock quote, alphavantage, stock price."
 metadata: { "includeInPrompt": true }
+tagline: "Stock quotes and daily price history. Read-only."
+catalog_auth: "Alpha Vantage API key (per-user, alphavantage.co/support/#api-key; free tier 25 calls/day)"
+catalog_hosts: ["www.alphavantage.co"]
 ---
 
 # Alpha Vantage

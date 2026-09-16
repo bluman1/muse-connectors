@@ -2,6 +2,9 @@
 name: "replicate"
 description: "Read and write Replicate: look up model versions and input schemas, run predictions, poll status, cancel runs. Trigger phrases: replicate, ai models."
 metadata: { "includeInPrompt": true }
+tagline: "Run AI models, poll predictions."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.replicate.com"]
 ---
 
 # Replicate

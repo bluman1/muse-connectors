@@ -2,6 +2,9 @@
 name: "patreon"
 description: "Read Patreon campaigns, members, tiers, and identity (read-only). Trigger phrases: patreon, patrons, members, campaign earnings, membership tiers."
 metadata: { "includeInPrompt": true }
+tagline: "Read Patreon campaigns, members, tiers, and identity (read-only)."
+catalog_auth: "Creator's Access Token via the secure credential flow"
+catalog_hosts: ["www.patreon.com"]
 ---
 
 # Patreon

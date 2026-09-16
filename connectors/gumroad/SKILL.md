@@ -2,6 +2,9 @@
 name: "gumroad"
 description: "View your Gumroad products and sales. Read-only by design. Trigger phrases: gumroad, gumroad sales, gumroad products."
 metadata: { "includeInPrompt": true }
+tagline: "View your Gumroad products and sales. Read-only by design."
+catalog_auth: "Gumroad access token (per-user, app.gumroad.com \u2192 Settings \u2192 Advanced)"
+catalog_hosts: ["api.gumroad.com"]
 ---
 
 # Gumroad

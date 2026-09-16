@@ -2,6 +2,9 @@
 name: "home-assistant"
 description: "Read entity states and call services on your Home Assistant instance. Service calls are confirmed first. Trigger phrases: home assistant, smart home, turn on the light."
 metadata: { "includeInPrompt": true }
+tagline: "Read entity states and call services on your Home Assistant instance. Service calls are confirmed first."
+catalog_auth: "Home Assistant long-lived access token (per-user, Profile \u2192 Security \u2192 Long-Lived Access Tokens)"
+catalog_hosts: ["your instance host"]
 ---
 
 # Home Assistant

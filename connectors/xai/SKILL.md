@@ -2,6 +2,9 @@
 name: "xai"
 description: "Query Grok chat completions and list available Grok models through the xAI API. Trigger phrases: xai, grok, chat with grok, grok model."
 metadata: { "includeInPrompt": true }
+tagline: "Query Grok chat completions and list available Grok models through xAI's OpenAI-compatible API, with per-call token usage surfaced so cost is always visible."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.x.ai"]
 ---
 
 # xAI (Grok)

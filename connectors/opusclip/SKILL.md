@@ -2,6 +2,9 @@
 name: "opusclip"
 description: "Turn long videos into AI-curated short clips with OpusClip: create clip projects, check status, list clips with virality scores. Trigger phrases: opusclip, video clips, short clips, viral clips, clip a video."
 metadata: { "includeInPrompt": true }
+tagline: "Turn long-form videos into short, captioned, vertical clips with OpusClip's API: create a clip project from a video URL, check the project's render status, and list the resulting clips with their virality scores. API access requires a Pro-tier (or higher) OpusClip plan and is in beta."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.opus.pro"]
 ---
 
 # OpusClip

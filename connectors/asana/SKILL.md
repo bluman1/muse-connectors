@@ -2,6 +2,9 @@
 name: "asana"
 description: "Read and manage Asana tasks: my tasks, task details, create tasks. Trigger phrases: asana, my tasks, task list, todo."
 metadata: { "includeInPrompt": true }
+tagline: "View your assigned Asana tasks and create new ones."
+catalog_auth: "Asana personal access token (per-user, My Settings \u2192 Apps \u2192 Manage Developer Apps)"
+catalog_hosts: ["app.asana.com"]
 ---
 
 # Asana

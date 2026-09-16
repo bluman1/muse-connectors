@@ -2,6 +2,9 @@
 name: "zep"
 description: "Work with Zep's temporal memory: create users and threads, append messages, read distilled facts and history. Trigger phrases: zep, knowledge graph memory, conversation memory."
 metadata: { "includeInPrompt": true }
+tagline: "Work with Zep's temporal memory: create users and threads, append messages, read distilled facts and history."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.getzep.com"]
 ---
 
 # Zep

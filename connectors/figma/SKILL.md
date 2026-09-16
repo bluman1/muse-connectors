@@ -2,6 +2,9 @@
 name: "figma"
 description: "Look up your Figma user and read file metadata. Read-only. Trigger phrases: figma, figma file, design file."
 metadata: { "includeInPrompt": true }
+tagline: "Look up your Figma user and read file metadata. Read-only."
+catalog_auth: "Figma personal access token (per-user, Figma Settings \u2192 Personal access tokens)"
+catalog_hosts: ["api.figma.com"]
 ---
 
 # Figma

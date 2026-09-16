@@ -2,6 +2,9 @@
 name: "gemini"
 description: "Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing. Trigger phrases: gemini image, nano banana, imagen, veo video, google veo, gemini tts."
 metadata: { "includeInPrompt": true }
+tagline: "Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["generativelanguage.googleapis.com"]
 ---
 
 # Gemini (media generation)

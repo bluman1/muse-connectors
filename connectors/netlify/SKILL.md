@@ -2,6 +2,9 @@
 name: "netlify"
 description: "Inspect Netlify sites and deploys: list sites, list recent deploys. Trigger phrases: netlify, netlify site, netlify deploy."
 metadata: { "includeInPrompt": true }
+tagline: "List your Netlify sites and recent deploys. Read-only."
+catalog_auth: "personal access token (per-user, app.netlify.com \u2192 User settings \u2192 Applications)"
+catalog_hosts: ["api.netlify.com"]
 ---
 
 # Netlify

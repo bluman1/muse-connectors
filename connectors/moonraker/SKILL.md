@@ -2,6 +2,9 @@
 name: "moonraker"
 description: "Control a Klipper 3D printer through Moonraker: print jobs, file uploads, emergency stop, smart plugs, and gated raw G-code. Trigger phrases: moonraker, klipper, mainsail, fluidd, start print, pause print, emergency stop."
 metadata: { "includeInPrompt": true }
+tagline: "Control a Klipper-based 3D printer through the Moonraker API server (the backend behind Mainsail, Fluidd and RatOS): read server and print status, list and upload gcode files, start/pause/resume/cancel prints, trigger the emergency stop, toggle smart-plug devices, and (gated) run raw G-code. Use when the user mentions Moonraker, Klipper, Mainsail, or Fluidd."
+catalog_auth: "no credential needed on most LAN installs (optional API key via the secure credential flow)"
+catalog_hosts: ["the host you pass via --host"]
 ---
 
 # Moonraker

@@ -2,6 +2,9 @@
 name: "printful"
 description: "Read Printful products and orders, create orders and mockups. Trigger phrases: printful, print on demand, mockup, fulfillment, store orders."
 metadata: { "includeInPrompt": true }
+tagline: "Read Printful products and orders, create orders and mockups."
+catalog_auth: "personal access token via the secure credential flow"
+catalog_hosts: ["api.printful.com"]
 ---
 
 # Printful

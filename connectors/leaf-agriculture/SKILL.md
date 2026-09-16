@@ -2,6 +2,9 @@
 name: "leaf-agriculture"
 description: "Read and manage farm data through Leaf Agriculture: fields, boundaries, machine operation files, and as-applied irrigation. Trigger phrases: leaf agriculture, farm data, field boundaries, as-applied irrigation, john deere data, operation files."
 metadata: { "includeInPrompt": true }
+tagline: "Read and manage farm data through Leaf Agriculture, a unified farm-data API that aggregates the partner-gated OEM platforms under self-serve access: John Deere, CNH Industrial (Case IH/New Holland), Climate FieldView, Trimble, Raven and AgLeader. The primitives it exposes (fields, boundaries, machine operation files for planting/harvest/application/tillage, plus as-applied irrigation) are exactly what a farmer-first fintech and supply-chain digitization product consumes. This is the practical route to partner-gated OEM data without a partnership agreement: individual provider connections need that grower's OAuth consent, which is the normal data-access model rather than a partnership gate."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.withleaf.io"]
 ---
 
 # Leaf Agriculture

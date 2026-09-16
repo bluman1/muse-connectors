@@ -2,6 +2,9 @@
 name: "kit"
 description: "Read and write Kit (ConvertKit): list subscribers, broadcasts, sequences, tags; draft broadcasts. Trigger phrases: kit, convertkit, newsletter, broadcasts, subscribers."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write Kit (ConvertKit): list subscribers, broadcasts, sequences, tags; draft broadcasts."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.kit.com"]
 ---
 
 # Kit

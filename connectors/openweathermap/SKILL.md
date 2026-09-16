@@ -2,6 +2,9 @@
 name: "openweathermap"
 description: "Current weather and 5-day forecast for any city. Trigger phrases: weather, openweathermap, forecast."
 metadata: { "includeInPrompt": true }
+tagline: "Current weather and 5-day forecast for any city. Read-only."
+catalog_auth: "OpenWeatherMap API key (per-user, openweathermap.org \u2192 API keys; free tier fine)"
+catalog_hosts: ["api.openweathermap.org"]
 ---
 
 # OpenWeatherMap

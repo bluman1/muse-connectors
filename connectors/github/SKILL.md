@@ -2,6 +2,9 @@
 name: "github"
 description: "Work with GitHub: view profile, list repos, list and create issues. Trigger phrases: github, repo, issue, pull request."
 metadata: { "includeInPrompt": true }
+tagline: "View your profile, list repos, list open issues, and create issues."
+catalog_auth: "personal access token (classic, scopes `repo` + `read:user`, per-user)"
+catalog_hosts: ["api.github.com"]
 ---
 
 # GitHub

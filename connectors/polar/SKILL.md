@@ -2,6 +2,9 @@
 name: "polar"
 description: "Read Polar orders, subscriptions, products, and customers; create checkouts and refunds. Trigger phrases: polar, orders, refunds, merchant of record."
 metadata: { "includeInPrompt": true }
+tagline: "Read Polar orders, subscriptions, products, and customers; create checkouts and refunds."
+catalog_auth: "Organization Access Token via the secure credential flow"
+catalog_hosts: ["api.polar.sh", "sandbox-api.polar.sh"]
 ---
 
 # Polar

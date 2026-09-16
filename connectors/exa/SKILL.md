@@ -2,6 +2,9 @@
 name: "exa"
 description: "Neural web search with page text: one call returns ranked sources with snippets. Trigger phrases: exa, exa search, search the web."
 metadata: { "includeInPrompt": true }
+tagline: "Neural web search with page text: one call returns ranked sources with snippets. Read-only."
+catalog_auth: "Exa API key (per-user, dashboard.exa.ai/api-keys)"
+catalog_hosts: ["api.exa.ai"]
 ---
 
 # Exa

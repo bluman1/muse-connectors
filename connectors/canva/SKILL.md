@@ -2,6 +2,9 @@
 name: "canva"
 description: "Work with Canva designs: list designs and folders, create designs, upload assets, and export to PNG/JPG/PDF/MP4. Trigger phrases: canva, canva design, export canva design."
 metadata: { "includeInPrompt": true }
+tagline: "Read and manage Canva designs through the Canva Connect API: list designs and folders, inspect a design, create designs, upload assets, and export designs. Exports are async jobs: submit with export, then poll with export-status until the job succeeds."
+catalog_auth: "provider OAuth 2.0 + PKCE via the secure credential flow"
+catalog_hosts: ["api.canva.com"]
 ---
 
 # Canva

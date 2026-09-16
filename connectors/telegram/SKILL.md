@@ -2,6 +2,9 @@
 name: "telegram"
 description: "Send and read Telegram messages through your bot: bot info, send messages, read updates. Trigger phrases: telegram, telegram bot, send a telegram message."
 metadata: { "includeInPrompt": true }
+tagline: "Send messages and read updates through your own Telegram bot. Bots can't message users who haven't started them first."
+catalog_auth: "Telegram bot token from @BotFather (per-user, single token)"
+catalog_hosts: ["api.telegram.org"]
 ---
 
 # Telegram

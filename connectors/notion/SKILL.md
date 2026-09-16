@@ -2,6 +2,9 @@
 name: "notion"
 description: "Work with Notion: search pages, read page properties, query databases. Trigger phrases: notion, notion page, notion database."
 metadata: { "includeInPrompt": true }
+tagline: "Search pages and databases, read page properties, query databases (read-only)."
+catalog_auth: "Notion internal integration token (per-user, created at notion.so/my-integrations)"
+catalog_hosts: ["api.notion.com"]
 ---
 
 # Notion

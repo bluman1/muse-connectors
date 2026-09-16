@@ -2,6 +2,9 @@
 name: "remove-bg"
 description: "Remove image backgrounds with the remove.bg API and check remaining credits. Trigger phrases: remove.bg, remove background, cutout image."
 metadata: { "includeInPrompt": true }
+tagline: "Remove the background from an image with the remove.bg API: submit a local file or an image URL, get back a transparent PNG saved to a local path. Also check the account's remaining credits."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.remove.bg"]
 ---
 
 # remove.bg

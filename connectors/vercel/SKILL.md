@@ -2,6 +2,9 @@
 name: "vercel"
 description: "Inspect Vercel projects and deployments: your account, project list, recent deploys. Trigger phrases: vercel, vercel project, vercel deployment."
 metadata: { "includeInPrompt": true }
+tagline: "See your Vercel account, projects, and recent deployments."
+catalog_auth: "personal token (per-user, vercel.com/account/tokens)"
+catalog_hosts: ["api.vercel.com"]
 ---
 
 # Vercel

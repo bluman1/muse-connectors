@@ -2,6 +2,9 @@
 name: "spotify"
 description: "Work with Spotify: read your profile, playlists, top tracks and artists, search the catalog, and (with confirmation) create playlists, add tracks, and save tracks to your library. Trigger phrases: spotify, my playlists, my top tracks, top artists, save track, search spotify."
 metadata: { "includeInPrompt": true }
+tagline: "Read your profile, playlists, top tracks and artists, and search the catalog. Playlist and library writes need your confirmation."
+catalog_auth: "OAuth 2.0 Authorization Code (per-user)"
+catalog_hosts: ["api.spotify.com"]
 ---
 
 # Spotify

@@ -42,6 +42,7 @@ connectors/<provider-id>/
 
 `SKILL.md` sections (mirror the skill-creator scaffold, plus two):
 
+- Frontmatter: `name`, `description`, plus the catalog fields the site and README table are built from: `tagline` (human one-liner), `catalog_auth` (e.g. `API key (per-user)`), `catalog_hosts` (list of allowed hosts).
 - `## Purpose`: what the connector does, trigger phrases.
 - `## Tooling`: exact CLI commands with examples. Every command a user might want must be documented here; undocumented == unavailable.
 - `## Auth`: provider id, how the credential is collected (API key vs provider OAuth), required scopes, allowed hosts, and the status-check command.

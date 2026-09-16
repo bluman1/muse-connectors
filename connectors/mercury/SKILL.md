@@ -2,6 +2,9 @@
 name: "mercury"
 description: "View Mercury bank accounts and transactions. Read-only by design. Trigger phrases: mercury, mercury balance, mercury transactions."
 metadata: { "includeInPrompt": true }
+tagline: "View Mercury bank accounts and transactions. Read-only by design."
+catalog_auth: "Mercury API token (per-user, app.mercury.com \u2192 Settings \u2192 API Tokens; a Read-Only token suffices)"
+catalog_hosts: ["api.mercury.com"]
 ---
 
 # Mercury

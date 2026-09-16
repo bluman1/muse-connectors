@@ -2,6 +2,9 @@
 name: "calendly"
 description: "Read and manage Calendly: list scheduled events, event types, invitees, and availability schedules; cancel bookings. Trigger phrases: calendly, my meetings, scheduled events, cancel booking."
 metadata: { "includeInPrompt": true }
+tagline: "Read and manage Calendly: list scheduled events, event types, invitees, and availability schedules; cancel bookings."
+catalog_auth: "OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.calendly.com"]
 ---
 
 # Calendly

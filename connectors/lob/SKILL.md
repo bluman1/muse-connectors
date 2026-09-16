@@ -2,6 +2,9 @@
 name: "lob"
 description: "Print and mail physical letters and postcards through Lob, verify US addresses, and cancel pieces before production. Trigger phrases: lob, send postcard, send letter, direct mail, print and mail."
 metadata: { "includeInPrompt": true }
+tagline: "Send physical mail through Lob's Print and Mail API: verify US addresses; create postcards and letters that get printed and mailed; list what was sent; cancel a piece while it is still before production. Reach for this when the user wants a real letter or postcard in the mail rather than an email."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.lob.com"]
 ---
 
 # Lob

@@ -2,6 +2,9 @@
 name: "coda"
 description: "Read and write Coda: list docs, read tables and rows, add rows. Trigger phrases: coda, coda doc, coda table."
 metadata: { "includeInPrompt": true }
+tagline: "List docs, read tables and rows, add rows. Your docs as a database."
+catalog_auth: "personal API token (per-user)"
+catalog_hosts: ["coda.io"]
 ---
 
 # Coda

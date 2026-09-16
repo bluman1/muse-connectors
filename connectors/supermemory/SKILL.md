@@ -2,6 +2,9 @@
 name: "supermemory"
 description: "Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings. Trigger phrases: supermemory, memory engine, remember this."
 metadata: { "includeInPrompt": true }
+tagline: "Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.supermemory.ai"]
 ---
 
 # Supermemory

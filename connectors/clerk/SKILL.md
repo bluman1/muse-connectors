@@ -2,6 +2,9 @@
 name: "clerk"
 description: "Read and write Clerk: list users, look up a user, create, update, and delete users. Trigger phrases: clerk, users auth."
 metadata: { "includeInPrompt": true }
+tagline: "List, create, update, and delete users."
+catalog_auth: "Secret API key (per-project)"
+catalog_hosts: ["api.clerk.com"]
 ---
 
 # Clerk

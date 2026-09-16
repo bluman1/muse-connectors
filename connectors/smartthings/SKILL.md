@@ -2,6 +2,9 @@
 name: "smartthings"
 description: "Read status and send commands to Samsung SmartThings devices: lights, locks, thermostats, sirens, garage doors. Trigger phrases: smartthings, samsung smart home, unlock the door, smartthings thermostat."
 metadata: { "includeInPrompt": true }
+tagline: "Read device status and issue capability commands across a Samsung SmartThings account: locations, devices, switches, dimmers, locks, thermostats, sirens, garage door controllers, and window shades. Use it when the user asks about or wants to change the state of anything paired to their SmartThings hub or cloud account. This connector drives real physical hardware, so every write is confirmation-gated (see Operating Rules)."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.smartthings.com"]
 ---
 
 # SmartThings

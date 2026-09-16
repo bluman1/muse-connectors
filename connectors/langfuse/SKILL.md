@@ -2,6 +2,9 @@
 name: "langfuse"
 description: "Read and write Langfuse: browse traces and observations, list prompts and datasets, score traces, add dataset items. Trigger phrases: langfuse, llm observability."
 metadata: { "includeInPrompt": true }
+tagline: "Query traces and observations, manage prompts and scores."
+catalog_auth: "Public+secret key pair (per-project; host declared at connect time)"
+catalog_hosts: ["cloud.langfuse.com", "us.cloud.langfuse.com"]
 ---
 
 # Langfuse

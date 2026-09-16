@@ -2,6 +2,9 @@
 name: "letta"
 description: "Work with Letta agent memory: list agents, read core-memory blocks, list or add archival passages, create blocks, message an agent to record memory. Trigger phrases: letta, agent memory, core memory."
 metadata: { "includeInPrompt": true }
+tagline: "Work with Letta agent memory: list agents, read core-memory blocks, list or add archival passages, create blocks, message an agent to record memory."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.letta.com"]
 ---
 
 # Letta

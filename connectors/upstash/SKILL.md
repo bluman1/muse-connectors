@@ -2,6 +2,9 @@
 name: "upstash"
 description: "Read and write Upstash: get, set, and delete Redis keys, run command pipelines. Trigger phrases: upstash, redis."
 metadata: { "includeInPrompt": true }
+tagline: "Run Redis commands over REST."
+catalog_auth: "Per-database token (host declared at connect time)"
+catalog_hosts: ["*.upstash.io"]
 ---
 
 # Upstash

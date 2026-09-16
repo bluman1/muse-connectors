@@ -2,6 +2,9 @@
 name: "discord"
 description: "Read and write Discord: list servers and channels, read recent messages, send messages, open DMs. Trigger phrases: discord, discord server."
 metadata: { "includeInPrompt": true }
+tagline: "Read servers and channels, send messages and DMs."
+catalog_auth: "Bot token (per-server install)"
+catalog_hosts: ["discord.com"]
 ---
 
 # Discord

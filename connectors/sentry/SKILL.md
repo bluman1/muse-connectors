@@ -2,6 +2,9 @@
 name: "sentry"
 description: "Triage Sentry errors: list organizations, projects, and recent issues. Trigger phrases: sentry, sentry errors, error tracking."
 metadata: { "includeInPrompt": true }
+tagline: "List organizations and projects, triage unresolved issues from the last 24h. Read-only."
+catalog_auth: "auth token (per-user, sentry.io \u2192 Settings \u2192 Auth Tokens)"
+catalog_hosts: ["sentry.io"]
 ---
 
 # Sentry

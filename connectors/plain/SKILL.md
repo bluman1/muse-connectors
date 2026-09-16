@@ -2,6 +2,9 @@
 name: "plain"
 description: "Read and write Plain support: find and upsert customers, list threads, create and reply to support threads. Trigger phrases: plain, support tickets."
 metadata: { "includeInPrompt": true }
+tagline: "Find customers, manage support threads."
+catalog_auth: "Machine-user API key"
+catalog_hosts: ["core-api.uk.plain.com"]
 ---
 
 # Plain

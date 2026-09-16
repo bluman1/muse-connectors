@@ -2,6 +2,9 @@
 name: "ashby"
 description: "Search Ashby public job boards (no key needed) and read/write the Ashby ATS: candidates, jobs, applications. Trigger phrases: ashby, job board, candidates, hiring, job search."
 metadata: { "includeInPrompt": true }
+tagline: "Search Ashby public job boards (no key needed) and read/write the Ashby ATS: candidates, jobs, applications."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.ashbyhq.com"]
 ---
 
 # Ashby

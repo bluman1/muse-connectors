@@ -2,6 +2,9 @@
 name: "pexels"
 description: "Search Pexels for royalty-free stock photos and videos, browse curated and popular media, and inspect collections. Trigger phrases: pexels, stock photo, stock video, find an image."
 metadata: { "includeInPrompt": true }
+tagline: "Search Pexels' royalty-free stock library: find photos and videos by keyword, browse curated/trending photos and popular videos, look up a single photo or video, and read collection contents. The Pexels API is read-only, so this connector cannot change anything."
+catalog_auth: "free API key via the secure credential flow"
+catalog_hosts: ["api.pexels.com"]
 ---
 
 # Pexels

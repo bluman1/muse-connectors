@@ -2,6 +2,9 @@
 name: "loops"
 description: "Read and write Loops: find and manage email contacts; send events and transactional emails. Trigger phrases: loops, email contacts."
 metadata: { "includeInPrompt": true }
+tagline: "Manage email contacts, trigger loops, send transactional email."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["app.loops.so"]
 ---
 
 # Loops

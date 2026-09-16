@@ -92,7 +92,7 @@
   },
   {
     "id": "beatoven",
-    "name": "Beatoven",
+    "name": "Beatoven.ai",
     "tagline": "Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems.",
     "auth": "API token via the secure credential flow",
     "hosts": [
@@ -109,18 +109,6 @@
       "api.beehiiv.com"
     ],
     "category": "Newsletters"
-  },
-  {
-    "id": "black-forest-labs",
-    "name": "Black Forest Labs",
-    "tagline": "Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.",
-    "auth": "API key via the secure credential flow",
-    "hosts": [
-      "api.bfl.ai",
-      "api.eu.bfl.ai",
-      "api.us.bfl.ai"
-    ],
-    "category": "Media generation"
   },
   {
     "id": "bluesky",
@@ -428,6 +416,18 @@
     "category": "Search & Data"
   },
   {
+    "id": "black-forest-labs",
+    "name": "FLUX image API",
+    "tagline": "Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.",
+    "auth": "API key via the secure credential flow",
+    "hosts": [
+      "api.bfl.ai",
+      "api.eu.bfl.ai",
+      "api.us.bfl.ai"
+    ],
+    "category": "Media generation"
+  },
+  {
     "id": "flyio",
     "name": "Fly.io",
     "tagline": "List apps and machines, manage machine lifecycle.",
@@ -459,7 +459,7 @@
   },
   {
     "id": "gemini",
-    "name": "Gemini",
+    "name": "Gemini (media generation)",
     "tagline": "Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing.",
     "auth": "API key via the secure credential flow",
     "hosts": [
@@ -680,7 +680,7 @@
   },
   {
     "id": "luma",
-    "name": "Luma",
+    "name": "Luma (Dream Machine API)",
     "tagline": "Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload.",
     "auth": "API key via the secure credential flow",
     "hosts": [
@@ -701,7 +701,7 @@
   },
   {
     "id": "mem0",
-    "name": "Mem0",
+    "name": "mem0",
     "tagline": "Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events.",
     "auth": "API key via the secure credential flow",
     "hosts": [
@@ -721,7 +721,7 @@
   },
   {
     "id": "mistral",
-    "name": "Mistral",
+    "name": "Mistral AI",
     "tagline": "Mistral AI's La Plateforme API: chat completions, embeddings, document OCR, and model listing via Bearer API key.",
     "auth": "API key (per-user)",
     "hosts": [
@@ -1274,7 +1274,7 @@
   },
   {
     "id": "tesla-fleet-api",
-    "name": "Tesla Fleet API",
+    "name": "Tesla Fleet API (vehicles)",
     "tagline": "Control Tesla vehicles through the official Tesla Fleet API: read live vehicle state, wake a sleeping car, and send signed commands (lock/unlock, keyless drive, charge control, preconditioning, honk/flash, trunk, sentry/valet, speed limit, navigation). Use when the user mentions their Tesla car or asks for vehicle actuation.",
     "auth": "provider OAuth 2.0 via the secure credential flow",
     "hosts": [
@@ -1338,7 +1338,7 @@
   },
   {
     "id": "triggerdev",
-    "name": "Trigger.dev",
+    "name": "trigger.dev",
     "tagline": "Trigger background jobs, list runs, manage schedules.",
     "auth": "API key (per-environment)",
     "hosts": [
@@ -1481,7 +1481,7 @@
   },
   {
     "id": "xai",
-    "name": "xAI",
+    "name": "xAI (Grok)",
     "tagline": "Query Grok chat completions and list available Grok models through xAI's OpenAI-compatible API, with per-call token usage surfaced so cost is always visible.",
     "auth": "API key (per-user)",
     "hosts": [

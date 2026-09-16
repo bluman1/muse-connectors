@@ -2,6 +2,9 @@
 name: "n8n"
 description: "Read and write n8n: list workflows, inspect and update them, list executions. Trigger phrases: n8n, workflows."
 metadata: { "includeInPrompt": true }
+tagline: "List and manage workflows, read executions."
+catalog_auth: "API key (instance; host declared at connect time)"
+catalog_hosts: ["your n8n instance host"]
 ---
 
 # n8n

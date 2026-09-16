@@ -2,6 +2,9 @@
 name: "uber-direct"
 description: "Quote and dispatch same-day Uber Direct courier deliveries, and check their status. Trigger phrases: uber direct, same-day delivery, dispatch courier, delivery quote."
 metadata: { "includeInPrompt": true }
+tagline: "Dispatch same-day couriers through Uber Direct for food, retail, grocery, or parcel deliveries. Get a price and time quote without dispatching anyone, create a delivery when the user approves, check its status, and cancel a pending one. Reach for this when the user needs something picked up and dropped off locally today."
+catalog_auth: "provider OAuth 2.0 client-credentials via the secure credential flow"
+catalog_hosts: ["api.uber.com"]
 ---
 
 # Uber Direct

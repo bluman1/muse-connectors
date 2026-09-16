@@ -2,6 +2,9 @@
 name: "octoprint"
 description: "Control an OctoPrint 3D printer over its local REST API: print jobs, temperatures, file uploads, and gated raw G-code. Trigger phrases: octoprint, 3d printer, start print, pause print, nozzle temperature, bed temperature, gcode."
 metadata: { "includeInPrompt": true }
+tagline: "Control an OctoPrint 3D printer over its local REST API: read printer state and temperatures, monitor print progress, start/pause/cancel/restart jobs, upload and select gcode files, set hotend and bed temperatures, jog or home axes, and (gated) run raw G-code. Use when the user mentions their OctoPrint instance or a printer it drives."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["the host you pass via --host"]
 ---
 
 # OctoPrint

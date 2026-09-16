@@ -2,6 +2,9 @@
 name: "digitalocean"
 description: "Inspect DigitalOcean: list droplets and domains. Trigger phrases: digitalocean, droplet, digitalocean domains."
 metadata: { "includeInPrompt": true }
+tagline: "List your DigitalOcean droplets and domains. Read-only."
+catalog_auth: "personal access token (per-user, cloud.digitalocean.com \u2192 API)"
+catalog_hosts: ["api.digitalocean.com"]
 ---
 
 # DigitalOcean

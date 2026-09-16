@@ -2,6 +2,9 @@
 name: "polymarket"
 description: "Read-only Polymarket market data: events, markets, prices, order books. No trading, no key needed. Trigger phrases: polymarket, prediction markets, market odds, event prices."
 metadata: { "includeInPrompt": true }
+tagline: "Read-only prediction market data: events, markets, prices, order books. No trading, no API key needed."
+catalog_auth: "none, public API"
+catalog_hosts: ["gamma-api.polymarket.com"]
 ---
 
 # Polymarket

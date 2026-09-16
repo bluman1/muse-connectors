@@ -2,6 +2,9 @@
 name: "newsapi"
 description: "Top headlines and full-text news search. Trigger phrases: news, headlines, newsapi."
 metadata: { "includeInPrompt": true }
+tagline: "Top headlines and full-text news search. Read-only."
+catalog_auth: "NewsAPI key (per-user, newsapi.org/register; free tier 100 requests/day)"
+catalog_hosts: ["newsapi.org"]
 ---
 
 # NewsAPI

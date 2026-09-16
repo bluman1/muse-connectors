@@ -2,6 +2,9 @@
 name: "perplexity"
 description: "Read and write Perplexity: ask AI questions with web search and citations, list models, run raw searches. Trigger phrases: perplexity, sonar, ai search."
 metadata: { "includeInPrompt": true }
+tagline: "Ask questions with citations, search the web."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.perplexity.ai"]
 ---
 
 # Perplexity

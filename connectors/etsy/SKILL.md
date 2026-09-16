@@ -2,6 +2,9 @@
 name: "etsy"
 description: "Read Etsy shop data: receipts, listings, transactions, payment ledger; create listings. Trigger phrases: etsy, shop orders, listings, receipts, seller."
 metadata: { "includeInPrompt": true }
+tagline: "Read Etsy shop data: receipts, listings, transactions, payment ledger; create listings."
+catalog_auth: "OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["openapi.etsy.com"]
 ---
 
 # Etsy

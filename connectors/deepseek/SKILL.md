@@ -2,6 +2,9 @@
 name: "deepseek"
 description: "Use DeepSeek's chat API: list models, run chat completions, check account balance. Trigger phrases: deepseek, deepseek chat, deepseek api."
 metadata: { "includeInPrompt": true }
+tagline: "Chat with DeepSeek's models and check account balance: OpenAI-compatible chat completions with thinking mode, model listing, and balance lookup via the official API."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.deepseek.com"]
 ---
 
 # DeepSeek

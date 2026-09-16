@@ -2,6 +2,9 @@
 name: "render"
 description: "Inspect Render services and deploys: list services, list recent deploys. Trigger phrases: render, render service, render deploy."
 metadata: { "includeInPrompt": true }
+tagline: "List your Render services and recent deploys. Read-only."
+catalog_auth: "API key (per-user, dashboard.render.com \u2192 Account Settings \u2192 API Keys)"
+catalog_hosts: ["api.render.com"]
 ---
 
 # Render

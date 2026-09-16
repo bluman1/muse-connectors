@@ -2,6 +2,9 @@
 name: "cartesia"
 description: "Cartesia text-to-speech: synthesize speech audio and browse voices. Trigger phrases: cartesia, text to speech, TTS, synthesize voice, voiceover."
 metadata: { "includeInPrompt": true }
+tagline: "Generate spoken audio from text with Cartesia's Sonic models (40+ languages) and browse the Cartesia voice library. Reach for this when the user wants narration, voiceovers, or spoken-audio files produced from a script."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.cartesia.ai"]
 ---
 
 # Cartesia

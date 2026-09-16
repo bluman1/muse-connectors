@@ -2,6 +2,9 @@
 name: "triggerdev"
 description: "Read and write trigger.dev: list runs, check run status, trigger tasks, cancel runs, list schedules. Trigger phrases: trigger.dev, background jobs."
 metadata: { "includeInPrompt": true }
+tagline: "Trigger background jobs, list runs, manage schedules."
+catalog_auth: "API key (per-environment)"
+catalog_hosts: ["api.trigger.dev"]
 ---
 
 # trigger.dev

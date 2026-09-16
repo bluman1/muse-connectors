@@ -2,6 +2,9 @@
 name: "deepgram"
 description: "Deepgram speech AI: transcribe audio to text and synthesize speech (TTS). Trigger phrases: deepgram, transcribe audio, speech to text, STT, deepgram tts."
 metadata: { "includeInPrompt": true }
+tagline: "Transcribe prerecorded audio files to text (with optional diarization, summaries, topics, sentiment) and synthesize speech with Deepgram's Aura voices. Reach for this when the user has an audio file to transcribe or wants spoken audio generated from text."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.deepgram.com"]
 ---
 
 # Deepgram

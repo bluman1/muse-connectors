@@ -2,6 +2,9 @@
 name: "restream"
 description: "Manage Restream multistreaming: profile, streaming destinations, channel metadata, and stream key. Trigger phrases: restream, livestream destinations, multistream, stream key, toggle destination."
 metadata: { "includeInPrompt": true }
+tagline: "Manage Restream multistreaming: read your profile, list streaming destinations (channels), toggle destinations or edit channel metadata, and retrieve your stream key. Use when the user wants to control where a livestream goes without opening the Restream dashboard."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.restream.io"]
 ---
 
 # Restream

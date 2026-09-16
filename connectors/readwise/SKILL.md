@@ -2,6 +2,9 @@
 name: "readwise"
 description: "Read and write Readwise: list books and highlights, save new highlights. Trigger phrases: readwise, my highlights, reading list."
 metadata: { "includeInPrompt": true }
+tagline: "Search your highlights and books, save new highlights."
+catalog_auth: "access token (per-user, from readwise.io/access_token)"
+catalog_hosts: ["readwise.io"]
 ---
 
 # Readwise

@@ -2,6 +2,9 @@
 name: "google-nest"
 description: "Read Nest device state (thermostats, cameras, doorbells) and set thermostat modes and setpoints via the Smart Device Management API. Trigger phrases: google nest, nest thermostat, nest camera, sdm."
 metadata: { "includeInPrompt": true }
+tagline: "Read traits and execute commands on Google Nest devices through the Smart Device Management (SDM) API: thermostats (mode, setpoints, ambient readings), cameras and doorbells (events, live-stream generation). Use it when the user asks about their Nest thermostat, wants to change heating/cooling, or wants camera/doorbell state. Thermostat commands start or stop real HVAC, so they are confirmation-gated (see Operating Rules)."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["smartdevicemanagement.googleapis.com"]
 ---
 
 # Google Nest

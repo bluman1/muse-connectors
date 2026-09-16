@@ -2,6 +2,9 @@
 name: "lemon-squeezy"
 description: "Read Lemon Squeezy revenue: list orders, subscriptions, customers, products; create checkout links. Trigger phrases: lemon squeezy, store orders, revenue, checkout link."
 metadata: { "includeInPrompt": true }
+tagline: "Read Lemon Squeezy revenue: list orders, subscriptions, customers, products; create checkout links."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.lemonsqueezy.com"]
 ---
 
 # Lemon Squeezy

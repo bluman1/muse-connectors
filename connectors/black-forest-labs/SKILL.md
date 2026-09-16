@@ -2,6 +2,9 @@
 name: "black-forest-labs"
 description: "Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling. Trigger phrases: black forest labs, BFL, flux image, flux-2-pro, flux 2 generate."
 metadata: { "includeInPrompt": true }
+tagline: "Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.bfl.ai", "api.eu.bfl.ai", "api.us.bfl.ai"]
 ---
 
 # FLUX image API

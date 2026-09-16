@@ -2,6 +2,9 @@
 name: "brave-search"
 description: "Independent web search from Brave's own index. Trigger phrases: brave, brave search, web search."
 metadata: { "includeInPrompt": true }
+tagline: "Independent web search from Brave's own index. Read-only."
+catalog_auth: "Brave Search API key (per-user, brave.com/search/api; free tier 2,000 queries/month)"
+catalog_hosts: ["api.search.brave.com"]
 ---
 
 # Brave Search

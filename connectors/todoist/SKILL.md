@@ -2,6 +2,9 @@
 name: "todoist"
 description: "List tasks, create tasks, and complete them in Todoist. Trigger phrases: todoist, my tasks, add a task, todo list."
 metadata: { "includeInPrompt": true }
+tagline: "List tasks, create tasks, and mark them done in Todoist."
+catalog_auth: "Todoist API token (per-user, Settings \u2192 Integrations \u2192 Developer)"
+catalog_hosts: ["api.todoist.com"]
 ---
 
 # Todoist

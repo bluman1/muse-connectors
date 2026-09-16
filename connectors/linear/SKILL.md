@@ -2,6 +2,9 @@
 name: "linear"
 description: "Work with Linear: view your assigned issues and create issues. Trigger phrases: linear, linear issue, ticket."
 metadata: { "includeInPrompt": true }
+tagline: "View your assigned issues and create issues, over Linear's GraphQL API."
+catalog_auth: "Linear personal API key (per-user, linear.app/settings/api)"
+catalog_hosts: ["api.linear.app"]
 ---
 
 # Linear

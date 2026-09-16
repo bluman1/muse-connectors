@@ -2,6 +2,9 @@
 name: "webflow"
 description: "Manage Webflow sites: list sites and CMS collections, read and edit CMS items, and publish. Trigger phrases: webflow, webflow cms, publish webflow site."
 metadata: { "includeInPrompt": true }
+tagline: "Work with the Webflow Data API v2: list sites, inspect site details, browse CMS collections and items, create/update/delete CMS items, and publish a site. Uses a per-site token from Site Settings."
+catalog_auth: "per-site token via the secure credential flow"
+catalog_hosts: ["api.webflow.com"]
 ---
 
 # Webflow

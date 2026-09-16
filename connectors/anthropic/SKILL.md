@@ -2,6 +2,9 @@
 name: "anthropic"
 description: "Check Anthropic API access and list available Claude models. Read-only. Trigger phrases: anthropic, claude models, anthropic api."
 metadata: { "includeInPrompt": true }
+tagline: "Check your Anthropic API access and list available Claude models. Read-only."
+catalog_auth: "Anthropic API key (per-user, console.anthropic.com)"
+catalog_hosts: ["api.anthropic.com"]
 ---
 
 # Anthropic

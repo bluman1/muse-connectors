@@ -2,6 +2,9 @@
 name: "paddle"
 description: "View Paddle transactions and customers. Read-only by design. Trigger phrases: paddle, paddle transactions, paddle customers."
 metadata: { "includeInPrompt": true }
+tagline: "View Paddle transactions and customers. Read-only by design."
+catalog_auth: "Paddle API key (per-user, Paddle Dashboard \u2192 Developer Tools \u2192 Authentication)"
+catalog_hosts: ["api.paddle.com"]
 ---
 
 # Paddle

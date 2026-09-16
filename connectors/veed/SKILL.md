@@ -2,6 +2,9 @@
 name: "veed"
 description: "Remove video backgrounds with VEED's direct developer API: standard, fast and green-screen endpoints. Trigger phrases: veed, remove video background, background removal, transparent video."
 metadata: { "includeInPrompt": true }
+tagline: "Remove backgrounds from video with VEED's direct developer API (POST /v1/video/background-remove): standard quality, fast throughput and green-screen chroma-key with spill suppression. Outputs are VP9-with-alpha or H.264 RGB+alpha, up to 4K."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["the host you pass via --api-host"]
 ---
 
 # VEED

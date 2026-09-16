@@ -2,6 +2,9 @@
 name: "ticktick"
 description: "Read and write TickTick: list projects and tasks, create tasks, complete and delete tasks. Trigger phrases: ticktick, task list, my tasks."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write TickTick: list projects and tasks, create tasks, complete and delete tasks."
+catalog_auth: "OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.ticktick.com"]
 ---
 
 # TickTick

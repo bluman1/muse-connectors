@@ -2,6 +2,9 @@
 name: "beatoven"
 description: "Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems. Trigger phrases: beatoven, compose music, generate a track, royalty free music, background music."
 metadata: { "includeInPrompt": true }
+tagline: "Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems."
+catalog_auth: "API token via the secure credential flow"
+catalog_hosts: ["public-api.beatoven.ai"]
 ---
 
 # Beatoven.ai

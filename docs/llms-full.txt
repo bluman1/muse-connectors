@@ -78,7 +78,7 @@ Auth: API key (per-workspace)
 Allowed hosts: api.attio.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/attio/SKILL.md
 
-# Beatoven (beatoven)
+# Beatoven.ai (beatoven)
 Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems.
 Auth: API token via the secure credential flow
 Allowed hosts: public-api.beatoven.ai
@@ -89,12 +89,6 @@ List publications, subscribers, and posts; add subscribers.
 Auth: API key (per-user; Scale plan or higher)
 Allowed hosts: api.beehiiv.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/beehiiv/SKILL.md
-
-# Black Forest Labs (black-forest-labs)
-Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.
-Auth: API key via the secure credential flow
-Allowed hosts: api.bfl.ai, api.eu.bfl.ai, api.us.bfl.ai
-Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/black-forest-labs/SKILL.md
 
 # Bluesky (bluesky)
 Read timelines, search posts, post and follow.
@@ -276,6 +270,12 @@ Auth: API key (per-user)
 Allowed hosts: api.firecrawl.dev
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/firecrawl/SKILL.md
 
+# FLUX image API (black-forest-labs)
+Black Forest Labs FLUX image generation: flux-2-pro and flux-2-flex text-to-image with async polling.
+Auth: API key via the secure credential flow
+Allowed hosts: api.bfl.ai, api.eu.bfl.ai, api.us.bfl.ai
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/black-forest-labs/SKILL.md
+
 # Fly.io (flyio)
 List apps and machines, manage machine lifecycle.
 Auth: API token (app or org scoped)
@@ -294,7 +294,7 @@ Auth: Front API token (per-user, Front Settings → API)
 Allowed hosts: api2.frontapp.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/front/SKILL.md
 
-# Gemini (gemini)
+# Gemini (media generation) (gemini)
 Google Gemini media generation: Nano Banana images, Imagen 4 images, Veo video, TTS, model listing.
 Auth: API key via the secure credential flow
 Allowed hosts: generativelanguage.googleapis.com
@@ -426,7 +426,7 @@ Auth: API key (per-user)
 Allowed hosts: app.loops.so
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/loops/SKILL.md
 
-# Luma (luma)
+# Luma (Dream Machine API) (luma)
 Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload.
 Auth: API key via the secure credential flow
 Allowed hosts: api.lumalabs.ai
@@ -438,7 +438,7 @@ Auth: provider OAuth via the secure credential flow
 Allowed hosts: your Mastodon instance host, declared at connect time. The credential is only ever sent to that host
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mastodon/SKILL.md
 
-# Mem0 (mem0)
+# mem0 (mem0)
 Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events.
 Auth: API key via the secure credential flow
 Allowed hosts: api.mem0.ai
@@ -450,7 +450,7 @@ Auth: Mercury API token (per-user, app.mercury.com → Settings → API Tokens; 
 Allowed hosts: api.mercury.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mercury/SKILL.md
 
-# Mistral (mistral)
+# Mistral AI (mistral)
 Mistral AI's La Plateforme API: chat completions, embeddings, document OCR, and model listing via Bearer API key.
 Auth: API key (per-user)
 Allowed hosts: api.mistral.ai
@@ -780,7 +780,7 @@ Auth: Telegram bot token from @BotFather (per-user, single token)
 Allowed hosts: api.telegram.org
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/telegram/SKILL.md
 
-# Tesla Fleet API (tesla-fleet-api)
+# Tesla Fleet API (vehicles) (tesla-fleet-api)
 Control Tesla vehicles through the official Tesla Fleet API: read live vehicle state, wake a sleeping car, and send signed commands (lock/unlock, keyless drive, charge control, preconditioning, honk/flash, trunk, sentry/valet, speed limit, navigation). Use when the user mentions their Tesla car or asks for vehicle actuation.
 Auth: provider OAuth 2.0 via the secure credential flow
 Allowed hosts: fleet-api.prd.na.vn.cloud.tesla.com, fleet-api.prd.eu.vn.cloud.tesla.com, fleet-api.prd.cn.vn.cloud.tesla.com
@@ -816,7 +816,7 @@ Auth: API key via the secure credential flow
 Allowed hosts: api.transistor.fm
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/transistor/SKILL.md
 
-# Trigger.dev (triggerdev)
+# trigger.dev (triggerdev)
 Trigger background jobs, list runs, manage schedules.
 Auth: API key (per-environment)
 Allowed hosts: api.trigger.dev
@@ -900,7 +900,7 @@ Auth: OAuth2 PKCE (per-user; paid read access)
 Allowed hosts: api.x.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/x/SKILL.md
 
-# xAI (xai)
+# xAI (Grok) (xai)
 Query Grok chat completions and list available Grok models through xAI's OpenAI-compatible API, with per-call token usage surfaced so cost is always visible.
 Auth: API key (per-user)
 Allowed hosts: api.x.ai

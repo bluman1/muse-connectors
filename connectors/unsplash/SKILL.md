@@ -2,6 +2,9 @@
 name: "unsplash"
 description: "Search Unsplash for free stock photos, browse by photographer or topic, and download images with proper attribution credit. Trigger phrases: unsplash, stock photo, find an image, download unsplash image."
 metadata: { "includeInPrompt": true }
+tagline: "Search Unsplash's free stock photo library, browse the latest photos, look up a photo's details, browse a photographer's portfolio or a topic, and download an image while honoring Unsplash's API guidelines. At the Client-ID tier this connector is read-only."
+catalog_auth: "access key via the secure credential flow"
+catalog_hosts: ["api.unsplash.com"]
 ---
 
 # Unsplash

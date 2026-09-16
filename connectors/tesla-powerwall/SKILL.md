@@ -2,6 +2,9 @@
 name: "tesla-powerwall"
 description: "Monitor and control Tesla Powerwall and energy sites through the Tesla Fleet API: live power status, backup reserve, operation mode, storm watch. Trigger phrases: tesla powerwall, powerwall, tesla energy, backup reserve, storm watch."
 metadata: { "includeInPrompt": true }
+tagline: "Monitor and control Tesla energy sites (Powerwall, solar) through the official Tesla Fleet API. Read live power flows, battery state, and site settings; change backup reserve percentage, operation mode, and Storm Watch. Use when the user mentions their Powerwall, Tesla energy site, backup reserve, or storm mode."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["fleet-api.prd.na.vn.cloud.tesla.com", "fleet-api.prd.eu.vn.cloud.tesla.com", "fleet-api.prd.cn.vn.cloud.tesla.com"]
 ---
 
 # Tesla Powerwall

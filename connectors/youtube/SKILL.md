@@ -2,6 +2,9 @@
 name: "youtube"
 description: "Read YouTube: show channels and videos, search videos, list playlist items. Trigger phrases: youtube, videos."
 metadata: { "includeInPrompt": true }
+tagline: "Look up channels and videos, search (reads only)."
+catalog_auth: "API key (per-user; reads only)"
+catalog_hosts: ["www.googleapis.com"]
 ---
 
 # YouTube

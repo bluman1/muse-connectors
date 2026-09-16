@@ -2,6 +2,9 @@
 name: "philips-hue"
 description: "Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors. Trigger phrases: philips hue, hue lights, my lights."
 metadata: { "includeInPrompt": true }
+tagline: "Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors."
+catalog_auth: "Bridge pairing (local) or OAuth2 (remote)"
+catalog_hosts: ["derived from --host at runtime; the CLI refuses to send the key anywhere else"]
 ---
 
 # Philips Hue

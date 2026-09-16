@@ -2,6 +2,9 @@
 name: "firecrawl"
 description: "Scrape and crawl websites with Firecrawl: scrape a page, start a crawl, check crawl status, map a site, search the web. Trigger phrases: firecrawl, scrape website."
 metadata: { "includeInPrompt": true }
+tagline: "Scrape pages, crawl sites, search the web."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.firecrawl.dev"]
 ---
 
 # Firecrawl

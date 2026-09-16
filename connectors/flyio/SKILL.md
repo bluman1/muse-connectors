@@ -2,6 +2,9 @@
 name: "flyio"
 description: "Read and write Fly.io: list apps and machines, manage volumes, start/stop/restart machines, run exec commands. Trigger phrases: fly.io, machines."
 metadata: { "includeInPrompt": true }
+tagline: "List apps and machines, manage machine lifecycle."
+catalog_auth: "API token (app or org scoped)"
+catalog_hosts: ["api.machines.dev"]
 ---
 
 # Fly.io

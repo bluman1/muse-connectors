@@ -2,6 +2,9 @@
 name: "attio"
 description: "Read and write Attio: list objects, query records, upsert records, add notes and tasks. Trigger phrases: attio, crm."
 metadata: { "includeInPrompt": true }
+tagline: "Query CRM records, upsert by matching attribute, add notes and tasks."
+catalog_auth: "API key (per-workspace)"
+catalog_hosts: ["api.attio.com"]
 ---
 
 # Attio

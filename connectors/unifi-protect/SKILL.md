@@ -2,6 +2,9 @@
 name: "unifi-protect"
 description: "Read UniFi Protect cameras, pull snapshots, and adjust camera settings (PTZ, lights, chimes). Trigger phrases: unifi protect, unifi camera, protect snapshot, unifi doorbell."
 metadata: { "includeInPrompt": true }
+tagline: "Read camera state and still snapshots from a local UniFi Protect console (Protect 5.3+) through the official Integration API, and adjust camera settings: PTZ position, flood lights, chimes, talkback. Use it when the user asks what their UniFi cameras see, wants a snapshot saved, or wants to change camera behavior. Everything runs against the local console; there is no cloud dependency."
+catalog_auth: "integration key via the secure credential flow"
+catalog_hosts: ["the host you pass via --host"]
 ---
 
 # UniFi Protect

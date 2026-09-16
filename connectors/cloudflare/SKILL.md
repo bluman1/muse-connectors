@@ -2,6 +2,9 @@
 name: "cloudflare"
 description: "Read Cloudflare zones and DNS records: list zones, list DNS records for a zone. Trigger phrases: cloudflare, dns records, cloudflare zone."
 metadata: { "includeInPrompt": true }
+tagline: "List your Cloudflare zones and read DNS records. Read-only."
+catalog_auth: "API token (per-user, dash.cloudflare.com \u2192 My Profile \u2192 API Tokens; needs Zone:Read + DNS:Read)"
+catalog_hosts: ["api.cloudflare.com"]
 ---
 
 # Cloudflare

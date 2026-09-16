@@ -2,6 +2,9 @@
 name: "monday"
 description: "Read and write monday.com: list boards, read items, create items. Trigger phrases: monday, monday.com board."
 metadata: { "includeInPrompt": true }
+tagline: "List boards, read items, create items. Project management over GraphQL."
+catalog_auth: "personal API token (per-user)"
+catalog_hosts: ["api.monday.com"]
 ---
 
 # Monday

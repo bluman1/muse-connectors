@@ -2,6 +2,9 @@
 name: "apollo"
 description: "Search B2B contacts with Apollo.io: find people by title and company, enrich contacts and companies. Trigger phrases: apollo, find prospects, enrich contact."
 metadata: { "includeInPrompt": true }
+tagline: "Search B2B contacts and enrich people and companies."
+catalog_auth: "API key (per-user; Professional plan or higher)"
+catalog_hosts: ["api.apollo.io"]
 ---
 
 # Apollo

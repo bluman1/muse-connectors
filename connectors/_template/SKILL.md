@@ -2,6 +2,9 @@
 name: "<provider-id>"
 description: "<What it does, one line>. Trigger phrases: <phrases>."
 metadata: { "includeInPrompt": true }
+tagline: "<Human one-liner for the catalog table and site card>"
+catalog_auth: "<Auth summary, e.g. API key (per-user)>"
+catalog_hosts: ["<allowed host>"]
 ---
 
 # <Display Name>

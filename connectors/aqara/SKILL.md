@@ -2,6 +2,9 @@
 name: "aqara"
 description: "Read and control Aqara smart home devices: plugs, switches, lights, AC, locks, curtains, scenes. Trigger phrases: aqara, aqara hub, aqara lock, aqara curtain."
 metadata: { "includeInPrompt": true }
+tagline: "Read device attributes and send control commands to Aqara devices through the Aqara Open Cloud API: plugs and wall switches, lights (brightness, color temperature), air conditioners, supported locks, curtain motors, and saved scenes, organized by homes and rooms. Use it when the user asks about or wants to change anything in their Aqara setup. Zigbee devices need an Aqara hub online. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules)."
+catalog_auth: "OAuth-style account authorization via the secure credential flow"
+catalog_hosts: ["open-<region>.aqara.com"]
 ---
 
 # Aqara

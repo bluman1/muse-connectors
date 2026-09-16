@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate docs/connectors.json and docs/index.html from the README catalog.
+"""Generate docs/connectors.json, docs/index.html, and the README catalog
+from connectors/*/SKILL.md frontmatter.
 
 Run this before pushing whenever connectors change, so the GitHub Pages
 site always matches the repo. Usage: python3 tools/build-site.py
@@ -139,40 +140,47 @@ FILTER_ORDER = [
     "Weather", "Agritech", "Other",
 ]
 
-ID_RE = re.compile(r"connectors/([a-z0-9-]+)/SKILL\.md")
+def parse_frontmatter(text):
+    """Minimal frontmatter parser: handles key: "val", key: val, key: ["a", "b"]."""
+    fm = {}
+    lines = text.split("\n")
+    if not lines or lines[0] != "---":
+        return fm
+    for ln in lines[1:]:
+        if ln == "---":
+            break
+        m = re.match(r"^([A-Za-z0-9_]+):\s*(.*)$", ln)
+        if not m:
+            continue
+        key, raw = m.groups()
+        raw = raw.strip()
+        if raw.startswith(("[", '"')):
+            try:
+                fm[key] = json.loads(raw)
+                continue
+            except json.JSONDecodeError:
+                pass
+        fm[key] = raw.strip('"')
+    return fm
 
 
-def parse_entries(readme):
+def load_connectors():
+    """Read the catalog from connectors/*/SKILL.md frontmatter.
+
+    Returns (id, display_name, tagline, auth, hosts) tuples. _template is skipped.
+    """
     entries = []
-    blocks = re.split(r"(?m)^### ", readme)[1:]
-    for b in blocks:
-        header, rest = b.split("\n", 1)
-        name = re.sub(r"\s+(✅|🧪|👥).*$", "", header).strip()
-        if not name:
+    for skill in sorted(ROOT.glob("connectors/*/SKILL.md")):
+        cid = skill.parent.name
+        if cid == "_template":
             continue
-        tagline = next((ln.strip() for ln in rest.split("\n") if ln.strip()), "")
-        am = re.search(r"^- Auth:\s+(.*?)\s+·\s+Allowed hosts:\s+(.*?)\s*$",
-                       rest, re.M)
-        if not am:
-            continue
-        auth, hosts = am.groups()
-        hosts = clean_hosts(hosts)
-        id_m = ID_RE.search(b)
-        if not id_m:
-            continue
-        entries.append((id_m.group(1), name, tagline, auth, hosts))
+        text = skill.read_text()
+        fm = parse_frontmatter(text)
+        m = re.search(r"(?m)^# (.+)$", text)
+        name = m.group(1).strip() if m else cid
+        entries.append((cid, name, fm.get("tagline", ""),
+                        fm.get("catalog_auth", ""), fm.get("catalog_hosts", [])))
     return entries
-
-
-def clean_hosts(raw):
-    s = raw.replace("`", "")
-    s = re.sub(r"\s*\([^)]*\)", "", s)
-    out = []
-    for h in s.split(","):
-        h = h.strip().rstrip(".")
-        if h and h not in out:
-            out.append(h)
-    return out
 
 
 TEMPLATE = r"""<!DOCTYPE html>
@@ -865,10 +873,38 @@ def build_llms_txt(connectors):
     print(f"wrote llms.txt + llms-full.txt ({len(connectors)} connectors)")
 
 
+def build_readme_catalog(connectors):
+    """Replace the README's catalog section with a compact table.
+
+    The README is a landing page, not the catalog: the full interactive
+    catalog (search + one-click install prompts) lives on the site.
+    """
+    rows = [
+        "## Catalog",
+        "",
+        f"All {len(connectors)} connectors, searchable with one-click install prompts, "
+        f"at **{SITE_URL}**. Each name links straight to its detail page.",
+        "",
+        "| Connector | What it does |",
+        "|---|---|",
+    ]
+    for c in connectors:
+        tag = c["tagline"].replace("|", ",").strip()
+        rows.append(f"| [{c['name']}]({SITE_URL}#{c['id']}) | {tag} |")
+    rows += ["", "*To add a connector, see [CONTRIBUTING.md](CONTRIBUTING.md).*", ""]
+    section = "\n".join(rows)
+    rp = ROOT / "README.md"
+    txt = rp.read_text()
+    new = re.sub(r"(?sm)^## Catalog\n.*?(?=\n## Something not working\?)",
+                 section, txt, count=1)
+    if new != txt:
+        rp.write_text(new)
+        print(f"rewrote README catalog table ({len(connectors)} rows)")
+
+
 def main():
-    readme = (ROOT / "README.md").read_text()
     connectors = []
-    for cid, name, tagline, auth, hosts in parse_entries(readme):
+    for cid, name, tagline, auth, hosts in load_connectors():
         raw_cat = CATEGORIES.get(cid, "Other")
         connectors.append({
             "id": cid,
@@ -894,6 +930,7 @@ def main():
     print(f"wrote {docs / 'index.html'}")
     build_og_image(len(connectors))
     build_llms_txt(connectors)
+    build_readme_catalog(connectors)
     # keep the connectors-count badge in README in sync
     rp = ROOT / "README.md"
     badge_txt = rp.read_text()

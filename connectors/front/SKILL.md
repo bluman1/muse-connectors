@@ -2,6 +2,9 @@
 name: "front"
 description: "List Front inboxes and read conversations. Read-only. Trigger phrases: front, front inbox, shared inbox, support inbox."
 metadata: { "includeInPrompt": true }
+tagline: "List Front inboxes and read conversations in your shared inbox. Read-only."
+catalog_auth: "Front API token (per-user, Front Settings \u2192 API)"
+catalog_hosts: ["api2.frontapp.com"]
 ---
 
 # Front

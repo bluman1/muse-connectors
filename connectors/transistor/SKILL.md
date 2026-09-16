@@ -2,6 +2,9 @@
 name: "transistor"
 description: "Manage Transistor.fm podcast hosting, from episode drafts to audio uploads. Trigger phrases: transistor, transistor.fm, podcast hosting, publish episode."
 metadata: { "includeInPrompt": true }
+tagline: "Manage podcast hosting on Transistor.fm: list shows and episodes, create draft episodes, update or delete them, and upload episode audio via Transistor's two-step upload flow. Use when the user wants to publish or manage podcast episodes programmatically."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.transistor.fm"]
 ---
 
 # Transistor

@@ -2,6 +2,9 @@
 name: "prusa-connect"
 description: "Read Prusa Connect cloud state for Prusa 3D printers: printers, jobs, files, cameras, stats, plus file upload. Trigger phrases: prusa connect, prusa printer, prusa job, prusa camera."
 metadata: { "includeInPrompt": true }
+tagline: "Read Prusa 3D printer state through the official Prusa Connect cloud API: list printers and their state, list jobs and files, view cameras, read print statistics, and upload gcode files to printer storage. Use when the user mentions Prusa Connect or a networked Prusa printer (MK3/MK4/CORE One)."
+catalog_auth: "personal API token via the secure credential flow"
+catalog_hosts: ["connect.prusa3d.com"]
 ---
 
 # Prusa Connect

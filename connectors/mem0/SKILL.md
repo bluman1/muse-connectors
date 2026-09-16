@@ -2,6 +2,9 @@
 name: "mem0"
 description: "Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events. Trigger phrases: mem0, memory layer, remember this."
 metadata: { "includeInPrompt": true }
+tagline: "Mem0 memory CLI: add memories from messages, semantic search, read or delete memories, poll async events."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.mem0.ai"]
 ---
 
 # mem0

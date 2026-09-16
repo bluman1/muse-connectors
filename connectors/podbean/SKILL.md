@@ -2,6 +2,9 @@
 name: "podbean"
 description: "Manage Podbean podcast hosting: podcasts and episodes via OAuth API. Trigger phrases: podbean, podcast hosting, publish episode, podcast episodes."
 metadata: { "includeInPrompt": true }
+tagline: "Manage podcast hosting on Podbean: list podcasts and their episodes, create, update, or delete episodes. Podbean's analytics endpoints are a differentiator; the download/analytics report paths are not yet mapped in this connector."
+catalog_auth: "provider OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.podbean.com"]
 ---
 
 # Podbean

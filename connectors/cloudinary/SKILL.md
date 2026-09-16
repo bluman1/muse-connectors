@@ -2,6 +2,9 @@
 name: "cloudinary"
 description: "Manage Cloudinary media: upload images and videos, list and inspect assets, update metadata, delete assets, and check plan usage. Trigger phrases: cloudinary, upload image, cloudinary usage."
 metadata: { "includeInPrompt": true }
+tagline: "Manage media on Cloudinary through the Upload and Admin APIs: upload images and videos, list and inspect assets, update metadata and tags, delete assets, and check plan usage (credits, storage, bandwidth, transformations)."
+catalog_auth: "cloud_name + API key + secret via the secure credential flow"
+catalog_hosts: ["api.cloudinary.com"]
 ---
 
 # Cloudinary

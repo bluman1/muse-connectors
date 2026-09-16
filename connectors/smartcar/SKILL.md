@@ -2,6 +2,9 @@
 name: "smartcar"
 description: "Read and control connected cars across brands through the Smartcar API: telemetry, lock/unlock, charge control, navigation. Trigger phrases: smartcar, connected car, lock my car, car charge, car location, odometer."
 metadata: { "includeInPrompt": true }
+tagline: "Read and control connected cars across many brands (Tesla, Ford, GM, Toyota, BMW, Hyundai and others) through one standardized API. Read odometer, location, charge and battery level, fuel level and tire pressure; lock/unlock doors; start/stop charging; set charge limits and schedules; route the built-in navigation. Use when the user mentions their car and the brand has no dedicated connector here, or asks for cross-brand vehicle telemetry and control."
+catalog_auth: "provider OAuth 2.0 (Smartcar Connect) via the secure credential flow"
+catalog_hosts: ["api.smartcar.com"]
 ---
 
 # Smartcar

@@ -2,6 +2,9 @@
 name: "luma"
 description: "Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload. Trigger phrases: luma, dream machine, luma video, ray video."
 metadata: { "includeInPrompt": true }
+tagline: "Luma Dream Machine video generation: text-to-video and image-to-video, status polling, cancel, image upload."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.lumalabs.ai"]
 ---
 
 # Luma (Dream Machine API)

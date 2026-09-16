@@ -2,6 +2,9 @@
 name: "elevenlabs"
 description: "Check your ElevenLabs subscription usage and list available voices. Read-only. Trigger phrases: elevenlabs, eleven labs, voice api, tts voices."
 metadata: { "includeInPrompt": true }
+tagline: "Check your ElevenLabs subscription usage and list available voices. Read-only."
+catalog_auth: "ElevenLabs API key (per-user, elevenlabs.io/app/settings/api-keys)"
+catalog_hosts: ["api.elevenlabs.io"]
 ---
 
 # ElevenLabs

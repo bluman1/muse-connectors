@@ -2,6 +2,9 @@
 name: "rachio"
 description: "Control a Rachio smart sprinkler controller: check schedules, start watering zones, and stop all water. Trigger phrases: rachio, sprinklers, irrigation controller, water the lawn, stop watering."
 metadata: { "includeInPrompt": true }
+tagline: "Control a Rachio smart irrigation controller through the public Rachio API. Check who is signed in, see what the controller is currently running, start watering a specific zone for a set number of seconds, and shut all water off in an emergency. Reach for this when the user asks about sprinklers, watering schedules, or irrigation zones."
+catalog_auth: "personal API key via the secure credential flow"
+catalog_hosts: ["api.rach.io"]
 ---
 
 # Rachio

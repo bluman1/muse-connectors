@@ -2,6 +2,9 @@
 name: "mastodon"
 description: "Read and write Mastodon: verify the account, list own posts and followers, publish toots with native scheduling, upload media. Trigger phrases: mastodon, toot, post to mastodon, fediverse."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write Mastodon: verify the account, list own posts and followers, publish toots with native scheduling, upload media."
+catalog_auth: "provider OAuth via the secure credential flow"
+catalog_hosts: ["your Mastodon instance host", "declared at connect time. The credential is only ever sent to that host"]
 ---
 
 # Mastodon

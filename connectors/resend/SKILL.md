@@ -2,6 +2,9 @@
 name: "resend"
 description: "Send email through Resend and check delivery status. Trigger phrases: resend, send email, transactional email."
 metadata: { "includeInPrompt": true }
+tagline: "Send email through Resend and check delivery status. Every send is confirmed with you first."
+catalog_auth: "Resend API key (per-user, resend.com/api-keys)"
+catalog_hosts: ["api.resend.com"]
 ---
 
 # Resend

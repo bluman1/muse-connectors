@@ -2,6 +2,9 @@
 name: "fal-ai"
 description: "Generate media with fal.ai: images, video, audio, music on one key. Submit jobs to 100s of models, poll status, fetch results, upload files. Trigger phrases: fal.ai, fal, run a fal model, flux pro on fal, kling video via fal."
 metadata: { "includeInPrompt": true }
+tagline: "Generate media with fal.ai: images, video, audio, music on one key. Submit jobs to 100s of models, poll status, fetch results, upload files."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["fal.run", "queue.fal.run", "rest.alpha.fal.ai"]
 ---
 
 # fal.ai

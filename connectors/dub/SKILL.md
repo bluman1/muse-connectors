@@ -2,6 +2,9 @@
 name: "dub"
 description: "Read and write Dub: manage short links and read their click analytics; record lead or sale conversions. Trigger phrases: dub, short links."
 metadata: { "includeInPrompt": true }
+tagline: "Create short links, read analytics, track conversions."
+catalog_auth: "API key (per-workspace)"
+catalog_hosts: ["api.dub.co"]
 ---
 
 # Dub

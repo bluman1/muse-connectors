@@ -2,6 +2,9 @@
 name: "gitlab"
 description: "Read and write GitLab: your user, projects, open merge requests, create issues. Trigger phrases: gitlab, merge request, gitlab issue."
 metadata: { "includeInPrompt": true }
+tagline: "Your GitLab user, projects, open merge requests, and issue creation."
+catalog_auth: "personal access token (per-user, gitlab.com \u2192 Preferences \u2192 Access Tokens; `read_api` for reads, `api` to create issues)"
+catalog_hosts: ["gitlab.com"]
 ---
 
 # GitLab

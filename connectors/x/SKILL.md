@@ -2,6 +2,9 @@
 name: "x"
 description: "Read and write X: post and delete tweets, search recent tweets, like tweets, send DMs. Trigger phrases: x, twitter, tweet."
 metadata: { "includeInPrompt": true }
+tagline: "Post, search, like, DM. Note: no usable free read tier."
+catalog_auth: "OAuth2 PKCE (per-user; paid read access)"
+catalog_hosts: ["api.x.com"]
 ---
 
 # X

@@ -2,6 +2,9 @@
 name: "tuya"
 description: "Read and control Tuya / Smart Life devices: plugs, lights, thermostats, curtains, smart locks. Trigger phrases: tuya, smart life, tuya device, smart life plug."
 metadata: { "includeInPrompt": true }
+tagline: "Read status and send control commands to Tuya Cloud / Smart Life devices: smart plugs and switches, lights, thermostats, curtain motors, and supported smart locks, plus executing saved scenes. Use it when the user asks about or wants to change anything paired through the Tuya or Smart Life app. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules)."
+catalog_auth: "Access ID + Access Secret pair via the secure credential flow"
+catalog_hosts: ["openapi.tuyaus.com", "openapi.tuyaeu.com", "openapi.tuyacn.com", "openapi.tuyain.com"]
 ---
 
 # Tuya

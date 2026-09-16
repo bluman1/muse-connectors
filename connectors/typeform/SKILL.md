@@ -2,6 +2,9 @@
 name: "typeform"
 description: "Work with Typeform: list forms and responses, and (with confirmation) manage response webhooks. Trigger phrases: typeform, form responses, typeform webhook, typeform forms."
 metadata: { "includeInPrompt": true }
+tagline: "List forms and responses, and manage response webhooks with confirmation."
+catalog_auth: "personal access token (per-user)"
+catalog_hosts: ["api.typeform.com"]
 ---
 
 # Typeform

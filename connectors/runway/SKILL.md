@@ -2,6 +2,9 @@
 name: "runway"
 description: "Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync. Trigger phrases: runway, runway video, gen-4 video, runway upscale, runway lip sync."
 metadata: { "includeInPrompt": true }
+tagline: "Runway developer API: text-to-video, image-to-video, task polling, video upscale, lip-sync."
+catalog_auth: "API secret via the secure credential flow"
+catalog_hosts: ["api.dev.runwayml.com"]
 ---
 
 # Runway

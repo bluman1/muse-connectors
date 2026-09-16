@@ -2,6 +2,9 @@
 name: "openai"
 description: "Check OpenAI API access and list the models your key can use. Read-only. Trigger phrases: openai, openai models, what models do I have access to."
 metadata: { "includeInPrompt": true }
+tagline: "Check your OpenAI API access and list the models your key can use. Read-only."
+catalog_auth: "OpenAI API key (per-user, platform.openai.com/api-keys)"
+catalog_hosts: ["api.openai.com"]
 ---
 
 # OpenAI

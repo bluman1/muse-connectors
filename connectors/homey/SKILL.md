@@ -2,6 +2,9 @@
 name: "homey"
 description: "Read and control devices on a Homey Pro hub or Homey cloud account: lights, thermostats, locks, blinds, Flows. Trigger phrases: homey, homey pro, homey flow, athom."
 metadata: { "includeInPrompt": true }
+tagline: "Read device state and write capability values on a Homey Pro (local) or Homey cloud account through the Homey Web API: lights and outlets, dimmers and color, thermostats, connected locks, blinds and curtains, plus listing Flows (automations). Use it when the user asks about or wants to change anything paired to their Homey. Writes drive real physical hardware, so they are confirmation-gated (see Operating Rules)."
+catalog_auth: "personal API token or OAuth via the secure credential flow"
+catalog_hosts: ["the host you pass via --host"]
 ---
 
 # Homey

@@ -2,6 +2,9 @@
 name: "postmark"
 description: "Send email with Postmark: send transactional mail, check messages and bounces. Trigger phrases: postmark, send via postmark."
 metadata: { "includeInPrompt": true }
+tagline: "Send transactional email, check delivery and bounces."
+catalog_auth: "server API token (per-user)"
+catalog_hosts: ["api.postmarkapp.com"]
 ---
 
 # Postmark

@@ -2,6 +2,9 @@
 name: "stripe"
 description: "Read-only Stripe visibility: balance, recent charges, customers. Trigger phrases: stripe, revenue, charges, balance, customers."
 metadata: { "includeInPrompt": true }
+tagline: "Read-only Stripe visibility: balance, recent charges, customers. No write commands ship: expanding to writes is a deliberate v2."
+catalog_auth: "Stripe restricted API key (per-user, Dashboard \u2192 Developers \u2192 API keys; read-only permissions suffice)"
+catalog_hosts: ["api.stripe.com"]
 ---
 
 # Stripe

@@ -2,6 +2,9 @@
 name: "shippo"
 description: "Get multi-carrier shipping rates, buy postage labels, track parcels, and refund labels via Shippo. Trigger phrases: shippo, shipping label, postage, shipping rates, track package."
 metadata: { "includeInPrompt": true }
+tagline: "Ship through many carriers (USPS, UPS, FedEx, DHL and others) with one API: get rates for a shipment; buy a printable postage label; track a parcel; refund unused labels. Reach for this when the user needs to price or purchase shipping for a package."
+catalog_auth: "API token via the secure credential flow"
+catalog_hosts: ["api.goshippo.com"]
 ---
 
 # Shippo

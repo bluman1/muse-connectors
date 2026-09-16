@@ -2,6 +2,9 @@
 name: "shopify"
 description: "View open orders, products, and customers in your Shopify store. Read-only by design. Trigger phrases: shopify, shopify orders, shopify store."
 metadata: { "includeInPrompt": true }
+tagline: "View open orders, products, and customers in your Shopify store. Read-only by design."
+catalog_auth: "Shopify Admin API access token (per-user, Shopify admin \u2192 Apps \u2192 Develop apps \u2192 custom app; scopes read_orders/read_products/read_customers)"
+catalog_hosts: ["<your-shop>.myshopify.com"]
 ---
 
 # Shopify

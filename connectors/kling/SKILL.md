@@ -2,6 +2,9 @@
 name: "kling"
 description: "Kling AI video generation with client-side JWT auth: text-to-video, image-to-video, status polling, clip extend, lip-sync. Trigger phrases: kling, kling video, klingai, kling text to video."
 metadata: { "includeInPrompt": true }
+tagline: "Kling AI video generation with client-side JWT auth: text-to-video, image-to-video, status polling, clip extend, lip-sync."
+catalog_auth: "access key + secret key pair via the secure credential flow"
+catalog_hosts: ["api.klingai.com"]
 ---
 
 # Kling

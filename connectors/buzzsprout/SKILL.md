@@ -2,6 +2,9 @@
 name: "buzzsprout"
 description: "Manage Buzzsprout podcast hosting: episodes and players via its JSON API. Trigger phrases: buzzsprout, podcast episodes, publish episode, podcast hosting."
 metadata: { "includeInPrompt": true }
+tagline: "Manage podcast episodes on Buzzsprout: list and fetch episodes, create, update, or delete them, and list embed players. Use when the user wants to publish or manage podcast episodes on a Buzzsprout-hosted show."
+catalog_auth: "API token via the secure credential flow"
+catalog_hosts: ["www.buzzsprout.com"]
 ---
 
 # Buzzsprout

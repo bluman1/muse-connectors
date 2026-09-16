@@ -2,6 +2,9 @@
 name: "amadeus"
 description: "Search travel with Amadeus: flight offers and prices, airport autocomplete, hotel offers, cheapest dates. Trigger phrases: amadeus, flight search, flight prices, hotel search."
 metadata: { "includeInPrompt": true }
+tagline: "Search travel with Amadeus: flight offers and prices, airport autocomplete, hotel offers, cheapest dates."
+catalog_auth: "OAuth 2.0 client credentials via the secure credential flow"
+catalog_hosts: ["test.api.amadeus.com", "api.amadeus.com"]
 ---
 
 # Amadeus

@@ -2,6 +2,9 @@
 name: "mistral"
 description: "Mistral AI (La Plateforme) API: chat completions, embeddings, document OCR, and model listing via api.mistral.ai. Trigger phrases: mistral, La Plateforme, mistral chat, mistral ocr, mistral embeddings."
 metadata: { "includeInPrompt": true }
+tagline: "Mistral AI's La Plateforme API: chat completions, embeddings, document OCR, and model listing via Bearer API key."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.mistral.ai"]
 ---
 
 # Mistral AI

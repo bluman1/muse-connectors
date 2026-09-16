@@ -2,6 +2,9 @@
 name: "clickup"
 description: "List ClickUp workspaces and tasks, and create tasks. Trigger phrases: clickup, clickup tasks, my clickup list."
 metadata: { "includeInPrompt": true }
+tagline: "List ClickUp workspaces and tasks, and create tasks."
+catalog_auth: "ClickUp personal API token (per-user, Settings \u2192 Apps \u2192 API Token)"
+catalog_hosts: ["api.clickup.com"]
 ---
 
 # ClickUp

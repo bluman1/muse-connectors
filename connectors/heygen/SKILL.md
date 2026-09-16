@@ -2,6 +2,9 @@
 name: "heygen"
 description: "HeyGen avatar and talking-head video: prompt-to-video agent, multi-scene avatar video, status polling, avatar and voice lists. Trigger phrases: heygen, avatar video, talking head video, video agent."
 metadata: { "includeInPrompt": true }
+tagline: "HeyGen avatar and talking-head video: prompt-to-video agent, multi-scene avatar video, status polling, avatar and voice lists."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.heygen.com"]
 ---
 
 # HeyGen

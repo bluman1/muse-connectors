@@ -2,6 +2,9 @@
 name: "airtable"
 description: "List Airtable bases, read table records, and add records. Trigger phrases: airtable, my base, add a record, spreadsheet."
 metadata: { "includeInPrompt": true }
+tagline: "List Airtable bases, read table records, and add records."
+catalog_auth: "Airtable personal access token (per-user, airtable.com/create/tokens)"
+catalog_hosts: ["api.airtable.com"]
 ---
 
 # Airtable

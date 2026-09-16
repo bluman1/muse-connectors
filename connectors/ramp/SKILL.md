@@ -2,6 +2,9 @@
 name: "ramp"
 description: "Read-only Ramp corporate spend: transactions, cards and card limits, users, departments. No spend actions by design. Trigger phrases: ramp, corporate spend, expense transactions, card spend limits."
 metadata: { "includeInPrompt": true }
+tagline: "Read-only view of corporate spend: transactions, cards and limits, users, departments. No spend actions by design."
+catalog_auth: "OAuth 2.0 client credentials (per-user)"
+catalog_hosts: ["api.ramp.com"]
 ---
 
 # Ramp

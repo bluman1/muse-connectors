@@ -2,6 +2,9 @@
 name: "ynab"
 description: "Read and write YNAB budgets: list budgets, accounts, balances, transactions, and categories; record transactions. Trigger phrases: ynab, budget, my budget, spending."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write YNAB budgets: list budgets, accounts, balances, transactions, and categories; record transactions."
+catalog_auth: "OAuth 2.0 via the secure credential flow"
+catalog_hosts: ["api.ynab.com"]
 ---
 
 # YNAB

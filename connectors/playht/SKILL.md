@@ -2,6 +2,9 @@
 name: "playht"
 description: "PlayHT text-to-speech: synthesize speech, list voices, and manage instant voice clones. Trigger phrases: playht, play ht, text to speech, TTS, voice clone."
 metadata: { "includeInPrompt": true }
+tagline: "Generate spoken audio from text with PlayHT voices, browse stock and cloned voices, and create instant voice clones. Reach for this when the user wants narration or voiceovers, a voice library lookup, or a voice cloned from a sample."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.play.ht"]
 ---
 
 # PlayHT

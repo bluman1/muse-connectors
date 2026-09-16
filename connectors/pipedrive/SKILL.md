@@ -2,6 +2,9 @@
 name: "pipedrive"
 description: "Read and write Pipedrive: list deals and contacts, create deals. Trigger phrases: pipedrive, my pipeline, deals."
 metadata: { "includeInPrompt": true }
+tagline: "List deals and contacts, create deals. CRM for your pipeline."
+catalog_auth: "personal API token (per-user) + company subdomain"
+catalog_hosts: ["{company}.pipedrive.com"]
 ---
 
 # Pipedrive

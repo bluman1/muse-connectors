@@ -2,6 +2,9 @@
 name: "wise"
 description: "View Wise profiles and multi-currency balances. Read-only by design. Trigger phrases: wise, wise balance, transferwise."
 metadata: { "includeInPrompt": true }
+tagline: "View Wise profiles and multi-currency balances. Read-only by design."
+catalog_auth: "Wise personal API token (per-user, wise.com \u2192 Settings \u2192 API tokens)"
+catalog_hosts: ["api.wise.com"]
 ---
 
 # Wise

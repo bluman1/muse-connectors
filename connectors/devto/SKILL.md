@@ -2,6 +2,9 @@
 name: "devto"
 description: "Read and write dev.to: own profile, own articles (published, drafts, all), public articles by username, create and update articles with a safe draft default. Trigger phrases: dev.to, devto, blog post, publish article, draft article."
 metadata: { "includeInPrompt": true }
+tagline: "Read and write dev.to: own profile, own articles (published, drafts, all), public articles by username, create and update articles with a safe draft default."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["dev.to"]
 ---
 
 # Dev.to

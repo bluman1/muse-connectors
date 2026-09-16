@@ -2,6 +2,9 @@
 name: "tally"
 description: "Read and write Tally: list forms, fetch a form, create and update forms, read submissions. Trigger phrases: tally, forms."
 metadata: { "includeInPrompt": true }
+tagline: "List forms, read submissions, manage form blocks."
+catalog_auth: "API key (per-user; free on all plans)"
+catalog_hosts: ["api.tally.so"]
 ---
 
 # Tally

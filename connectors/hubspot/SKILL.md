@@ -2,6 +2,9 @@
 name: "hubspot"
 description: "Read and manage the HubSpot CRM: contacts, contact search, deals. Trigger phrases: hubspot, CRM, contacts, deals, pipeline."
 metadata: { "includeInPrompt": true }
+tagline: "List and search contacts, create contacts, and list deals in your HubSpot CRM."
+catalog_auth: "HubSpot private app token (per-user, HubSpot Settings \u2192 Integrations \u2192 Private Apps)"
+catalog_hosts: ["api.hubapi.com"]
 ---
 
 # HubSpot

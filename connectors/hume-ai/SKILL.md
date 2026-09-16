@@ -2,6 +2,9 @@
 name: "hume-ai"
 description: "Hume AI Octave TTS and EVI speech-to-speech configs: synthesize speech and manage EVI configs. Trigger phrases: hume, hume ai, octave tts, EVI config."
 metadata: { "includeInPrompt": true }
+tagline: "Synthesize speech with Hume's Octave TTS models and read EVI (Empathic Voice Interface) conversational configs. Reach for this when the user wants expressive TTS audio from text or wants to inspect an EVI voice-agent configuration."
+catalog_auth: "API key via the secure credential flow"
+catalog_hosts: ["api.hume.ai"]
 ---
 
 # Hume AI

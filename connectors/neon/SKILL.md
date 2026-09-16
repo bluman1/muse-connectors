@@ -2,6 +2,9 @@
 name: "neon"
 description: "Inspect Neon serverless Postgres: projects, branches, databases. Branch create and delete need exact-match confirmation; connection passwords are masked. Trigger phrases: neon, serverless postgres, database branch, postgres project."
 metadata: { "includeInPrompt": true }
+tagline: "Inspect Neon serverless Postgres projects, branches, and databases. Branch create and delete need exact-match confirmation; connection passwords are masked."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["console.neon.tech"]
 ---
 
 # Neon

@@ -2,6 +2,9 @@
 name: "openrouter"
 description: "Browse OpenRouter's model catalog and check your key usage. Trigger phrases: openrouter, model prices, openrouter key."
 metadata: { "includeInPrompt": true }
+tagline: "Browse the model catalog with per-token pricing; check your key usage. Read-only."
+catalog_auth: "API key (per-user, openrouter.ai/keys)"
+catalog_hosts: ["openrouter.ai"]
 ---
 
 # OpenRouter

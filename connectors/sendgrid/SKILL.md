@@ -2,6 +2,9 @@
 name: "sendgrid"
 description: "Send email with SendGrid: send mail, check stats and profile. Trigger phrases: sendgrid, send an email via sendgrid."
 metadata: { "includeInPrompt": true }
+tagline: "Send email, check stats and profile."
+catalog_auth: "API key (per-user)"
+catalog_hosts: ["api.sendgrid.com"]
 ---
 
 # SendGrid

@@ -2,6 +2,9 @@
 name: "beehiiv"
 description: "Read and write beehiiv: list publications, subscribers, and posts; add subscribers. Trigger phrases: beehiiv, newsletter subscribers."
 metadata: { "includeInPrompt": true }
+tagline: "List publications, subscribers, and posts; add subscribers."
+catalog_auth: "API key (per-user; Scale plan or higher)"
+catalog_hosts: ["api.beehiiv.com"]
 ---
 
 # Beehiiv

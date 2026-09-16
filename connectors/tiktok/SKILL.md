@@ -2,6 +2,9 @@
 name: "tiktok"
 description: "Read TikTok via API v2: your profile and video list. Posting is approval-gated and not shipped. Trigger phrases: tiktok, my tiktok, tiktok profile, tiktok videos."
 metadata: { "includeInPrompt": true }
+tagline: "Read your TikTok profile and video list. API access needs TikTok app approval first, and posting is not shipped."
+catalog_auth: "OAuth 2.0 (per-user; TikTok app approval required)"
+catalog_hosts: ["open.tiktokapis.com"]
 ---
 
 # TikTok

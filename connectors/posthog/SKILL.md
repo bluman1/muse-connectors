@@ -2,6 +2,9 @@
 name: "posthog"
 description: "Read PostHog analytics: your user, projects, saved insights. Trigger phrases: posthog, analytics, posthog insights."
 metadata: { "includeInPrompt": true }
+tagline: "Your PostHog user, projects, and saved insights. Read-only."
+catalog_auth: "personal API key (per-user, PostHog Settings \u2192 Personal API keys; starts `phx_`)"
+catalog_hosts: ["configurable", "default app.posthog.com"]
 ---
 
 # PostHog

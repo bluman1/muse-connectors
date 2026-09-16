@@ -2,6 +2,9 @@
 name: "square"
 description: "Work with Square: list locations and payments, create orders, push Terminal checkouts, charge payment sources, and refund payments. Trigger phrases: square, square terminal, process payment, refund payment, point of sale."
 metadata: { "includeInPrompt": true }
+tagline: "Work with a Square seller account: list locations and payments, create orders, push a checkout to a physical Square Terminal for in-person payment, charge a payment source directly, cancel a pending Terminal checkout, and refund a payment. Reach for this when the user needs to take or return money through Square."
+catalog_auth: "provider OAuth 2.0 or personal access token via the secure credential flow"
+catalog_hosts: ["connect.squareup.com", "connect.squareupsandbox.com"]
 ---
 
 # Square

@@ -2,6 +2,9 @@
 name: "elai"
 description: "Elai AI avatar videos: list avatars, check videos, and render avatar videos. Trigger phrases: elai, avatar video, AI presenter, talking head video."
 metadata: { "includeInPrompt": true }
+tagline: "Build AI avatar presenter videos with Elai: list available avatars, inspect videos and their render status, submit renders, and poll until a render finishes. Reach for this when the user wants a talking-head video generated from a script or slide deck."
+catalog_auth: "API token via the secure credential flow"
+catalog_hosts: ["apis.elai.io"]
 ---
 
 # Elai

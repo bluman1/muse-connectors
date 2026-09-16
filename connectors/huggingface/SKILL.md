@@ -2,6 +2,9 @@
 name: "huggingface"
 description: "Verify your Hugging Face account and search the model hub. Read-only. Trigger phrases: hugging face, huggingface, hf model, search models."
 metadata: { "includeInPrompt": true }
+tagline: "Verify your Hugging Face account and search the model hub. Read-only."
+catalog_auth: "Hugging Face user access token (per-user, huggingface.co/settings/tokens)"
+catalog_hosts: ["huggingface.co"]
 ---
 
 # Hugging Face

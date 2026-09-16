@@ -2,6 +2,9 @@
 name: "hubitat"
 description: "Read and control devices on a Hubitat Elevation hub via the Maker API: lights, locks, thermostats, garage doors, HSM. Trigger phrases: hubitat, maker api, hubitat lock, hubitat hub."
 metadata: { "includeInPrompt": true }
+tagline: "Read device states and invoke capability commands on a Hubitat Elevation hub through the official Maker API app: lights and dimmers, deadbolt locks, garage door controllers, thermostats, location modes, and the Hubitat Safety Monitor (HSM). Use it when the user asks about or wants to change anything paired to their Hubitat hub. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules)."
+catalog_auth: "Maker API token via the secure credential flow"
+catalog_hosts: ["the host you pass via --host"]
 ---
 
 # Hubitat

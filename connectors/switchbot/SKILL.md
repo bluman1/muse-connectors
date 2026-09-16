@@ -2,6 +2,9 @@
 name: "switchbot"
 description: "Read and control SwitchBot devices: Bots, Locks, curtains, plugs, lights, AC, IR remotes, scenes. Trigger phrases: switchbot, switchbot lock, switchbot bot, switchbot curtain."
 metadata: { "includeInPrompt": true }
+tagline: "Read status and send commands to SwitchBot devices over the official OpenAPI v1.1: SwitchBot Bot (physical button presser), SwitchBot Lock, Curtain and Blind Tilt motors, plugs, lights, air conditioners, infrared remotes, and saved scenes. Use it when the user asks about or wants to change anything in their SwitchBot setup. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules)."
+catalog_auth: "token + secret pair via the secure credential flow"
+catalog_hosts: ["api.switch-bot.com"]
 ---
 
 # SwitchBot

@@ -2,6 +2,9 @@
 name: "slack"
 description: "Read and write Slack: list channels, read history, post messages, search, list users. Trigger phrases: slack, slack channel, post to slack."
 metadata: { "includeInPrompt": true }
+tagline: "Read channels, post messages, list users. The most-requested workplace connector."
+catalog_auth: "Slack OAuth (per-user)"
+catalog_hosts: ["slack.com"]
 ---
 
 # Slack
