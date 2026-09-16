@@ -154,13 +154,23 @@ def parse_entries(readme):
         if not am:
             continue
         auth, hosts = am.groups()
-        hosts = hosts.strip().strip("`")
+        hosts = clean_hosts(hosts)
         id_m = ID_RE.search(b)
         if not id_m:
             continue
-        entries.append((id_m.group(1), name.strip(), badge, tagline, auth,
-                        [h.strip().strip("`") for h in hosts.split(",")]))
+        entries.append((id_m.group(1), name.strip(), badge, tagline, auth, hosts))
     return entries
+
+
+def clean_hosts(raw):
+    s = raw.replace("`", "")
+    s = re.sub(r"\s*\([^)]*\)", "", s)
+    out = []
+    for h in s.split(","):
+        h = h.strip().rstrip(".")
+        if h and h not in out:
+            out.append(h)
+    return out
 
 
 TEMPLATE = r"""<!DOCTYPE html>

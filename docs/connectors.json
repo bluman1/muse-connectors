@@ -61,7 +61,7 @@
     "tagline": "Read device attributes and send control commands to Aqara devices through the Aqara Open Cloud API: plugs and wall switches, lights (brightness, color temperature), air conditioners, supported locks, curtain motors, and saved scenes, organized by homes and rooms. Use it when the user asks about or wants to change anything in their Aqara setup. Zigbee devices need an Aqara hub online. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
     "auth": "OAuth-style account authorization via the secure credential flow",
     "hosts": [
-      "open-<region>.aqara.com` (e.g. `open-us.aqara.com`)"
+      "open-<region>.aqara.com"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -105,7 +105,7 @@
     "tagline": "Beatoven.ai royalty-free music generation: compose tracks, poll tasks, download audio, fetch individual stems.",
     "auth": "API token via the secure credential flow",
     "hosts": [
-      "public-api.beatoven.ai` (plus the download host Beatoven's own task response returns)"
+      "public-api.beatoven.ai"
     ],
     "maturity": "draft",
     "category": "Media generation"
@@ -362,7 +362,7 @@
     "auth": "Access Key via the secure credential flow",
     "hosts": [
       "open.ecovacs.com",
-      "open.ecovacs.cn` (region-selected)"
+      "open.ecovacs.cn"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -463,7 +463,7 @@
     "tagline": "Verify a Framer project's Server API connection. Framer's Server API is WebSocket/SDK-only (there is no REST surface): the official framer-api npm package opens a long-lived connection to wss://api.framer.com/channel/headless-plugin with the header Authorization: Token <api_key>, keyed to one project. This connector's CLI performs that same official handshake as a connection check, so auth proves the API key and project pair work.",
     "auth": "per-project API key via the secure credential flow",
     "hosts": [
-      "api.framer.com` (WebSocket only)"
+      "api.framer.com"
     ],
     "maturity": "draft",
     "category": "Design"
@@ -551,7 +551,7 @@
     "tagline": "Read entity states and call services on your Home Assistant instance. Service calls are confirmed first.",
     "auth": "Home Assistant long-lived access token (per-user, Profile \u2192 Security \u2192 Long-Lived Access Tokens)",
     "hosts": [
-      "your instance host (declared at connect time)"
+      "your instance host"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -562,7 +562,7 @@
     "tagline": "Read device state and write capability values on a Homey Pro (local) or Homey cloud account through the Homey Web API: lights and outlets, dimmers and color, thermostats, connected locks, blinds and curtains, plus listing Flows (automations). Use it when the user asks about or wants to change anything paired to their Homey. Writes drive real physical hardware, so they are confirmation-gated (see Operating Rules).",
     "auth": "personal API token or OAuth via the secure credential flow",
     "hosts": [
-      "the host you pass via `--host` (your Homey's LAN IP/hostname or cloud URL; the credential is only ever sent there)"
+      "the host you pass via --host"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -573,7 +573,7 @@
     "tagline": "Read device states and invoke capability commands on a Hubitat Elevation hub through the official Maker API app: lights and dimmers, deadbolt locks, garage door controllers, thermostats, location modes, and the Hubitat Safety Monitor (HSM). Use it when the user asks about or wants to change anything paired to their Hubitat hub. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules).",
     "auth": "Maker API token via the secure credential flow",
     "hosts": [
-      "the host you pass via `--host` (your hub's LAN IP/hostname or cloud relay URL; the credential is only ever sent there)"
+      "the host you pass via --host"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -740,8 +740,7 @@
     "auth": "provider OAuth via the secure credential flow",
     "hosts": [
       "your Mastodon instance host",
-      "declared at connect time (the `--host` you pass",
-      "e.g. `https://mastodon.social`; it must start with `http://` or `https://`). The credential is only ever sent to that host."
+      "declared at connect time. The credential is only ever sent to that host"
     ],
     "maturity": "draft",
     "category": "Social"
@@ -785,7 +784,7 @@
     "tagline": "Control a Klipper-based 3D printer through the Moonraker API server (the backend behind Mainsail, Fluidd and RatOS): read server and print status, list and upload gcode files, start/pause/resume/cancel prints, trigger the emergency stop, toggle smart-plug devices, and (gated) run raw G-code. Use when the user mentions Moonraker, Klipper, Mainsail, or Fluidd.",
     "auth": "no credential needed on most LAN installs (optional API key via the secure credential flow)",
     "hosts": [
-      "the host you pass via `--host` (your printer's Moonraker server; the credential is only ever sent there)"
+      "the host you pass via --host"
     ],
     "maturity": "draft",
     "category": "3D printing"
@@ -851,7 +850,7 @@
     "tagline": "Control an OctoPrint 3D printer over its local REST API: read printer state and temperatures, monitor print progress, start/pause/cancel/restart jobs, upload and select gcode files, set hotend and bed temperatures, jog or home axes, and (gated) run raw G-code. Use when the user mentions their OctoPrint instance or a printer it drives.",
     "auth": "API key via the secure credential flow",
     "hosts": [
-      "the host you pass via `--host` (your OctoPrint server; the credential is only ever sent there)"
+      "the host you pass via --host"
     ],
     "maturity": "draft",
     "category": "3D printing"
@@ -961,7 +960,7 @@
     "tagline": "Control Philips Hue lights locally: list lights and rooms, set brightness/color, activate scenes, read sensors.",
     "auth": "Bridge pairing (local) or OAuth2 (remote)",
     "hosts": [
-      "derived from `--host` at runtime (the bridge's LAN IP or hostname); the CLI refuses to send the key anywhere else"
+      "derived from --host at runtime; the CLI refuses to send the key anywhere else"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -1029,7 +1028,7 @@
     "auth": "personal API key (per-user, PostHog Settings \u2192 Personal API keys; starts `phx_`)",
     "hosts": [
       "configurable",
-      "default `app.posthog.com"
+      "default app.posthog.com"
     ],
     "maturity": "draft",
     "category": "Monitoring"
@@ -1205,7 +1204,7 @@
     "tagline": "View open orders, products, and customers in your Shopify store. Read-only by design.",
     "auth": "Shopify Admin API access token (per-user, Shopify admin \u2192 Apps \u2192 Develop apps \u2192 custom app; scopes read_orders/read_products/read_customers)",
     "hosts": [
-      "<your-shop>.myshopify.com` (your store's domain)"
+      "<your-shop>.myshopify.com"
     ],
     "maturity": "draft",
     "category": "E-commerce"
@@ -1340,7 +1339,7 @@
     "hosts": [
       "fleet-api.prd.na.vn.cloud.tesla.com",
       "fleet-api.prd.eu.vn.cloud.tesla.com",
-      "fleet-api.prd.cn.vn.cloud.tesla.com` (region-selected)"
+      "fleet-api.prd.cn.vn.cloud.tesla.com"
     ],
     "maturity": "draft",
     "category": "Vehicles"
@@ -1353,7 +1352,7 @@
     "hosts": [
       "fleet-api.prd.na.vn.cloud.tesla.com",
       "fleet-api.prd.eu.vn.cloud.tesla.com",
-      "fleet-api.prd.cn.vn.cloud.tesla.com` (region-selected)"
+      "fleet-api.prd.cn.vn.cloud.tesla.com"
     ],
     "maturity": "draft",
     "category": "Energy"
@@ -1411,7 +1410,7 @@
       "openapi.tuyaus.com",
       "openapi.tuyaeu.com",
       "openapi.tuyacn.com",
-      "openapi.tuyain.com` (region-selected)"
+      "openapi.tuyain.com"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -1444,7 +1443,7 @@
     "tagline": "Read camera state and still snapshots from a local UniFi Protect console (Protect 5.3+) through the official Integration API, and adjust camera settings: PTZ position, flood lights, chimes, talkback. Use it when the user asks what their UniFi cameras see, wants a snapshot saved, or wants to change camera behavior. Everything runs against the local console; there is no cloud dependency.",
     "auth": "integration key via the secure credential flow",
     "hosts": [
-      "the host you pass via `--host` (your console's IP/hostname; the credential is only ever sent there)"
+      "the host you pass via --host"
     ],
     "maturity": "draft",
     "category": "Smart home"
@@ -1477,7 +1476,7 @@
     "tagline": "Remove backgrounds from video with VEED's direct developer API (POST /v1/video/background-remove): standard quality, fast throughput and green-screen chroma-key with spill suppression. Outputs are VP9-with-alpha or H.264 RGB+alpha, up to 4K.",
     "auth": "API key via the secure credential flow",
     "hosts": [
-      "the host you pass via `--api-host` (the credential is only ever sent there)"
+      "the host you pass via --api-host"
     ],
     "maturity": "draft",
     "category": "Video"
