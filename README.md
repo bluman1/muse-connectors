@@ -1,7 +1,7 @@
 # Muse Connectors
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Connectors](https://img.shields.io/badge/connectors-150-blue)](https://museconnectors.link/)
+[![Connectors](https://img.shields.io/badge/connectors-151-blue)](https://museconnectors.link/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![GitHub stars](https://img.shields.io/github/stars/bluman1/muse-connectors?style=social)](https://github.com/bluman1/muse-connectors/stargazers)
 
@@ -24,7 +24,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ## Catalog
 
-All 150 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
+All 151 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
 
 | Connector | What it does |
 |---|---|
@@ -102,6 +102,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Mistral AI](https://museconnectors.link/#mistral) | Mistral AI's La Plateforme API: chat completions, embeddings, document OCR, and model listing via Bearer API key. |
 | [Monday](https://museconnectors.link/#monday) | List boards, read items, create items. Project management over GraphQL. |
 | [Moonraker](https://museconnectors.link/#moonraker) | Control a Klipper-based 3D printer through the Moonraker API server (the backend behind Mainsail, Fluidd and RatOS): read server and print status, list and upload gcode files, start/pause/resume/cancel prints, trigger the emergency stop, toggle smart-plug devices, and (gated) run raw G-code. Use when the user mentions Moonraker, Klipper, Mainsail, or Fluidd. |
+| [Mushare](https://museconnectors.link/#mushare) | Assistant-to-assistant messaging: your Muse messages your friends' Muse. |
 | [n8n](https://museconnectors.link/#n8n) | List and manage workflows, read executions. |
 | [Neon](https://museconnectors.link/#neon) | Inspect Neon serverless Postgres projects, branches, and databases. Branch create and delete need exact-match confirmation; connection passwords are masked. |
 | [Netlify](https://museconnectors.link/#netlify) | List your Netlify sites and recent deploys. Read-only. |

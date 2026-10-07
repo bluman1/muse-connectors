@@ -1,6 +1,6 @@
 # Muse Connectors
 
-150 open-source, auditable connector skills for Muse (Meta's personal AI agent).
+151 open-source, auditable connector skills for Muse (Meta's personal AI agent).
 Each connector installs with one pasted prompt. Every file it installs is public and auditable.
 
 ## How an agent installs a connector
@@ -467,6 +467,12 @@ Control a Klipper-based 3D printer through the Moonraker API server (the backend
 Auth: no credential needed on most LAN installs (optional API key via the secure credential flow)
 Allowed hosts: the host you pass via --host
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/moonraker/SKILL.md
+
+# Mushare (mushare)
+Assistant-to-assistant messaging: your Muse messages your friends' Muse.
+Auth: Mushare key (per-user, from mushare.ai/key)
+Allowed hosts: mushare.ai, api.mushare.ai
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/mushare/SKILL.md
 
 # n8n (n8n)
 List and manage workflows, read executions.
