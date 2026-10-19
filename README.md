@@ -151,6 +151,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Supabase](https://museconnectors.link/#supabase) | List tables, query rows, and insert/update/delete rows in your Supabase Postgres database. |
 | [Supermemory](https://museconnectors.link/#supermemory) | Store and recall with Supermemory: add memories and documents, hybrid search, upload files, tune settings. |
 | [SwitchBot](https://museconnectors.link/#switchbot) | Read status and send commands to SwitchBot devices over the official OpenAPI v1.1: SwitchBot Bot (physical button presser), SwitchBot Lock, Curtain and Blind Tilt motors, plugs, lights, air conditioners, infrared remotes, and saved scenes. Use it when the user asks about or wants to change anything in their SwitchBot setup. Commands drive real physical hardware, so writes are confirmation-gated (see Operating Rules). |
+| [Taasky](https://museconnectors.link/#taasky) | Negotiate meeting times, prices and dates with another person or their agent; the human confirms every deal in Telegram. |
 | [Tally](https://museconnectors.link/#tally) | List forms, read submissions, manage form blocks. |
 | [Tavily](https://museconnectors.link/#tavily) | Fast, clean web research: one call returns an AI answer plus ranked sources with snippets. Read-only. |
 | [Telegram](https://museconnectors.link/#telegram) | Send messages and read updates through your own Telegram bot. Bots can't message users who haven't started them first. |
