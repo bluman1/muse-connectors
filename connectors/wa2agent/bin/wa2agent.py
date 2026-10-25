@@ -7,8 +7,8 @@ never touches this script: the runtime swaps the surrogate on approved egress,
 only to the user's own vault host (taken from --vault).
 
 Read-only: wa2agent has no send or settings tools. Message text arrives
-encrypted; the user opens the returned reading link and types their own key.
-Never pass, store or log that encryption key.
+encrypted; the reading link decrypts in the browser with the key that browser
+keeps. Never pass, store or log an encryption key.
 """
 from __future__ import annotations
 
@@ -88,6 +88,7 @@ def main() -> None:
     msgs.add_argument("--after", type=int, help="Unix seconds; oldest first after this time")
     msgs.add_argument("--limit", type=int)
     msgs.add_argument("--cursor")
+    sub.add_parser("replace-key", help="get a one-time link that makes a new encryption key in the browser")
     args = parser.parse_args()
 
     if args.command == "auth":
@@ -97,6 +98,9 @@ def main() -> None:
     if args.command == "chats":
         params = {k: v for k, v in {"kind": args.kind, "limit": args.limit, "cursor": args.cursor}.items() if v is not None}
         print(json.dumps(call(args.vault, "list_chats", params), indent=2))
+        return
+    if args.command == "replace-key":
+        print(json.dumps(call(args.vault, "replace_key", {}), indent=2))
         return
     params = {k: v for k, v in {"chat_id": args.chat, "after": args.after, "limit": args.limit, "cursor": args.cursor}.items() if v is not None}
     print(json.dumps(call(args.vault, "get_messages", params), indent=2))
