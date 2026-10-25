@@ -1450,6 +1450,16 @@
     "category": "Cloud & hosting"
   },
   {
+    "id": "wa2agent",
+    "name": "wa2agent (WhatsApp, read-only)",
+    "tagline": "Muse reads the WhatsApp groups you choose and turns them into events, tasks and a daily brief. Read-only; message text reaches Muse encrypted, and you unlock it with your own key.",
+    "auth": "wa2agent MCP access key (per-user, vault page \u2192 Connect your agent \u2192 Create credential)",
+    "hosts": [
+      "your vault host (vault-<id>.wa2agent.link)"
+    ],
+    "category": "Communication"
+  },
+  {
     "id": "webflow",
     "name": "Webflow",
     "tagline": "Work with the Webflow Data API v2: list sites, inspect site details, browse CMS collections and items, create/update/delete CMS items, and publish a site. Uses a per-site token from Site Settings.",

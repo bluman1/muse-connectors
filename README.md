@@ -1,7 +1,7 @@
 # Muse Connectors
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Connectors](https://img.shields.io/badge/connectors-150-blue)](https://museconnectors.link/)
+[![Connectors](https://img.shields.io/badge/connectors-151-blue)](https://museconnectors.link/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![GitHub stars](https://img.shields.io/github/stars/bluman1/muse-connectors?style=social)](https://github.com/bluman1/muse-connectors/stargazers)
 
@@ -24,7 +24,7 @@ No app stores, no config files, no tokens in chat. How the one-paste install wor
 
 ## Catalog
 
-All 150 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
+All 151 connectors, searchable with one-click install prompts, at **https://museconnectors.link/**. Each name links straight to its detail page.
 
 | Connector | What it does |
 |---|---|
@@ -171,6 +171,7 @@ All 150 connectors, searchable with one-click install prompts, at **https://muse
 | [Vapi](https://museconnectors.link/#vapi) | Manage voice AI assistants, phone numbers, and calls. Outbound calls need exact-match confirmation; test numbers by default. |
 | [VEED](https://museconnectors.link/#veed) | Remove backgrounds from video with VEED's direct developer API (POST /v1/video/background-remove): standard quality, fast throughput and green-screen chroma-key with spill suppression. Outputs are VP9-with-alpha or H.264 RGB+alpha, up to 4K. |
 | [Vercel](https://museconnectors.link/#vercel) | See your Vercel account, projects, and recent deployments. |
+| [wa2agent (WhatsApp, read-only)](https://museconnectors.link/#wa2agent) | Muse reads the WhatsApp groups you choose and turns them into events, tasks and a daily brief. Read-only; message text reaches Muse encrypted, and you unlock it with your own key. |
 | [Webflow](https://museconnectors.link/#webflow) | Work with the Webflow Data API v2: list sites, inspect site details, browse CMS collections and items, create/update/delete CMS items, and publish a site. Uses a per-site token from Site Settings. |
 | [Wise](https://museconnectors.link/#wise) | View Wise profiles and multi-currency balances. Read-only by design. |
 | [X](https://museconnectors.link/#x) | Post, search, like, DM. Note: no usable free read tier. |

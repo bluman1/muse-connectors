@@ -1,6 +1,6 @@
 # Muse Connectors
 
-150 open-source, auditable connector skills for Muse (Meta's personal AI agent).
+151 open-source, auditable connector skills for Muse (Meta's personal AI agent).
 Each connector installs with one pasted prompt. Every file it installs is public and auditable.
 
 ## How an agent installs a connector
@@ -881,6 +881,12 @@ See your Vercel account, projects, and recent deployments.
 Auth: personal token (per-user, vercel.com/account/tokens)
 Allowed hosts: api.vercel.com
 Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/vercel/SKILL.md
+
+# wa2agent (WhatsApp, read-only) (wa2agent)
+Muse reads the WhatsApp groups you choose and turns them into events, tasks and a daily brief. Read-only; message text reaches Muse encrypted, and you unlock it with your own key.
+Auth: wa2agent MCP access key (per-user, vault page → Connect your agent → Create credential)
+Allowed hosts: your vault host (vault-<id>.wa2agent.link)
+Install: https://raw.githubusercontent.com/bluman1/muse-connectors/main/connectors/wa2agent/SKILL.md
 
 # Webflow (webflow)
 Work with the Webflow Data API v2: list sites, inspect site details, browse CMS collections and items, create/update/delete CMS items, and publish a site. Uses a per-site token from Site Settings.
