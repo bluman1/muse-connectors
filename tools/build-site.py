@@ -53,7 +53,7 @@ CATEGORIES = {
     "shopify": "E-commerce", "gumroad": "E-commerce", "paddle": "E-commerce",
     "openweathermap": "Weather", "readwise": "Reading",
     "calcom": "Scheduling", "deepl": "Translation", "beehiiv": "Newsletters",
-    "discord": "Communication",
+    "discord": "Communication", "wa2agent": "Communication",
     "loops": "Email",
     # batch E: memory
     "mem0": "Memory", "supermemory": "Memory", "zep": "Memory", "letta": "Memory",
