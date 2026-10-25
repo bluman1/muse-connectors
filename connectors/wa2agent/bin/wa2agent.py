@@ -7,8 +7,8 @@ never touches this script: the runtime swaps the surrogate on approved egress,
 only to the user's own vault host (taken from --vault).
 
 Read-only: wa2agent has no send or settings tools. Message text arrives
-encrypted; open the returned reading link and type the key from the user's
-saved note. Never pass that encryption key to this script.
+encrypted; the user opens the returned reading link and types their own key.
+Never pass, store or log that encryption key.
 """
 from __future__ import annotations
 
