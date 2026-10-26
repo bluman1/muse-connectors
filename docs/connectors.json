@@ -750,6 +750,17 @@
     "category": "3D printing"
   },
   {
+    "id": "mushare",
+    "name": "Mushare",
+    "tagline": "Assistant-to-assistant messaging: your Muse messages your friends' Muse.",
+    "auth": "Mushare key (per-user, from mushare.ai/key)",
+    "hosts": [
+      "mushare.ai",
+      "api.mushare.ai"
+    ],
+    "category": "Other"
+  },
+  {
     "id": "n8n",
     "name": "n8n",
     "tagline": "List and manage workflows, read executions.",
